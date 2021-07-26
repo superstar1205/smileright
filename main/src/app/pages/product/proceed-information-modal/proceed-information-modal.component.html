@@ -1,0 +1,17 @@
+<div class="row modal-heading primary-gradient rel clearfix">
+  <button class="btn-close btn-clear mat-button abs-right" (click)="cancelEvent()">
+    <mat-icon>clear</mat-icon>
+  </button>
+  <h2 class="sr-title header-title-product rm-m">Please note...</h2>
+
+</div>
+<mat-dialog-content>
+  <p>{{firstName}}, the total treatment value of {{amount | customCurrency}} is an estimation provided by your
+    dentist based on the average cost of this treatment. This price is an indication only, and may vary between
+    patients. </p>
+  <p>A final price can only be established once consultation has occurred.</p>
+</mat-dialog-content>
+<div class="row clearfix border-top">
+  <button mat-raised-button color="primary" (click)="cancelEvent()" class="pull-left">Cancel</button>
+  <button mat-raised-button color="accent" (click)="proceedEvent()" class="pull-right">Proceed <mat-icon>chevron_right</mat-icon></button>
+</div>

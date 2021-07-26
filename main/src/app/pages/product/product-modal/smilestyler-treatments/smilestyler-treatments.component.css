@@ -1,0 +1,80 @@
+.smilestyler-gradient {
+  background: #757F9A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h2.summary-header.sr-title.white {
+  color: #fff;
+  font-size: 2rem;
+}
+
+h2 .subLabel {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.inModal button.btn-close {
+  float: right;
+  color: #fff;
+  min-width: 0;
+}
+.row.titleArea.clearfix.full-width h2 {
+  width: 100%;
+}
+.card-header.smilestyler-gradient.inModal {
+  margin: -16px -16px 20px;
+  padding: 24px;
+  color: #fff;
+}
+.card-header.smilestyler-gradient.inModal p, .card-header.smilestyler-gradient.inModal h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.2);
+}
+.card-header.smilestyler-gradient.inModal h2 {
+  padding-top: 0;
+  text-transform: capitalize;
+}
+.card-header.inModal .titleArea {
+  max-width: 80%;
+  float: left;
+}
+.card-header.smilestyler-gradient.inModal label {
+  color: rgba(255,255,255,0.8);
+}
+/* tabs */
+.bronze {
+  color: #e79e6d;
+}
+mat-tab-group.treatment-tabs {
+  margin: 0 -24px 20px;
+  text-align: center;
+  background: #f6f6f6;
+}
+::ng-deep mat-tab-group.treatment-tabs mat-tab-header.mat-tab-header {
+  display: none;
+}
+::ng-deep mat-tab-group.treatment-tabs .mat-tab-body-content {
+  padding: 24px;
+}
+.treatment-tabs p.larger {
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif !important;
+}
+.treatment-tabs p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 2.05rem;
+}
+.buttons {
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  z-index: 99;
+}
+img.tab-icon {
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}

@@ -1,0 +1,11 @@
+.margin-div {
+  padding: 5px;
+}
+
+.margin-div:hover {
+  color: #059dbf;
+}
+
+.margin-div:hover a {
+  color: #059dbf  !important;
+}

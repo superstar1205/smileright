@@ -1,0 +1,28 @@
+<div class="rel">
+    <div class="card-header primary-gradient-img clearfix confirmModal" [ngClass]="confirmDialog.icon">
+        <div class="row clearfix">
+          <!-- Modal dismiss button -->
+          <button class="btn-close btn-clear mat-button white" (click)="onClick()">
+            <mat-icon>clear</mat-icon>
+          </button>
+          <div class="row titleArea clearfix">
+              <mat-icon class="white pull-left">{{confirmDialog.icon}}</mat-icon>
+            <h2 class="summary-header rm-m">
+                {{confirmDialog.title}}
+            </h2>
+          </div>
+        </div>
+      </div>
+
+  <mat-dialog-content>
+
+    <div class="row clearfix mb">
+      <div [innerHTML]="confirmDialog.confirmMessage | safeHtml"> </div>
+    </div>
+    <hr>
+  </mat-dialog-content>
+  <mat-dialog-actions class="button-row text-center">
+    <button mat-raised-button (click)="onClick()" color="accent">{{confirmDialog.buttonMessage}}</button>
+    <!-- Can optionally provide a result for the closing dialog. -->
+  </mat-dialog-actions>
+</div>

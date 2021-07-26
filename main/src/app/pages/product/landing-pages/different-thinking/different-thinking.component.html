@@ -1,0 +1,104 @@
+<app-bluebg></app-bluebg>
+<div *ngIf="merchant">
+  <div class="container main">
+
+
+    <section class="introduction clearfix">
+      <div class="text pull-right half-width">
+        <div class="col-left">
+
+          <h1 class="white-header">
+            We now live in a different world. Things are not going “back to normal” for a long time (if ever).</h1>
+     
+        </div>
+      </div>
+      <div class="pull-left half-width">
+        <img class="hero" src="/assets/img/dentist-faq.png" />
+      </div>
+    </section>
+    <section class="features">
+      <mat-card class="add-mb">
+        <div class="row clearfix reduced">
+
+          <p class="lead larger text-center">Business survival (your business survival) is going to require a whole different approach. 
+ 
+            How did if feel when you lost most of your income, but still had bills to pay?
+            It's not fun is it?  
+            That's the pain a lot of patients are still feeling and it's only set to get worse.
+            
+            Your next steps in how you navigate in these difficult time is paramount - are you prepared?
+            
+            The new reality is every patient will need and expect payment options to be presented with all treatment.
+            Knowing this upfront and anticipating this need (rather than making them ask) is part of helping people regain their lives, and their dignity in difficult times 
+             
+            Smile Right is a complete patient communication strategy.
+            
+            Make every presentation to patients count by providing patients all the information they could possibly want (informed consent, photos, videos, payment/finance options) with ALL treatment proposed (from simple to complex) and all done in less than 30 seconds - faster than any PMS on the market. 
+            
+            Patients don’t have to ask you to help them out. Helping them out is built into our system.
+             
+            Times are going to be tougher however we are here to help.
+            
+            Find out how Smile Right can help you, and your patients, get through them.
+            </p>
+
+          <p>Book your next appointment now</p>
+        </div>
+      </mat-card>
+
+
+    </section>
+
+ 
+  </div>
+
+  <!-- <section class="grey"  *ngIf="campaign">
+    <div class="container">
+      <div class="">
+        <div class="row clearfix reduced mb">
+          <h2 class="accent larger background text-center rm-mt"><span class="">How do I get started?</span></h2>
+          <p class="lead text-center mb">Our online booking system is easy to use and popular with patients. But if you have any questions or concerns, simply call the clinic on 0000 0000 and we’ll be happy to help you over the phone.</p>
+          <div class="row clearfix flex">
+
+            <div class="half-width">
+              <div class="col-left">
+                <mat-card class="rm-bp">
+                  <h3 class="primary larger background text-center rm-mb"><span class="white-bg">Bite-sized payments</span></h3>
+                  <p class="larger text-center">We know there can be a bit of a sting when it comes to digesting the cost of your dental appointments. Not to worry though, we can break your costs into bite-sized portions that you'll find much easier to swallow!</p>
+
+                  <div class="row clearfix dealArea rel" >
+                    <div class="half-width">
+                      <img src="/assets/img/dentists-clear-aligner.png" class="promoPos" />
+                      &nbsp;
+                    </div>
+             
+
+                    <div class="half-width text-right rel">
+                      <h3 class="white rm-m">from as little as</h3>
+                      <h1 class="offerValue">{{minAmount | customCurrency}}</h1>
+                      <h3 class="white rm-mt">per day</h3>
+
+                      <button mat-raised-button color="accent" (click)="applyEvent()">Apply now !
+                        <mat-icon>chevron_right</mat-icon></button>
+                    </div>
+
+
+
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+            <div class="half-width flex flexCol">
+              <div class="row clearfix well flexColHigh">
+              
+               <app-lead-form-slim *ngIf="patient" [patient]="patient"></app-lead-form-slim>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+</div>

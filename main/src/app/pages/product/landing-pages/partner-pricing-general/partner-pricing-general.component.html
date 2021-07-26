@@ -1,0 +1,130 @@
+
+<div>
+    <app-bluebg></app-bluebg>
+    <section class="top">
+        <div class="top-main">
+            <div class="top-l" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="top-txtbox">
+                    <h5>Home &rarr; Pricing</h5>
+                    <h1>Find a plan that’s right for you!</h1>
+                    <p>Whether you want better patient communication and finance options, or the whole package deal - Smile Right has a plan to suit all your needs.</p>
+                </div>
+            </div>
+            <div class="top-r" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="top-imgbox">
+                    <img class="top-img" src="/assets/img/campaign/price/Asset_1.png">
+                </div>
+            </div>
+        </div>
+        <div class="top-card">
+            <div class="cardbox">
+                <div class="card premium" data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                    <div class="card-title">Smile Right Recommends</div>
+                    <div class="card-body">
+                        <h3>Premium</h3>
+                        <p>Ideal for larger practices looking for advanced communication and growth.</p>
+                        <h1><sup>$</sup>299</h1>
+                        <h6>per month*</h6>
+                        <button mat-stroked-button class="pre" (click)="onpremodal()">Select</button>
+                        <div class="sele">
+                            <h5>What do you get?</h5>
+                            <div class="hr pre"></div>
+                            <span>Everything in the Starter pack, plus:</span>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Appointments</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Health History</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Portal</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Marketing Campaigns (email/SMS/social)</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Smile Right Training Academy</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Unlimited Practitioners</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Plus More...</span></div>
+                            <div class="select"><h5 routerLink="/plans">About Premium ></h5></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card standard" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                    <div class="card-title">Smile Right Recommends</div>
+                    <div class="card-body">
+                        <h3>Standard</h3>
+                        <p>Personalise and reach more patients more often and in more ways.</p>
+                        <h1><sup>$</sup>99</h1>
+                        <h6>per month*</h6>
+                        <button mat-stroked-button class="stand" (click)="onstandmodal()">Select</button>
+                        <div class="sele">
+                            <h5>What do you get?</h5>
+                            <div class="hr stand"></div>
+                            <span>Everything in the Starter pack, plus:</span>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Appointments</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Health History</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Portal</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Marketing Campaigns (email/SMS/social)</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Smile Right Training Academy</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Up to 2 Practioners</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Plus More...</span></div>
+                            <div class="select"><h5 routerLink="/plans">About Standard ></h5></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card starter" data-aos="fade-up" data-aos-delay="700" data-aos-easing="ease-in-sine" data-aos-once="true">
+                    <div class="card-title">Smile Right Recommends</div>
+                    <div class="card-body">
+                        <h3>Starter</h3>
+                        <p>The essential tools needed to communicate and finance your patients.</p>
+                        <h1><sup>$</sup>0</h1>
+                        <h6>per month*</h6>
+                        <button mat-stroked-button class="start" (click)="onstartmodal()">Select</button>
+                        <div class="sele">
+                            <h5>What do you get?</h5>
+                            <div class="hr start"></div>
+                            <span>The basics for patient communication & finance:</span>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Digital Treatment Planning</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Digital Treatment Communication</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Digital Informed Consent</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Reminders</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Patient Finance</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Procedure Catalogue</span></div>
+                            <div class="select"><mat-icon>check_circle</mat-icon><span>Plus More...</span></div>
+                            <div class="select"><h5 routerLink="/plans">About Starter ></h5></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-bot" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+            <p>Your competitors understand the importance of practices building a digital presence through consistent email marketing and social media.</p>
+            <p>With the average practice spending a minimum of $1000 per month on patient communication and marketing and some spending significantly more, how does your practice compare?</p>
+            <button mat-stroked-button routerLink="/plans">Compare Plans <mat-icon>chevron_right</mat-icon></button>
+        </div>
+    </section>
+    <section class="mid">
+        <div class="mid-main">
+            <div class="mid-l" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="mid-imgbox">
+                    <img class="img" src="/assets/img/campaign/price/Asset_2.png">
+                </div>
+            </div>
+            <div class="mid-r" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="mid-txtbox">
+                    <h3>Want to subscribe for Standard or Premium packages and pay no monthly fees? </h3>
+                    <p>Yes, you are reading that right - FREE.<br>Click on the button below and we will show you how!</p>
+                    <button mat-stroked-button routerLink="/frees">Free? Show Me How <mat-icon>chevron_right</mat-icon></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bot">
+        <div class="bot-main">
+            <div class="bot-l" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="bot-txtbox">
+                    <h3>Not 100% convinced?</h3>
+                    <p>Book a FREE online demonstration with one of our practice consultants for you and the team!</p>
+                    <a href="https://calendly.com/smileright/"><button mat-stroked-button>Book an online demonstration!<mat-icon>chevron_right</mat-icon></button></a>
+                </div>
+            </div>
+            <div class="bot-r" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="mid-imgbox">
+                    <img class="img" src="/assets/img/campaign/price/Asset_3.png">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

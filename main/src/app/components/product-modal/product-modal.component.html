@@ -1,0 +1,123 @@
+<div *ngIf="product" class="white-background">
+    <div class="row modal-heading primary-gradient rel clearfix">
+
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button abs-right" mat-dialog-close>
+        <mat-icon>clear</mat-icon>
+      </button>
+
+
+      <div class="text-center">
+        <h1 class="sr-title header-title-product sm-h1 rm-m">{{product.Label}}</h1>
+        <label class="mb header-title-product">
+          <p class="rm-m" *ngFor="let d of descriptions">{{d}}</p>
+        </label>
+
+      </div>
+
+    </div>
+    <div class="container">
+      <mat-dialog-content>
+        <div class="row clearfix ">
+          <div class="row clearfix">
+            <div class="expandedHeader">
+            <h3 class="sm-h3 primary rm-m featureTitle">
+              <mat-icon>star</mat-icon>
+              <div>Essentials</div>
+            </h3>
+          </div>
+            <div *ngIf="product['TandCs.Essentials']" class="row clearfix contentArea" [innerHTML]="formatTermsAndConditions(product['TandCs.Essentials']) | safeHtml">
+
+            </div>
+          </div>
+          <div class="row clearfix">
+            <mat-accordion>
+              <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" *ngIf="product['TandCs.Features']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon>new_releases</mat-icon> Features
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                  <div  [innerHTML]="formatTermsAndConditions(product['TandCs.Features']) | safeHtml">
+
+                  </div>
+                </div>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" *ngIf="product['TandCs.Deposit']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon class="fas fa-donate"></mat-icon> Deposit
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                    <div [innerHTML]="formatTermsAndConditions(product['TandCs.Deposit']) | safeHtml" >
+
+                    </div>
+                </div>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" *ngIf="product['TandCs.Fees']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon>attach_money</mat-icon> Fees
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                  <div [innerHTML]="formatTermsAndConditions(product['TandCs.Fees']) | safeHtml" >
+
+                  </div>
+                </div>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" *ngIf="product['TandCs.Rates']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon>assessment</mat-icon> Rates
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                  <div [innerHTML]="formatTermsAndConditions(product['TandCs.Rates']) | safeHtml" >
+
+                  </div>
+                </div>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" *ngIf="product['TandCs.ThingsToConsider']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon>error_outline</mat-icon> Things to consider
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                  <div [innerHTML]="formatTermsAndConditions(product['TandCs.ThingsToConsider']) | safeHtml">
+
+                  </div>
+                </div>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" *ngIf="product['TandCs.Eligibility']">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="primary-color">
+                    <mat-icon>supervisor_account</mat-icon> Are you eligible?
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                  <div [innerHTML]="formatTermsAndConditions(product['TandCs.Eligibility']) | safeHtml" >
+
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+
+        </div>
+      </mat-dialog-content>
+      <!--
+    <div class="clearfix text-center mt mb" >
+      <button mat-raised-button class="" color="primary"  (click)="closeEvent()">Close</button>
+    </div> -->
+    </div>
+  </div>
+

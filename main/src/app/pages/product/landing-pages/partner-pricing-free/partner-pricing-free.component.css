@@ -1,0 +1,140 @@
+::ng-deep app-partner-pricing-free #blueBg{
+    top: -250px !important;
+    background: #044a6c;
+    background: -webkit-gradient(linear, left top, right top, from(#249DCE), to(#2CA3A1));
+    background: linear-gradient(to right, #249DCE, #2CA3A1);
+    z-index: -1;
+}
+h1{font-size: 3.3rem;
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 0 3px 10px rgb(0 0 0 / 25%)}
+h2{font-size: 2.25rem;}
+h3{font-size: 2rem;}
+h4{font-size: 24px;}
+p{font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 300;
+    font-family: "Open Sans" !important;
+    color: #474747;}
+button{
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: "Nunito", sans-serif !important;
+    margin: 0px auto 0;
+}
+.img{width: 100%;}
+
+.top{padding: 0rem 0rem; padding-top: 5rem;}
+.top-main{
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.top-l{width: 60%; display: flex; justify-content: flex-start; align-items: center;}
+.top-r{width: 40%; display: flex; justify-content: center; align-items: center;}
+.imgbox{width: 100%;}
+.top-txtbox>h5, .top-txtbox>h1, .top-txtbox>p{color: #fff;max-width: 580px;}
+.top-txtbox>p{
+    text-align: justify;
+    font-size: 24px;
+}
+.mid{margin: 1rem 0rem;}
+.mid-main{
+    width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #f7f7f7, #fff, #fff);
+    border-radius: 4px;
+    padding: 3rem;
+}
+.mid-top{text-align: center;}
+.mid-sel{
+    margin: 0 auto;
+    max-width: 960px;
+    padding:1rem 0rem;
+    text-align: start;
+}
+.mid-seli{display: flex;padding-top: 1rem;}
+.mid-seli>mat-icon{color: #28A0B8;}
+.mid-seli>p{
+    padding-left: 2rem;
+    margin: 0rem 0rem;
+}
+.mid-top>h3, .mid-bot>h3, .target-main>h3, .bot-txtbox>h3, .bot-main>h3{color: #059DBF;}
+.mid-selb>p{padding: 0rem 0rem; margin: 0rem 0rem;}
+.mid-bot{text-align: center;}
+.mid-botm{display: flex;}
+.mid-bot-l{width: 40%; padding: 0rem 1rem; display: flex; justify-content: center; align-items: center;}
+.mid-bot-r{width: 60%; padding: 0rem 1rem; display: flex;justify-content: flex-end; align-items: center;}
+.mid-txtbox{text-align: start;}
+.mid-txtbox>p{margin-top: 0rem;}
+.mid-txtbox>label{font-size: 14px;}
+.target{background: #f7f7f7; padding: 3rem 0rem;}
+.target-main, .bot-main{width: 1200px; margin: 0 auto;}
+.target-main{padding: 1rem 4rem;}
+.btn-box{display: flex; justify-content: center; align-items: center; padding: 2rem 0rem;}
+.btn-box>button{
+    background: #222B54;
+    color: #fff;
+    width: 240px;
+}
+.bot{padding: 3rem 0rem;}
+.bot-main{padding: 1rem;}
+.bot-main>p{margin: 1.4rem 0rem;}
+.bot-main>img{float:left; width: 490px; padding-right: 3rem; padding-top: 2rem;}
+@media(max-width:1279px){
+    .top-main, .mid-main, .target-main, .bot-main{width: 96%;}
+}
+@media(max-width:1023px){
+    .top-main, .mid-botm{flex-direction: column;}
+    .top-l, .top-r, .mid-bot-l, .mid-bot-r{width: 100% !important;}
+    .top-txtbox>h5, .top-txtbox>h1, .top-txtbox>p{max-width: 100% !important;}
+    .mid-main{padding: 1rem;}
+    .imgbox{max-width: 500px;}
+    .bot-main>img{width: 300px;}
+    .target-main{padding: 1rem 2rem;}
+}
+@media(max-width:767px){
+    .mid-bot-l, .mid-bot-r{padding: 1rem 0rem;}
+    .top-txtbox{padding: 0rem 1rem;}
+    .top-txtbox>h1{
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+    .top-txtbox>p{
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    .target-main{padding: 1rem 1rem;}
+    h3{font-size: 1.5rem;}
+    p{font-size: 1rem}
+    .bot-main>img{width: 120px; padding-right: 1rem;}
+}
+@media(max-width:374px){
+    .bot-main>img{width: 100%; order: 1; padding:1rem 0rem;}
+    button{
+        font-size: 1rem;
+    }
+    .bot-txtbox>button{width: 256px;}
+}
+
+::ng-deep app-partner-pricing-free .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
+    background-color: #5E17EB !important;
+}
+::ng-deep app-partner-pricing-free .mat-slider-track-background {
+    background-color: rgba(170, 132, 241, 0.5) !important;
+}
+::ng-deep app-partner-pricing-free .mat-accent .mat-slider-thumb {
+    border: solid 4px #fff !important;
+    bottom: -28px !important;
+    right: -28px !important;
+    width: 48px !important;
+    height: 48px !important;
+    background-color: #5E17EB !important;
+    outline: none;
+    border: 8px solid #AA87F1 !important;
+}

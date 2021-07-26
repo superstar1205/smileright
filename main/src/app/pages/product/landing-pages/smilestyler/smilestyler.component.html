@@ -1,0 +1,163 @@
+<!-- <div *ngIf="merchant"> -->
+<!-- temporarily add sleep apnea markup here for demo -->
+
+
+
+
+
+<section class="clearfix heading-banner">
+  <div class="container row clearfix">
+
+    <div class="text two-thrd-width">
+      <div class="col-left">
+
+        <h1 class="white-header add-mb rm-mt">Want to improve your smile? The choice is clear.
+        </h1>
+        <img class="brand-logo" src="/assets/img/third-party/smilestyler-logo.png" alt="SmileStyler logo" />
+
+      </div>
+    </div>
+    <div class="thrd-width">
+      <img class="hero" src="/assets/img/third-party/aligner-smilestyler.png" alt="SmileStyler aligners" />
+    </div>
+
+  </div>
+</section>
+
+<section class="top-cta" *ngIf="campaign">
+
+  <div class="container">
+    <div class="row clearfix flex">
+      <h2 class="cta">Get a smile that's designed to shine from as little as <span
+          class="cta-value bronze">{{minAmount | customCurrency}}</span>
+        per day</h2>
+      <button mat-button class="btn-outline btn-white btn-large" (click)="scrollToElement(target)">Find out how
+        <mat-icon>expand_more</mat-icon></button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="introduction">
+  <div class="container text-center">
+
+    <p class="lead add-mt">
+      No need for the inconvenience of unsightly braces. SmileStyler allows you to eat the foods you want, brush and
+      floss your teeth and still end up with the amazing smile you’ve always wanted.
+    </p>
+
+  </div>
+</section>
+
+<section class="product-info flex">
+  <div class="half-width background-image">
+    &nbsp;
+  </div>
+  <div class="half-width flex">
+    <div class="text">
+      <h3 class="sm-h3">Designed to fit conveniently with your lifestyle, the SmileStyler<sup>&reg;</sup> treatment
+        process is easy to understand and maintain so you can reach your goal of achieving a perfect smile.</h3>
+      <p class="lead">It combines the latest dental know-how with high quality materials, is refined and finished with
+        stylish minimalism, and packaged with elegance.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="product-info-description ">
+  <div class="container">
+    <div class="row clearfix">
+      <div class="half-width text">
+        <p class="lead">Our Australian-based service is second to none and comes with a host of benefits, including:</p>
+
+        <p class="lead rm-mb bronze">Easy and convenient<p>
+            <p class="larger">No need for the inconvenience of braces. SmileStyler allows you to eat the foods you
+              want,
+              brush and floss your teeth and still end up with the amazing smile you’ve always wanted.</p>
+            <p class="lead rm-mb bronze">Unrivalled delivery speed<p>
+                <p class="larger">SmileStyler delivers to your dental practitioner faster than any other aligner
+                  manufacturer as our aligners are designed and manufactured locally in Melbourne.</p>
+                <p class="lead rm-mb bronze">Premium quality<p>
+                    <p class="larger">Quality designed and produced in our dedicated Melbourne facility using state of
+                      the art software and
+                      manufacturing technologies.</p>
+      </div>
+      <div class="half-width">
+        <img src="/assets/img/third-party/smile-styler-product.jpg" alt="SmileStyler products" class="product-image" />
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="info-bar">
+  <div class="container">
+    <div class="row clearfix text-center">
+      <p class="lead">SmileStyler<sup>&reg;</sup> is highly effective in treating all sorts of teeth straightening
+        issues, from conventional orthodontics to correcting relapsed treatment, so you can achieve your perfect smile.
+      </p>
+      <button mat-button class="btn-outline btn-dark btn-large" (click)="openTreatmentsDialog()">What we can treat
+        <mat-icon>chevron_right</mat-icon></button>
+    </div>
+  </div>
+</section>
+
+<div class="booking-cta" *ngIf="campaign && campaign.ID && merchant && merchant.ID">
+  <div class="container text-center">
+    <p class="white">Interested in booking an appointment to talk to your dentist before proceeding? Click the <strong (click)="launchBookingModal()">book an appointment</strong> button below.</p>
+    <button class="btn-large" mat-raised-button (click)="launchBookingModal()">Book an appointment</button>
+  </div>
+</div>
+
+<section class="lower-cta" #target  *ngIf="campaign && campaign.ID && merchant && merchant.ID && minAmount>0">
+  <div class="container">
+    <div class="">
+      <div class="row clearfix reduced mb">
+        <h2 class="text-center rm-mt">Find out if SmileStyler<sup>&reg;</sup> is the solution for you</h2>
+        <p class="lead text-center add-mb">You can find out for sure by getting your treatment journey started today.
+          To
+          register your interest or learn more about how we can improve your smile, fill out the form below or check
+          out the cost
+          calculator and see how affordable your dream smile really is...</p>
+        <div class="row clearfix flex">
+          <div class="two-thrd-width centered">
+
+            <mat-card class="rm-bp mat-elevation-z6">
+              <h1 class="bronze rm-m">Easy repayment options!</h1>
+              <p class="lead mb"><strong>{{merchant['TradingAs']}}</strong> can help smooth out the cost of a better
+                smile for less than a cup of
+                coffee a day with one of our helpful payment options...</p>
+              <div class="row clearfix dealArea rel flex">
+                <div class="half-width rel full-height img">
+                  <img src="/assets/img/dentists-clear-aligner.png" alt="Smile right payment options" class="promoPos" />
+                </div>
+                <div class="half-width text-left rel">
+                  <div class="col-right">
+                    <h3 class="white rm-m">from as little as</h3>
+                    <h1 class="offerValue">{{minAmount | customCurrency}}</h1>
+                    <h3 class="white rm-mt ">per day</h3>
+                  <p class="small rm-mt">Full treatment value from {{userData?.Amount | customCurrency}}*</p>
+                  <button *ngIf="merchant" mat-raised-button color="accent" class="btn-large"
+                  (click)="launchApplyModal()">Apply now !
+                  <mat-icon>chevron_right</mat-icon></button>
+
+                <button *ngIf="!merchant" mat-raised-button color="accent" class="btn-large"
+                  (click)="launchBookingModal()">Book an appointment
+                  <mat-icon>chevron_right</mat-icon></button>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="small disclaimer">
+      <strong>* Disclaimer:</strong> Please note: pricing is indicative only, and price may vary between patients. We can only establish the final cost of treatment once the consultation has occurred.
+    </p>
+  </div>
+</section>

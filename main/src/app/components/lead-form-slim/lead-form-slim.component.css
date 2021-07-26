@@ -1,0 +1,27 @@
+section.contact {
+	background-color: #587386;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+section.contact .container {
+    max-width: 700px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    box-shadow: inset 0px 1px 7px rgba(0,0,0,0.15);
+}
+button.sm-mt {
+	margin-top: 10px;
+}
+
+
+::ng-deep app-lead-form-slim .mat-form-field-infix {
+	width: 100%;
+}
+@media (max-width: 991px) {
+	section.contact {
+	    background-color: #587386;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	}
+}

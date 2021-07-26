@@ -1,0 +1,15 @@
+[Unit]
+Description=node server
+
+[Service]
+Type=forking
+# The PID file is optional, but recommended in the manpage
+# "so that systemd can identify the main process of the daemon"
+ExecStart= /bin/sh  /home/ubuntu/solution/design/public/main/server-script/run-server.sh
+Restart=always
+RestartSec=3
+
+
+[Install]
+WantedBy=multi-user.targets
+Alias= node-server-public-design

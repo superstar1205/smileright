@@ -1,0 +1,417 @@
+section.introduction {
+  padding: 0;
+  position: relative;
+}
+
+section.getStarted {
+  background: #efefef;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+h1.white-header {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+img.hero {
+  width: 110%;
+  margin-bottom: -140px;
+  margin-top: -40px;
+}
+
+section.contact .block {
+  text-align: center;
+  width: 33%;
+}
+
+h2.larger {
+  font-size: 2.8rem;
+}
+
+h2.background span,
+h3.background span {
+  background: #fff;
+}
+
+section.contact2 {
+  background-color: #587386;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.block mat-icon {
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 20px;
+}
+
+section.contact2 .container {
+  max-width: 700px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.15);
+}
+
+
+
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.26);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Remove focus */
+select:focus {
+  outline: none;
+}
+
+/* Hide label */
+.form-field label {
+  display: none;
+}
+
+/* Use custom arrow */
+.form-field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field:after {
+  position: absolute;
+  top: 0.75em;
+  right: 0.5em;
+  /* Styling the down arrow */
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 0.25em solid transparent;
+  border-right: 0.25em solid transparent;
+  border-top: 0.375em solid rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+form p.small {
+  font-size: 10px;
+  padding: 15px 0;
+  color: rgba(0, 0, 0, 0.5);
+  width: auto !important;
+}
+
+#mc_embed_signup {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#mc_embed_signup .row.clearfix {
+  margin-bottom: 15px;
+}
+
+#mc_embed_signup .row.clearfix.flex .full-width:first-child {
+  margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+  section.contact .block {
+    text-align: center;
+    width: 50%;
+    float: left;
+    padding: 0;
+  }
+
+  img.hero {
+    width: 110%;
+    margin-bottom: -140px;
+    margin-top: 10px;
+  }
+
+  h1.white-header {
+    font-size: 2.5rem !important;
+    line-height: 2.8rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 0;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  section.contact .block {
+    text-align: center;
+    width: 100%;
+  }
+
+  #mc_embed_signup .row.clearfix.flex .full-width:first-child {
+    margin-right: 0;
+  }
+}
+
+.cover-background {
+  background-size: cover !important;
+  overflow: hidden;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  min-height: 300px !important;
+}
+
+
+.merchant-profile-container-modal {
+  overflow: hidden;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 100% !important;
+  border: 10px solid #fff;
+  margin: 0 auto;
+  bottom: -75px;
+  width: 100%;
+  display: block;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 1px 1px -3px rgb(0 0 0 / 10%),
+    0px 2px 2px 1px rgb(0 0 0 / 14%), 0px 3px 10px 2px rgb(0 0 0 / 12%);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.merchant-profile-container {
+  overflow: hidden;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  height: 160px !important;
+  width: 160px !important;
+  border-radius: 100% !important;
+  border: 10px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  bottom: -75px;
+  z-index: 9999;
+  width: 100%;
+  display: block;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 1px 1px -3px rgb(0 0 0 / 10%),
+    0px 2px 2px 1px rgb(0 0 0 / 14%), 0px 3px 10px 2px rgb(0 0 0 / 12%);
+  -webkit-font-smoothing: antialiased;
+}
+
+.firstCard {
+  padding-top: 80px;
+}
+
+.booking-cta {
+  background: #1b8bdd;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.booking-cta button {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: transparent;
+}
+
+.booking-cta p {
+  color: #fff;
+}
+
+.booking-cta button mat-icon {
+  height: 30px !important;
+  color: #fff;
+}
+
+.merchantName {
+  color: #fff;
+  font-size: 3.2rem;
+  text-shadow: 2px 5px 5px rgba(0, 0, 0);
+}
+
+.container-customer-background {
+  padding-top: 10px;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  min-height: calc(100vh - 190px) !important;
+}
+
+.no-margin {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+::ng-deep mat-option.label2 {
+  height: unset !important;
+  white-space: normal !important;
+}
+
+@media (max-width: 767px) {
+  button.mainCta {
+    position: relative;
+    top: 150px;
+  }
+
+  img.hero.two {
+    margin-bottom: -10px;
+    margin-top: -70px;
+  }
+
+  h1.white-header {
+    font-size: 2.2rem !important;
+    line-height: 2.8rem;
+  }
+
+  .typesOfDentist .help-icon {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
+
+.help-icon {
+  height: 320px;
+}
+
+.typesOfDentist .help-icon {
+  max-width: 250px;
+  display: block;
+  height: auto;
+  margin: 0 auto 30px;
+}
+
+.footer-img {
+  border-radius: 5px;
+  height: 70px;
+  width: 70px;
+}
+
+.footer-logo {
+  margin: 0px 20px 0px 20px;
+  height: 70px;
+  width: 70px;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+  float: right;
+}
+
+.footer-logo.inline {
+  float: none;
+}
+
+.dividerHR {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.p-icon-mat {
+  vertical-align: middle !important;
+  margin-right: 5px;
+  font-size: 16px;
+  line-height: 25px;
+  width: 13px;
+}
+
+.open-hours-button {
+  min-width: 130px !important;
+  margin-right: 120px;
+  height: 40px;
+}
+
+.icon-social-media {
+  margin-right: 120px;
+}
+
+.icon-social-media mat-icon {
+  font-size: 18px !important;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  line-height: 50px !important;
+}
+
+.divider-footer {
+  opacity: 0.3;
+  margin-bottom: 10px;
+}
+
+.appointment-container {
+  margin-bottom: 100px;
+}
+
+.left-footer-text {
+  height: 17px;
+}
+
+.bg-white {
+  background: #fff;
+  padding-left: 15px;
+}
+
+.partner-logo {
+  float: left;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 60px;
+  text-decoration: none;
+  margin: 0 auto;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+
+.partner-logo img {
+  width: auto;
+  max-height: 60px;
+}
+
+p.topCta {
+  margin: 0;
+}
+
+app-header-product {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.background-white {
+  background: #fff;
+}
+
+
+app-header-product {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.text-area-msg {
+  min-height: 100px !important;
+}

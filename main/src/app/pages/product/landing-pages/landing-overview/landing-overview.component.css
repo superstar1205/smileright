@@ -1,0 +1,27 @@
+section.application {
+  background: #fafafa;
+}
+section.application .container {
+  padding: 60px 0;
+}
+
+.formContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding-top: 20px;
+}
+.applyBg {
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+	.formContainer {
+    padding: 0 5px 50px;
+    margin: 0 auto;
+    width: auto;
+  }
+}
+

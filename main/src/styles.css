@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/angular-archwizard/archwizard.css';
+
+
+.noCardSpec mat-dialog-container,
+.noCardSpec .mat-dialog-container,
+.noCardMerch mat-dialog-container,
+.noCardMerch .mat-dialog-container {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.body-is-merchant-grey mat-dialog-container {
+  background: #f7f7f7;
+}
+
+
+/*  cookie law */
+
+@media screen and (min-width: 600px) {
+  .cookie-law .cookie-law-wrapper .copy {
+    padding: 14px 60px 14px 60px !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .cookie-law .cookie-law-wrapper .copy {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+}
+
+.cookie-law .cookie-law-wrapper {
+  background: #fff !important;
+  border: 1px solid #c9c9c9 !important;
+  color: #434343 !important;
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0 !important;
+  right: 0 !important;
+  border-radius: 0 0 5px 5px !important;
+  margin: 0 auto !important;
+  width: 80% !important;
+  z-index: 999999999;
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.04), 0px 3px 14px 2px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  -webkit-font-smoothing: antialiased;
+}
+
+.cookie-law .cookie-law-wrapper .copy span {
+  color: #646464 !important;
+}
+
+.cookie-law .cookie-law-wrapper a {
+  color: #202020 !important;
+}
+
+.cookie-law .cookie-law-wrapper a:hover {
+  color: #414141 !important;
+}
+
+.cookie-law .cookie-law-wrapper .dismiss svg {
+  fill: #202020 !important;
+}
+
+.cookie-law .cookie-law-wrapper a:hover svg {
+  fill: #414141 !important;
+}
+
+
+.noAnimation,
+.noAnimation mat-dialog-container {
+  animation: none !important;
+}

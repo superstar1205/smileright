@@ -1,0 +1,23 @@
+<div class="row clearfix consumer-slider">
+  <div class="half-width">
+    <div class="col-left row clearfix rel inlined-label flex">
+      <label class="slider-label half-width inline accent-color"> Repayment Period
+        <!-- <span class="smallish">{{durationLabel()}}</span> -->
+      </label>
+      <mat-form-field class="inline half-width slider-inputs">
+        <input matInput [min]="minAmount" [max]="maxAmount" type="number" name="amountRequired" placeholder=""  (change)="RepayPeriod()"  [(ngModel)]="period">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="half-width">
+    <div class="col-right">
+      <div class="row clearfix rel">
+        <!-- range slider for repayment period -->
+        <mat-slider class="full-width" [min]="minPeriod" [max]="maxPeriod" step="1" [(ngModel)]="period" thumbLabel (change)="selectRepayPeriod($event)"></mat-slider>
+        <p class="min-amount small">{{minPeriod}} {{timeLabel()}}</p>
+        <p class="max-amount small">{{maxPeriod}} {{timeLabel()}}</p>
+      </div>
+    </div>
+  </div>
+</div>

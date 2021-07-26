@@ -1,0 +1,1421 @@
+<div>
+    <app-bluebg></app-bluebg>
+    <section class="top">
+        <div class="top-main">
+            <div class="top-l" data-aos="fade-right" data-aos-delay="800" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="top-txtbox">
+                    <h5>Home &rarr; Pricing &rarr; Compare Plans</h5>
+                    <h1>It’s not about the price, its about the value</h1>
+                    <p>When considering your options, it’s easy to compare dollars and cents, but without reviewing all the details you could end up with a bus ticket instead of a boarding pass.</p>
+                </div>
+            </div>
+            <div class="top-r" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="imgbox">
+                    <img class="img" src="/assets/img/campaign/price/Asset_4.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tbl">
+        <div class="tbl-main" >
+            <div [ngClass]="{'hdr': !scrolling, 'hdrScroll': scrolling }">
+                <div class="tbl-header">
+                    <div class="hd-card card-pre">
+                        <div class="card-t dno">Smile Right Recommends</div>
+                        <div class="card-b">
+                            <h4>Premium</h4>
+                            <h3>$299</h3>
+                            <h6>*per month</h6>
+                            <button mat-stroked-button (click)="onpremodal()">Select</button>
+                        </div>
+                    </div>
+                    <div class="hd-card card-std">
+                        <div class="card-t ddnnoo">Smile Right Recommends</div>
+                        <div class="card-b">
+                            <h4>Standard</h4>
+                            <h3>$99</h3>
+                            <h6>*per month</h6>
+                            <button mat-stroked-button (click)="onstandmodal()">Select</button>
+                        </div>
+                    </div>
+                    <div class="hd-card card-str">
+                        <div class="card-t dno">Smile Right Recommends</div>
+                        <div class="card-b">
+                            <h4>Starter</h4>
+                            <h3>$0</h3>
+                            <h6>*per month</h6>
+                            <button mat-stroked-button (click)="onstartmodal()">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tblbox">
+                <div class="table tbl-treat">
+                    <!-- fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -->
+                    <div class="tab-head">
+                        <h4>Treatment</h4>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>FINANCE</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!toggleOn; else elseBlock" class="info-tit">
+                                        <p>Take price off the table and offer affordability, and ...</p>
+                                        <span class="r-btn" (click)="toggleOn =!toggleOn">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #elseBlock>
+                                        <div class="info">
+                                            <span class="stt"><b>Payment Plans</b></span>
+                                            <ul>
+                                                <li>From $100 to $10,000</li>
+                                                <li>No establishment or monthly fees or interest</li>
+                                                <li>From 1 to 24 months in duration</li>
+                                            </ul>
+                                            <span class="stt"><b>Personal Loans</b></span>
+                                            <ul>
+                                                <li>From $2001 to $50,000</li>
+                                                <li>From 12 months to 60 months in duration</li>
+                                                <li>Rates, fees and charges are competitive in the market</li>
+                                                <li>Comparable with all major bank lenders.</li>
+                                            </ul>
+                                            <p>Take price off the table and offer affordability, and payments presented are broken down into <b>bite-size chunks</b>. Seamlessly integrate payment options into every offer of treatment automatically.</p>
+                                            <p>Remove the <b>"sticker shock"</b> in your patient's mind while present treatment that is more affordable. Patients can apply for a payment plan in less than 5 minutes, be conditionally approved and complete their application online, with no manual paperwork.</p>
+                                            <p>Once finalised, the practice is notified and can lock in the patient's appointment. <b><i>We take all credit risk, guarantee payment and settle directly to the practice</i></b> - No credit risk to the practice should the patient stops paying.</p>
+                                            <p>Optionally assist patients in-house to complete payment plan applications on the Practice PC or tablet.</p>
+                                            <span class="r-btn" (click)="toggleOn =!toggleOn">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>INFORMED CONSENT</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!einfo; else eInfo" class="info-tit">
+                                        <p>Providing effective informed consent requires ...</p>
+                                        <span class="r-btn" (click)="einfo =!einfo">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eInfo>
+                                    <div class="info">
+                                        <p>Providing effective informed consent requires consistent delivery every time of the material needed to inform, whilst knowing your patient has taken the time to review the material. We automate this task with informed consent material presented to <b><i>all</i></b> patients with <b><i>every</i></b> treatment. Peer-reviewed treatment and procedural guides collated for you and all at your fingertips with a few keystrokes.</p>
+                                        <p>Each document presented is automatically tracked, giving insight into what your patient has viewed before accepting treatment. When accepting treatment, the patients <b>digitally sign an informed consent</b> declaration (terms and conditions customizable) that is automatically converted into a PDF to store on the patient’s medical record. Increase patient awareness of risks in an informative and friendly way. Reduce practice malpractice risk due to a lack of process and documentation.</p>
+                                        <span class="r-btn" (click)="einfo =!einfo">Less <b>&#708;</b></span>
+                                    </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>PLANNING</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!eplan; else ePlan" class="info-tit">
+                                        <p>Deliver digital treatment plans via email and SMS* ...</p>
+                                        <span class="r-btn" (click)="eplan =!eplan">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #ePlan>
+                                        <div class="info">
+                                            <p>Deliver digital treatment plans via email and SMS* that include treatment pricing, practice documentation, before and after images, informed consent material, supplier videos, brochures, along with offers for finance broken down into $$$ per day. All personalised to your practice, generated and delivered in <b><u>under 30 seconds!</u></b> (see Templates)</p>
+                                            <p>Rest easy as nothing is forgotten.</p>
+                                            <p>Every patient gets consistent messaging, no matter which team member deals with them. Replace paper with a complete digital experience, fully personalised to promote <b>YOUR PRACTICE</b> and <b>YOUR BRAND</b>. Patients can provide feedback to either proceed, defer, pay cash on the day, apply for finance. Should they not proceed with treatment, feedback is provided to the practice via a survey as to why. Patients can review and respond 24/7 to the treatment proposed, while the app provides continual insights into what drives patient decisions each step of the way. </p>
+                                            <span class="r-btn" (click)="eplan =!eplan">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>PROCEDURE CATALOGUE</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!eproca; else eProca" class="info-tit">
+                                        <p>We have digitised the ADA Schedule of Services ...</p>
+                                        <span class="r-btn" (click)="eproca =!eproca">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eProca>
+                                        <div class="info">
+                                            <p>We have digitised the ADA Schedule of Services catalogue into the platform and extended this to include suppliers, brands and products.</p>
+                                            <p>You now <b>search by category</b>, item code, supplier, brand or product all in one place. Access both marketing and training material such as images, videos, brochures, documentation, Safety Data Sheets etc. on 10,000’s of products and service now in the catalogue. *Ideal for patient consultations or staff training. </p>
+                                            <span class="r-btn" (click)="eproca =!eproca">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>REMINDERS</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!eremind; else eRemind" class="info-tit">
+                                        <p>No patient or treatment is forgotten. If your patients ...</p>
+                                        <span class="r-btn" (click)="eremind =!eremind">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eRemind>
+                                        <div class="info">
+                                            <p>No patient or treatment is forgotten. If your patients do not respond to the treatment offered, they <b>automatically</b> are re-engaged with email & SMS* reminders to respond to the offer.</p>
+                                            <p>Remove the burden from staff to make follow-up phone calls.</p>
+                                            <span class="r-btn" (click)="eremind =!eremind">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>SETTLEMENTS</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!esett; else eSett" class="info-tit">
+                                        <p>We guarantee payment on all approved patients ...</p>
+                                        <span class="r-btn" (click)="esett=!esett">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eSett>
+                                        <div class="info">
+                                            <p>We guarantee payment on all approved patients.</p>
+                                            <p>Access the portal to claim your payment. Acknowledge payment with the patient via either an SMS* or form. Once acknowledged and authorised, settlement is scheduled for payment via DDR <b>directly into your bank</b>. Reconciliation is made easy. Unlike other financiers who net settle payments, we pay you in full, then separately charge the appropriate fee.</p>
+                                            <p>We guarantee payment on all approved patients.</p>
+                                            <span class="r-btn" (click)="esett=!esett">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>STOCK ART</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!estock; else eStock" class="info-tit">
+                                        <p>Access before and after "stock art" images of dental ...</p>
+                                        <span class="r-btn" (click)="estock=!estock">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eStock>
+                                        <div class="info">
+                                            <p>Access before and after "stock art" images of dental procedures classified and searchable by description, ADA item code, type, category, product and brand.</p>
+                                            <p>Practices can also upload any of their own before and after image files for future access when creating treatment plans.</p>
+                                            <span class="r-btn" (click)="estock=!estock">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>SUPPLIER DIRECTORY</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!esupp; else eSupp" class="info-tit">
+                                        <p>Access the portal to claim your payment. Ack ...</p>
+                                        <span class="r-btn" (click)="esupp=!esupp">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eSupp>
+                                        <div class="info">
+                                            <p>Access the portal to claim your payment. Acknowledge payment with the patient via either an SMS* or form. Once acknowledged and authorised, settlement is scheduled for payment via DDR directly into your bank. Reconciliation is made easy. Unlike other financiers who net settle payments, we pay you in full, then separately charge the appropriate fee.</p>
+                                            <span class="r-btn" (click)="esupp=!esupp">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>TEMPLATES</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!etemp; else eTemp" class="info-tit">
+                                        <p>Faster than any PMS in the market and much ...</p>
+                                        <span class="r-btn" (click)="etemp=!etemp">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #eTemp>
+                                        <div class="info">
+                                            <p>Faster than any PMS in the market and much more effective at converting patients to treatment than that "tired old black and white treatment plan…". We have created 100's of <b>pre-made templates</b> for popular procedures and brands.</p>
+                                            <p>With just one click, get access to templated treatment offers that include price, practice documentation, informed consent material, before/after images, marketing materials, personalised messaging, and more. Use templates as provide or customise and define your own.</p>
+                                            <span class="r-btn" (click)="etemp=!etemp">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- secondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecondsecond -->
+                <div class="table tbl-pat">
+                    <div class="tab-head">
+                        <h4>Patients</h4>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>APPOINTMENTS</b></span>
+                                </div>
+                                <div class="newsd"><span class="vert">NEW FEATURE</span></div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!papp; else pApp" class="info-tit">
+                                        <p>The ability to <b>request an appointment</b> is possible ...</p>
+                                        <span class="r-btn" (click)="papp=!papp">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pApp>
+                                        <div class="info">
+                                            <p>The ability to <b>request an appointment</b> is possible via multiple workflows, including confirmation of treatment, social media and email campaigns, landing pages, Practice webpage and any marketing material produced by the Practice.</p>
+                                            <p>Schedule appointments effortlessly with limited keystrokes. Personalise all aspects of user experience, including the look and feel of appointment page, cancellation policy, staff availability, hours worked, type of procedures offered, and time required. Patients receive email & SMS* confirmation on request, proposed booking and reminders before attending the Practice.</p>
+                                            <p>You can configure a cancellation policy to suit the Practice's requirements, including terms and conditions, notification period, and the fee charged. The Patient can manage appointment request 24/7/365 with an interactive and personalise appointment page.</p>
+                                            <label class="newlab">*Excludes SMS charges</label>
+                                            <span class="r-btn" (click)="papp=!papp">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon class="new">close</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit ">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>CHAIRSIDE ENGAGEMENT</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pcha; else pCha" class="info-tit">
+                                        <p>Engage and educate patients whilst in the chair ...</p>
+                                        <span class="r-btn" (click)="pcha=!pcha">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pCha>
+                                        <div class="info">
+                                            <p>Engage and educate patients whilst in the chair on proposed treatment and options available. Treatment can be presented securely to your patients using a tablet or Practice PC.</p>
+                                            <p>Practitioners and other team members can replace 'paper treatment plans' with digital versions to review and</p>
+                                            <span class="r-btn" (click)="pcha=!pcha">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>DASHBOARD</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pdash; else pDash" class="info-tit">
+                                        <p>Track results with real time dashboards and watch ...</p>
+                                        <span class="r-btn" (click)="pdash=!pdash">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pDash>
+                                        <div class="info">
+                                            <p>Track results with real time dashboards and watch the patients pour through the door. Get comprehensive real-life reports and data to see what works with your patients.</p>
+                                            <p>Access your practice and patient information 24/7/365</p>
+                                            <span class="r-btn" (click)="pdash=!pdash">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>DATA IMPORT</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pdata; else pData" class="info-tit">
+                                        <p>We work with all PMS systems - Save duplication of ...</p>
+                                        <span class="r-btn" (click)="pdata=!pdata">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pData>
+                                        <div class="info">
+                                            <p>We work with all PMS systems - Save duplication of data entry. Export your patient data, and we provide the ability to import it into our platform. </p>
+                                            <p><b><i>No data limit</i></b></p>
+                                            <span class="r-btn" (click)="pdata=!pdata">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>HEALTH HISTORY</b></span>
+                                </div>
+                                <div class="newsd"><span class="vert">NEW FEATURE</span></div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pnewf; else pNewf" class="info-tit">
+                                        <p>Do away with manual forms that are hard to read ...</p>
+                                        <span class="r-btn" (click)="pnewf=!pnewf">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pNewf>
+                                        <div class="info">
+                                            <p>Do away with manual forms that are hard to read and get outdated quickly. Invite your patients via email and SMS* to complete online health history. A fun and interactive survey that patients can complete while waiting for treatment or before attending the practice.</p>
+                                            <p>Captures Illnesses, allergies, drugs taken, contact details and overall dental health. <b>Quickly identify key issues</b> before the patient even leans back in the chair.</p>
+                                            <span class="r-btn" (click)="pnewf=!pnewf">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon class="new">close</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>RE-ENGAGMENT</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!preee; else pReee" class="info-tit">
+                                        <p>Your patient database old and out of date? ...</p>
+                                        <span class="r-btn" (click)="preee=!preee">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pReee>
+                                        <div class="info">
+                                            <p>Your patient database old and out of date? Missing key data such as mobile or email addresses?</p>
+                                            <p>We provide a patient re-engagement feature that will personalise an offer to your patients to update key data such as mobile, email, addresses etc. </p>
+                                            <p>All branded and personalised to your via either Email & SMS*</p>
+                                            <span class="r-btn" (click)="preee=!preee">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>PROFILES</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pprof; else pProf" class="info-tit">
+                                        <p>Each patient profile in the platform contains ...</p>
+                                        <span class="r-btn" (click)="pprof=!pprof">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pProf>
+                                        <div class="info">
+                                            <p>Each patient profile in the platform contains everything needed to manage patients and a whole lot more. Store all patient information in one secure location. View the most critical information at a glance: personal info, general and medical alerts, the list of the patient's past and future appointments etc.</p>
+                                            <p>Access various sections relating to the patient's file, such as detailed personal information, recalls, imaging, clinical notes, etc. Patient documents (Images, Videos, Correspondence etc.) can also be uploaded for easy access when presenting treatment or shared automatically via the patient portal (see Patient Portal).</p>
+                                            <span class="r-btn" (click)="pprof=!pprof">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit ">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>PORTAL</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!pport; else pPort" class="info-tit">
+                                        <p>Provide patients access to your very own online ...</p>
+                                        <span class="r-btn" (click)="pport=!pport">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #pPort>
+                                        <div class="info">
+                                            <p>Provide patients access to your very own online portal, allowing them to access proposed treatment, update contact details, and advise you on their health changes. Branded and personalised to your Practice providing a 24/7/365 secure self-service environment</p>
+                                            <p>Features Include:</p>
+                                            <ul>
+                                                <li>View and update personal profile, including contact details</li>
+                                                <li>View all current and past treatment presented</li>
+                                                <li>View and update health history</li>
+                                                <li>Access shared Patient Documents (images, videos, correspondence etc.) shared by the Practice</li>
+                                                <li>View Practice contact information, social media links and office hours</li>
+                                                <li>Access to 24/7 chatbot to answer any patient portal queries</li>
+                                                <li>Access the platform via Facebook & Google account credentials</li>
+                                            </ul>
+                                            <span class="r-btn" (click)="pport=!pport">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <span class="limit new">Limited</span>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table tbl-mak">
+                    <div class="tab-head">
+                        <h4>Marketing</h4>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>BRANDING</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!mbrand; else mBrand" class="info-tit">
+                                        <p>From emails, SMS's, landing pages, QR codes and ...</p>
+                                        <span class="r-btn" (click)="mbrand=!mbrand">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #mBrand>
+                                        <div class="info">
+                                            <p>From emails, SMS's, landing pages, QR codes and more, everything on the platform is about building your Practice brand. You can personalise everything from COLOURS, LOGO, IMAGERY, AND MORE! </p>
+                                            <p>Make it easy for your patients to recognise your Practice and build <b><i>YOUR OWN BRAND IDENTITY.</i></b></p>
+                                            <span class="r-btn" (click)="mbrand=!mbrand">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>EDM & SOCIAL</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!medm; else mEdm" class="info-tit">
+                                        <p>With just a few simple clicks, you can grow your ...</p>
+                                        <span class="r-btn" (click)="medm=!medm">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #mEdm>
+                                        <div class="info">
+                                            <p>With just a few simple clicks, you can grow your Practice using our unique direct marketing tools. Connect with patients via multiple channels simultaneously - email, SMS* and social media (Facebook, Twitter, Instagram and LinkedIn) all branded to your Practice.</p>
+                                            <p>Schedule <u>a whole year worth of campaigns in advance,</u> and rest easy knowing your ongoing marketing and social media presence is done. Templates predesigned for all the latest industry brands, products and services.</p>
+                                            <p>There is <u>no need to pay graphic designers</u> or content creators to build marketing material, as it is all done for you. With our prebuilt campaigns, you can have professionally designed and <b>peer-reviewed content in minutes.</b> New products, services, brands and content added regularly.</p>
+                                            <span class="r-btn" (click)="medm=!medm">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon class="new">close</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>LANDING PAGES</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!mland; else mLand" class="info-tit">
+                                        <p>Landing pages are used through the application ...</p>
+                                        <span class="r-btn" (click)="mland=!mland">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #mLand>
+                                        <div class="info">
+                                            <p>Landing pages are used through the application to enhance your Patients experience and engagement.</p>
+                                            <p>All landing pages are branding to the Practice and personalised to the Patient dynamically.</p>
+                                            <span class="r-btn" (click)="mland=!mland">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <span class="limit new">Limited</span>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table tbl-oth">
+                    <div class="tab-head">
+                        <h4>Other</h4>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>DATA STORAGE</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div class="info">
+                                        <p>No data limits</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>POS MATERIALS</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!opos; else oPos" class="info-tit">
+                                        <p>Access to marketing materials to help promote ...</p>
+                                        <span class="r-btn" (click)="opos=!opos">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #oPos>
+                                        <div class="info">
+                                            <p>Access to marketing materials to help promote going digital and explain to your patients the new journey and what to expect. This includes flyers, brochures, websites,</p>
+                                            <p>All landing pages are branding to the Practice and personalised to the Patient dynamically.</p>
+                                            <span class="r-btn" (click)="opos=!opos">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Standard</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$99</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstandmodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <span class="limit new">Limited</span>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>SUPPORT</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div class="info">
+                                        <p>Access support direct via phone, email and chatbot.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>STAFF TRAINING</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!ostaff; else oStaff" class="info-tit">
+                                        <p>We know learning something new can take time, ...</p>
+                                        <span class="r-btn" (click)="ostaff=!ostaff">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #oStaff>
+                                        <div class="info">
+                                            <p>We know learning something new can take time, which is why we have created the Smile Right Academy</p>
+                                            <p>What's the Academy? Think of it like a university, with a series of FREE courses that will develop your skills and maximise the benefits of the platform.</p>
+                                            <p>Access a fully committed team of experts ready to help you grow your practice.</p>
+                                            <span class="r-btn" (click)="ostaff=!ostaff">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <span class="limit new">Limited</span>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-tr latest">
+                            <div class="tab-td tab-tit">
+                                <div class="td-con">
+                                    <span class="td-tit"><b>USERS, ACCESS, & UPDATES</b></span>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-con">
+                                <div class="td-con content">
+                                    <div *ngIf="!ouser; else oUser" class="info-tit">
+                                        <p>Web based software platform. Securely access ...</p>
+                                        <span class="r-btn" (click)="ouser=!ouser">Read More <b>&#709;</b></span>
+                                    </div>
+                                    <ng-template #oUser>
+                                        <div class="info">
+                                            <p>Web based software platform. Securely access from your web browser via desktop, phone or tablet anywhere with an internet connection.</p>
+                                            <p>Unlimited team-members can be created.</p>
+                                            <p>Enterprise level SSL encrypted channels protect your data.</p>
+                                            <span class="r-btn" (click)="ouser=!ouser">Less <b>&#708;</b></span>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-pre smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-std smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Premium</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$299</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onpremodal()">Select</button></div>
+                                </div>
+                            </div>
+                            <div class="tab-td tab-str smcard">
+                                <div class="td-con">
+                                    <mat-icon>check</mat-icon>
+                                </div>
+                                <div class="td-con hidcar">
+                                    <div class="cr-f"><div class="cr-fb"><h4>Starter</h4><h6>*per month</h6></div></div>
+                                    <div class="cr-s"><h3>$0</h3></div>
+                                    <div class="cr-t"><button mat-stroked-button (click)="onstartmodal()">Select</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label>*Plus, merchant service fees (MSF) on any loans financed and SMS charges. Subject to our Fair Use Policy.</label><br>
+            <label>*Plus GST</label>
+        </div>
+    </section>
+    <section class="mid">
+        <div class="mid-main">
+            <div class="mid-l" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="mid-imgbox">
+                    <img class="img" src="/assets/img/campaign/price/Asset_2.png">
+                </div>
+            </div>
+            <div class="mid-r" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <div class="mid-txtbox">
+                    <h3>Want to subscribe for Standard or Premium packages and pay no monthly fees? </h3>
+                    <p>Yes, you are reading that right - FREE.<br>Click on the button below and we will show you how!</p>
+                    <button mat-stroked-button routerLink="/frees">Free? Show Me How <mat-icon>chevron_right</mat-icon></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,40 @@
+
+.premm{max-width:1200px; padding: 2rem;}
+.head>h3{text-align: center;}
+h3{font-size: 2rem; line-height: 1.5; color: #059DBF;}
+p{font-size: 1.3rem; line-height: 1.5; font-family: "Open Sans" !important; color: #474747;}
+button{
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: "Nunito", sans-serif !important;
+    margin: 0px auto 0;
+    width: 240px;
+    background-color:#f42938;
+    color: #fff;
+}
+.body>p{text-align: justify;}
+.imgbox, .img{width: 100%; max-width: 504px;}
+.txtbox{max-width:360px}
+.body-main{display: flex; padding: 1rem; justify-content: center;
+align-items: center;}
+.body-l, .body-r{display: flex; align-items: center; padding: 1rem; justify-content: center;}
+.item{display: flex; padding: 0.5rem;}
+.item>mat-icon{color:#059DBF}
+.item>p{margin: 0rem 0rem 0rem 2rem; margin-top: -4px;}
+.body-bot{display: flex; justify-content: center;align-items: center; padding: 1rem 0rem;}
+@media(max-width:1279px){
+    .premm{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media(max-width:1023px){
+    .body-main{
+        flex-direction: column;
+    }
+    .body-l, .body-r{width: 100%; padding: 1rem 0rem;}
+    .txtbox{max-width:100%}
+}

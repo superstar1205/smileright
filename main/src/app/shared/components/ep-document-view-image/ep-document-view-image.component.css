@@ -1,0 +1,23 @@
+.EP-view {
+  background-position: center;
+}
+
+::ng-deep app-ep-document-view-image.display-image {
+  background: #fff;
+}
+
+::ng-deep app-contact-input app-ep-document-view-image img.ep-view-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px !important;
+}
+
+
+.ep-view-img {
+  display: flex;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

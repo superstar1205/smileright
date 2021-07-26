@@ -1,0 +1,23 @@
+<div class="nav-container header clearfix" *ngIf="merchant">
+
+  <a class="partner-logo primary" [routerLink]="['/consumer', {outlets: {'consumerPageRoute': ['home']}}]" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}" title="Sapphire Dental">
+    <!-- <img src="/assets/img/logo.png" /> -->
+    {{merchant['TradingAs']}}
+  </a>
+  <div class="pull-right">
+
+    <p *ngIf="merchant['phones.Number']" class="topCta primary mobHide">Need help? Call us now on
+      <!-- <strong>{{phoneNumber| customPhone}}</strong> -->
+      <strong> {{merchant['phones.Number'] | customPhone}}</strong>
+    </p>
+    <p *ngIf="merchant['phones.Number']" class="topCta primary small mobShow"> Call on
+      <strong> {{merchant['phones.Number'] | customPhone}}</strong>
+    </p>
+    <p class="topCta primary small justIcon"><a href="tel: {{merchant['phones.Number'] | customPhone}}">
+        <mat-icon class="primary">phone</mat-icon>
+      </a>
+    </p>
+    <!-- <app-authentication-header [type]='partner' (isLogin)="isLoginEvent($event)"></app-authentication-header> -->
+  </div>
+</div>

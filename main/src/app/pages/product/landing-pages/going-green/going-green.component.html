@@ -1,0 +1,534 @@
+<div *ngIf="merchant">
+  <section class="landing-hero">
+    <div class="container">
+      <header class="landing-header flex container">
+        <h4 class="white" data-aos="fade-down">
+          {{ getPracticeName() }}
+        </h4>
+        <button (click)="contact()" class="btn-large btn-white-transparent btn-desktop" mat-raised-button
+          data-aos="fade-down">
+          Contact Us
+        </button>
+      </header>
+      <img src="/assets/img/going-green/hero-1920.jpg"
+        alt="" class="hero-bg" />
+    </div>
+  </section>
+
+  <section class="section-one">
+    <div class="container top-container">
+      <img
+        src="/assets/img/going-green/section-one-bg.png"
+        alt="" class="section-one-line" />
+      <header class="section-one-header">
+        <img
+          src="/assets/img/going-green/goinggreen-banner1.png"
+          alt="" class="section-one-title" data-aos="fade-down" data-aos-once="true" />
+      </header>
+      <div class="section-one-content text-center">
+        <img src="/assets/img/going-green/max1.png"
+          alt="" class="max1" data-aos="fade-right" data-aos-once="true" />
+        <p data-aos="fade-left" data-aos-once="true">
+          We are doing our bit for the environment, while making things easier
+          for our patients.
+        </p>
+        <p class="font-bold" data-aos="fade-right" data-aos-once="true">
+          <span class="text-green">Going Green</span> means we now send our
+          treatment plans digitally via email and SMS!
+        </p>
+        <p data-aos="fade-left" data-aos-once="true">
+          In the past, we printed our treatment plans on paper and would hand
+          them to you after seeing the dentist – but now we are digital.
+        </p>
+        <h2 class="text-green text-uppercase">Welcome to the digital age!</h2>
+        <p data-aos="fade-right" data-aos-once="true">
+          Sending treatment plans via SMS and email have the following benefits:
+        </p>
+        <ul class="list">
+          <li data-aos="fade-right" data-aos-delay="300" data-aos-once="true">
+            Personalised to your needs
+          </li>
+          <li data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+            Interactive (videos, images)
+          </li>
+          <li data-aos="fade-right" data-aos-delay="500" data-aos-once="true">
+            Informative (fact sheets)
+          </li>
+          <li data-aos="fade-right" data-aos-delay="600" data-aos-once="true">
+            Environmentally friendly - no more paper
+          </li>
+          <li data-aos="fade-right" data-aos-delay="700" data-aos-once="true">
+            COVID friendly - no physical contact
+          </li>
+          <li data-aos="fade-right" data-aos-delay="800" data-aos-once="true">
+            Plus, much more...
+          </li>
+        </ul>
+        <p data-aos="fade-left" data-aos-once="true">
+          Best of all, you get to communicate with us when it suits using your
+          phone, tablet, or PC, via your digital treatment plan!
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="container booking-cta">
+      <div class="container text-center">
+        <p class="white rm-mt">Thinking about your next visit?</p>
+        <button class="btn-large btn-white-transparent" mat-raised-button (click)="appointmentRequest()">
+          Book an appointment
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-two">
+    <div class="container">
+      <img
+        src="/assets/img/going-green/how-it-works.jpg"
+        alt="" class="section-two-bg" />
+      <img
+        src="/assets/img/going-green/section-two-line.png"
+        alt="" class="step-1-line" />
+      <div class="steps-container">
+        <div class="steps step-1 relative" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+          <h5 class="step-header">
+            <span class="num">1</span>
+            <span>RECEIVE</span>
+          </h5>
+          <p>
+            Once you have seen your dentist, you will be sent your proposed
+            treatment securely via email and SMS.
+          </p>
+          <p>
+            Click on the link provided, and it will take you to your own
+            personalised digital treatment plan. View as many times as you like
+            as this is available even after you have decided on the treatment.*
+          </p>
+        </div>
+        <div class="steps step-2 relative" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+          <img
+            src="/assets/img/going-green/section-two-line-1.png"
+            alt="" class="step-2-line" />
+          <h5 class="step-header">
+            <span class="num">2</span>
+            <span>REVIEW</span>
+          </h5>
+          <p>
+            Depending on the treatment proposed, you will see the following to
+            assist you in being better informed:
+          </p>
+          <ul class="list">
+            <li data-aos="fade-right" data-aos-delay="300">
+              Proposed treatment
+            </li>
+            <li data-aos="fade-right" data-aos-delay="400">
+              Before and After images
+            </li>
+            <li data-aos="fade-right" data-aos-delay="500">
+              Important information
+            </li>
+            <li data-aos="fade-right" data-aos-delay="600">Fact sheets</li>
+            <li data-aos="fade-right" data-aos-delay="700">
+              Instructions for use
+            </li>
+            <li data-aos="fade-right" data-aos-delay="800">Videos</li>
+          </ul>
+          <p>
+            Information is presented in such a way as to inform and educate
+            before you decide to proceed.
+          </p>
+        </div>
+
+        <div class="steps step-3 relative" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+          <img
+            src="/assets/img/going-green/section-three-line.png"
+            alt="" class="step-3-line" />
+          <h5 class="step-header">
+            <span class="num">3</span>
+            <span>DECIDE</span>
+          </h5>
+          <p>
+            When you are ready, let your dentist know how you wish to proceed.
+            Options include:
+          </p>
+          <ul class="list">
+            <li>Apply for a payment plan</li>
+            <li>Pay cash or card on the day.</li>
+            <li>Hold off for now</li>
+            <li>Request changes</li>
+            <li>Decline treatment</li>
+          </ul>
+        </div>
+
+        <div class="steps step-4 relative" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+          <img
+            src="/assets/img/going-green/section-two-line-2.png"
+            alt="" class="step-4-line" />
+          <img
+            src="/assets/img/going-green/section-two-line-2.png"
+            alt="" class="step-4-line-dup" />
+          <img
+            src="/assets/img/going-green/section-two-line-3.png"
+            alt="" class="step-4-line-1" />
+          <h5 class="step-header">
+            <span class="num">4</span>
+            <span>REQUEST</span>
+          </h5>
+          <p>
+            Once you have decided to proceed, you can request an appointment
+            online at a time that best suits you!
+          </p>
+          <small>*Past treatments may be accessed via our patient portal.</small>
+        </div>
+      </div>
+      <div class="section-footer text-center">
+        <h3>WHAT IS MY DIGITAL TREATMENT PLAN?</h3>
+        <button mat-raised-button (click)="watchVideo()" class="btn-video">Watch Video ></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-three">
+    <div class="section-three-container">
+      <div class="container text-center top-content">
+        <h2 class="heading-h2 text-blue" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">WE OFFER PAYMENT
+          PLANS!</h2>
+        <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true">
+          You've been asking for simple, painless solutions to help make dental
+          treatment more affordable, so we've partnered with Smile Right
+          Australia's leading dental finance company, bringing you some
+          easy-to-understand payment options for a wide range of procedures.
+        </p>
+        <p data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
+          From a simple filling to a full smile makeover, we now have payment
+          options to suit any treatment or budget.
+        </p>
+        <img
+          src="/assets/img/going-green/section-four-line.png"
+          alt="" class="step-4-line-2" />
+      </div>
+      <div class="container">
+        <div class="section-card">
+          <div class="column relative" data-aos="fade-down" data-aos-delay="600" data-aos-once="true">
+            <div class="img">
+              <img
+                src="/assets/img/going-green/payment.png"
+                alt="" />
+            </div>
+            <ul class="list -blue">
+              <li>From $100 to $10,000</li>
+              <li>No interest</li>
+              <li>No establishment fees or monthly charges</li>
+            </ul>
+          </div>
+          <div class="column relative" data-aos="fade-down" data-aos-delay="600" data-aos-once="true">
+            <div class="img">
+              <img
+                src="/assets/img/going-green/personal.png"
+                alt="" />
+            </div>
+            <ul class="list -red">
+              <li>From $2000 to $50,000</li>
+              <li>Low variable interest rates</li>
+              <li>Flexible repayments</li>
+              <li>Loan duration 3 to 5 years</li>
+            </ul>
+          </div>
+        </div>
+        <button class="section-button -blue" (click)="calculate()" mat-raised-button>
+          Calculate My Repayments
+        </button>
+      </div>
+
+      <div class="container mt-94">
+        <h4 class="heading-h2 -line">
+          <i></i>
+          <span class="text-red2">WHY WAIT?</span>
+          <i></i>
+        </h4>
+        <div class="section-columns">
+          <div class="section-column" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">
+            <div class="img">
+              <img
+                src="/assets/img/going-green/max2.png"
+                alt="" />
+              <span>1</span>
+            </div>
+            <div class="txt">
+              <h5>Choose your product</h5>
+              <p>
+                Choose the product right for you, and complete the the simple
+                and guided application process. It automatically makes the
+                required checks, and when finished, will give you feedback in 60
+                seconds.
+              </p>
+            </div>
+          </div>
+          <div class="section-column" data-aos="fade-down" data-aos-delay="400" data-aos-once="true">
+            <div class="img">
+              <img
+                src="/assets/img/going-green/max3.png"
+                alt="" />
+              <span>2</span>
+            </div>
+            <div class="txt">
+              <h5>No waiting, no hassle</h5>
+              <p>
+                Once approved, the practice is notified, and you are free to
+                commence treatment. Settlement of the funds occurs once the
+                procedure has been completed directly with the practice.
+                Hassle-free.
+              </p>
+            </div>
+          </div>
+          <div class="section-column" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
+            <div class="img">
+              <img
+                src="/assets/img/going-green/max4.png"
+                alt="" />
+              <span>3</span>
+            </div>
+            <div class="txt">
+              <h5>Smile and enjoy</h5>
+              <p>
+                Now you can continue with your treatment with confidence,
+                knowing Smile Right has taken the financial burden away.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="section-button -red2" (click)="findOut()" mat-raised-button>
+          Find Out More >
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-four">
+    <div class="container relative">
+      <img
+        src="/assets/img/going-green/section-footer-tree.png"
+        alt="" class="max-and-tree" />
+      <div class="section-columns relative">
+        <h4 class="white mt-0">FREQUENTLY ASKED QUESTIONS</h4>
+        <div class="section-column" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">
+          <p class="white">
+            <em>Haven’t had a consultation?</em> While we'd love to tell you how
+            much your treatment will cost for your next visit, the reality is
+            you will need to have a consultation so we can determine the best
+            course of action for your ideal smile. After your consultation, we
+            will send you your digital treatment plan.
+          </p>
+          <p class="white">
+            <em>Already had your consultation?</em> Great! Your digital
+            treatment plan should arrive shortly via a link at your email
+            address and mobile number on file.
+          </p>
+        </div>
+        <div class="section-column relative" data-aos="fade-down" data-aos-delay="400" data-aos-once="true">
+          <p class="white mb-0">
+            <em>Waiting and still no SMS or Email?</em> We are sorry to hear!
+            Whilst we try to get your digital treatment plan processed quickly,
+            delays sometimes occur. If you have not received it within the next
+            24 hours, get in touch with us, and we will confirm your details and
+            resend it. Remember to let us know if you change your mobile or
+            email address.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-five">
+    <div class="container">
+      <div class="mapouter">
+        <div class="gmap_canvas"></div>
+      </div>
+      <div class="mt text-center">
+
+        <p class="text-default">
+          Have Questions?<br />
+          We are here to help. Feel free to contact the practice at<br />
+          any time during our business hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="full-width clearfix booking-container footer-booking-desktop">
+    <mat-card class="booking-cta flex" [style.color]="contactColor" [style.background-color]="contactBackgroundColor">
+      <div class="full-width flex clearfix">
+        <div class="footer-logo inline pull-left">
+          <img *ngIf="merchantProfile" class="footer-img" [src]="merchantProfile" />
+        </div>
+
+        <div class="full-width">
+          <div class="row clearfix flex text-center full-width">
+            <div class="full-width">
+              <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+                *ngIf="merchant['TradingAs']">
+                {{ merchant["TradingAs"] }}
+              </p>
+
+              <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+                *ngIf="merchant['phones.Number']">
+                {{ merchant["phones.Number"] | customPhone }}
+              </p>
+
+              <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+                *ngIf="merchant['addresses.Calculated']">
+                {{ merchant["addresses.Calculated"] }}
+              </p>
+
+              <p class="small left-footer-text text-left rm-m mr full-width clearfix"
+                (click)="openLink(merchant['URL'])" [style.color]="contactColor" *ngIf="merchant['URL']">
+                {{ cleanURL(merchant["URL"]) }}
+              </p>
+            </div>
+            <div class="full-width text-right">
+              <div class="clearfix open-hours-container">
+
+                <button mat-raised-button color="" class="contact-us-button mr" (click)="contact()"
+                  matTooltip="Contact Us">
+                  Contact Us
+                </button>
+
+
+                <button mat-raised-button color="" class="open-hours-button mr " (click)="tradingHours()"
+                  matTooltip="Opening Hours">
+                  Opening Hours
+                </button>
+              </div>
+              <div class="text-right icon-social-media clearfix" *ngIf="
+                  merchant['Facebook'] ||
+                  merchant['URL'] ||
+                  merchant['Twitter'] ||
+                  merchant['Tumblr'] ||
+                  merchant['Vimeo'] ||
+                  merchant['YouTube'] ||
+                  merchant['Instagram'] ||
+                  merchant['Pinterest'] ||
+                  merchant['LinkedIn']
+                ">
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Facebook']" class="mr fab fa-facebook-f"
+                  (click)="openLink(merchant['Facebook'])" aria-label="Facebook" matTooltip="Facebook">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Twitter']" class="mr fab fa-twitter"
+                  (click)="openLink(merchant['Twitter'])" aria-label="Twitter" matTooltip="Twitter">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Tumblr']" class="mr fab fa-tumblr"
+                  (click)="openLink(merchant['Tumblr'])" aria-label="Tumblr" matTooltip="Tumblr">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Vimeo']" class="mr fab fa-vimeo-v"
+                  (click)="openLink(merchant['Vimeo'])" aria-label="Vimeo" matTooltip="Vimeo">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['YouTube']" class="mr fab fa-youtube"
+                  (click)="openLink(merchant['YouTube'])" aria-label="YouTube" matTooltip="YouTube">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Instagram']" class="mr fab fa-instagram"
+                  (click)="openLink(merchant['Instagram'])" aria-label="Instagram" matTooltip="Instagram">
+                </mat-icon>
+
+                <mat-icon [style.color]="contactColor" *ngIf="merchant['Pinterest']" class="mr fab fa-pinterest-p"
+                  (click)="openLink(merchant['Pinterest'])" aria-label="Pinterest" matTooltip="Pinterest">
+                </mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="clearfix"></p>
+    </mat-card>
+  </div>
+
+
+  <div class="full-width clearfix booking-container footer-booking-mobile">
+    <mat-card class="booking-cta flex" [style.color]="contactColor" [style.background-color]="contactBackgroundColor">
+      <div class="full-width  clearfix">
+        <div class=" text-center  mt  clearfix full-width ">
+          <img *ngIf="merchantProfile" class="footer-img-mobile" [src]="merchantProfile" />
+        </div>
+
+        <div class="row clearfix  text-center full-width">
+
+          <div class="row clearfix  text-center full-width">
+            <h2 class="text-green text-uppercase rm-mb " [style.color]="contactColor" *ngIf="merchant['TradingAs']">
+              {{ merchant["TradingAs"] }}</h2>
+
+            <p class="small left-footer-text  rm-m mr full-width clearfix" [style.color]="contactColor"
+              *ngIf="merchant['phones.Number']">
+              {{ merchant["phones.Number"] | customPhone }}
+            </p>
+
+            <p class="small left-footer-text  rm-m mr full-width clearfix" [style.color]="contactColor"
+              *ngIf="merchant['addresses.Calculated']">
+              {{ merchant["addresses.Calculated"] }}
+            </p>
+
+            <p class="small left-footer-text  rm-m mr full-width clearfix" (click)="openLink(merchant['URL'])"
+              [style.color]="contactColor" *ngIf="merchant['URL']">
+              {{ cleanURL(merchant["URL"]) }}
+            </p>
+          </div>
+          <div class="full-width clearfix text-center mt">
+
+            <button mat-raised-button color="" class="mr " (click)="contact()" matTooltip="Contact Us">
+              Contact Us
+            </button>
+
+
+            <button mat-raised-button color=""  (click)="tradingHours()" matTooltip="Opening Hours">
+              Opening Hours
+            </button>
+          </div>
+          <div class="full-width clearfix text-center mt" *ngIf="
+                  merchant['Facebook'] ||
+                  merchant['URL'] ||
+                  merchant['Twitter'] ||
+                  merchant['Tumblr'] ||
+                  merchant['Vimeo'] ||
+                  merchant['YouTube'] ||
+                  merchant['Instagram'] ||
+                  merchant['Pinterest'] ||
+                  merchant['LinkedIn']
+                ">
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Facebook']" class="mr fab fa-facebook-f"
+              (click)="openLink(merchant['Facebook'])" aria-label="Facebook" matTooltip="Facebook">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Twitter']" class="mr fab fa-twitter"
+              (click)="openLink(merchant['Twitter'])" aria-label="Twitter" matTooltip="Twitter">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Tumblr']" class="mr fab fa-tumblr"
+              (click)="openLink(merchant['Tumblr'])" aria-label="Tumblr" matTooltip="Tumblr">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Vimeo']" class="mr fab fa-vimeo-v"
+              (click)="openLink(merchant['Vimeo'])" aria-label="Vimeo" matTooltip="Vimeo">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['YouTube']" class="mr fab fa-youtube"
+              (click)="openLink(merchant['YouTube'])" aria-label="YouTube" matTooltip="YouTube">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Instagram']" class="mr fab fa-instagram"
+              (click)="openLink(merchant['Instagram'])" aria-label="Instagram" matTooltip="Instagram">
+            </mat-icon>
+
+            <mat-icon [style.color]="contactColor" *ngIf="merchant['Pinterest']" class="mr fab fa-pinterest-p"
+              (click)="openLink(merchant['Pinterest'])" aria-label="Pinterest" matTooltip="Pinterest">
+            </mat-icon>
+          </div>
+        </div>
+      </div>
+      <p class="clearfix"></p>
+    </mat-card>
+  </div>
+</div>

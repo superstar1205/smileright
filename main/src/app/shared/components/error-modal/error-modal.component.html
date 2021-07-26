@@ -1,0 +1,93 @@
+<ng-container *ngIf="error.title!='510'">
+  <div class="card-header error-gradient clearfix inModal">
+    <div class="row clearfix">
+      <button class="btn-close btn-clear mat-button white pull-right" (click)="close()" mat-dialog-close>
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class="row titleArea clearfix full-width">
+        <mat-icon class="fas fa-exclamation-triangle pull-left"></mat-icon>
+        <h2 class="summary-header rm-m white">
+          Something's gone wrong!
+          <span class="subLabel" *ngIf="error.title">Error code: {{error.title}}</span>
+          <!-- <span class="subLabel">Error code: ECONNERROR</span> -->
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <img src="/assets/img/error-modal-banner.png" class="bannerImg" />
+
+  <mat-dialog-content class="text-center">
+    <div class="errorContent">
+      <p class="lead">We seem to be experiencing some technical difficulties with our website at this time.</p>
+      <p>Please try again later, or if you wish to discuss this issue with our technical team feel free to call
+        <strong>{{ settings.contactPhone | customPhone }}</strong> during office hours.</p>
+    </div>
+
+    <div class="greyBar" *ngIf="error.content">
+      <p class="errorContent small" [innerHTML]="error.content | safeHtml">
+      </p>
+    </div>
+
+
+    <hr class="small" *ngIf="!error.content">
+    <div class="drop-buttons text-center full-width">
+      <button mat-raised-button color="primary" class="" (click)="contactUs()" *ngIf="hidden">Contact us</button>
+      <button mat-raised-button *ngIf="!error.link" color="accent" class="inline" (click)="close()" mat-dialog-close>Close </button>
+      <button mat-raised-button *ngIf="error.link" color="accent" class="inline" (click)="openLink()">Ok </button>
+    </div>
+  </mat-dialog-content>
+</ng-container>
+
+
+<ng-container *ngIf="error.title!='510'">
+
+
+
+</ng-container>
+
+
+
+<!-- if offline 510 -->
+<ng-container *ngIf="error.title=='510'">
+  <div class="card-header error-gradient clearfix inModal">
+    <div class="row clearfix">
+      <button class="btn-close btn-clear mat-button white pull-right" (click)="close()" mat-dialog-close>
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class="row titleArea clearfix full-width">
+        <mat-icon class="fas fa-exclamation-triangle pull-left"></mat-icon>
+        <h2 class="summary-header rm-m white">
+          We're just away at the moment!
+          <!-- <span class="subLabel" *ngIf="error.title">Error code: {{error.title}}</span> -->
+          <!-- <span class="subLabel">Error code: ECONNERROR</span> -->
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <img src="/assets/img/error-modal-banner.png" class="bannerImg" />
+
+  <mat-dialog-content class="text-center">
+    <div class="errorContent">
+      <p class="errorContent lead" [innerHTML]="error.content | safeHtml">
+      <p>Please try again later, or if you wish to discuss this issue with our technical team feel free to call
+        <strong>{{ settings.contactPhone | customPhone }}</strong> during office hours.</p>
+    </div>
+
+
+    <hr class="small" *ngIf="!error.content">
+    <div class="drop-buttons text-center full-width">
+      <!-- <button mat-raised-button color="primary" class="" (click)="contactUs()" *ngIf="hidden">Contact us</button> -->
+      <button mat-raised-button *ngIf="!error.link" color="accent" class="inline" (click)="close()">Close </button>
+      <button mat-raised-button *ngIf="error.link" color="accent" class="inline" (click)="openLink()">Ok </button>
+    </div>
+  </mat-dialog-content>
+</ng-container>
+
+
+<ng-container *ngIf="error.title!='510'">
+
+
+  
+</ng-container>

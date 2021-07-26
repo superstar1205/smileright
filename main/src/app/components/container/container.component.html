@@ -1,0 +1,30 @@
+<h1 class="sr-title text-center rm-mb"> Index </h1>
+<p class="text-center"> click on link to open the landing page in new tab, you can find the path of the component in
+  <strong>BOLD </strong>text</p>
+<p class="text-center"> You can use <a target='_blank' href="/product/(page:main/suresmile) ">Sure smile</a> as
+  Reference</p>
+<p class="text-center">Put your images in <strong>src\assets\img\campaign </strong> , create a new folder in that path
+  for each component </p>
+
+<div class="full-width  clearfix flex  text-center  mt   ">
+  <div class="full-width ml mr clearfix flex text-center">
+    <mat-form-field class="full-width " appearance="outline">
+      <mat-label>Filter the result by label,code Or path</mat-label>
+      <input name="mobile" matInput placeholder="Filter the result by label,code Or path" [(ngModel)]="filter" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="full-width ml mr text-center clearfix mb">
+
+  <div class="full-width clearfix  margin-div flex"
+    *ngFor="let c of codes | OrderArrayObject: 'label'  | FilterArrayMultipleContainValue: ['label','code','path']: filter  ">
+
+    <a target='_blank' class="full-width text-right" href="/product/(page:main/{{c.code}}) ">{{c.label}}</a>
+
+    <a target='_blank' class="ml full-width  text-left" href="/product/(page:main/{{c.code}}) "> <strong class="">
+        {{c.path}}</strong></a>
+
+  </div>
+</div>
+<div class="full-width mb clearfix"></div>

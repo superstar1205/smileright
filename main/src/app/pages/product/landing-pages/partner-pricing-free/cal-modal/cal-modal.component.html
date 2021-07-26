@@ -1,0 +1,118 @@
+<div class="calm">
+    <div class="body-main">
+        <div class="body-l">
+            <div class="body-lt">
+                <h3>What is your target for free access?</h3>
+                <p>Present a minimum number of treatment plans per month digitally using the platform, and we will automatically wave your monthly subscription fee*</p>
+                <p>Using the simple calculator below, choose your plan, answer a few questions, and we will tell you your target.</p>
+                <h4>Choose Your Plan</h4>
+                <div class="tselbox">
+                    <select class="top-sel" (change)="select($event)">
+                        <option value="123">Premium</option>
+                        <option value="123">Standard</option>
+                        <option value="321">Starter</option>
+                        
+                    </select>
+                    <span class="top-sel-ar"><i class='fas'>&#xf107;</i></span>
+                </div>
+            </div>
+            <div class="lt-main">
+                <ng-container  *ngIf="selected == 123;">
+                    <div class="item">
+                        <div class="item-l">
+                            <h4>How many dental practitioners work at your practice?</h4>
+                            <input type="number" min="1" max="15" (change)="onChangeDent($event)" value={{dent_num}}>
+                        </div>
+                        <div class="item-r">
+                            <mat-slider tickInterval="1000" step="1" min="1" max="15" aria-label="units" value={{dent_num}} (input)="onInputDent($event)"></mat-slider>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-l">
+                            <h4>Day per week they work?</h4>
+                            <input type="number" min="1" max="7" (change)="onChangeDay($event)" value={{day_num}}>
+                        </div>
+                        <div class="item-r">
+                            <mat-slider tickInterval="1000" step="1" min="1" max="7" aria-label="units" value={{day_num}} (input)="onInputDay($event)"></mat-slider>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-l sed">
+                            <h4>Number of patients each practitioner sees per day?</h4>
+                            <input type="number" min="1" max="50" (change)="onChangePat($event)" value={{pat_num}}>
+                        </div>
+                        <div class="item-r">
+                            <div class="lsl">
+                                <mat-slider tickInterval="1000" step="1" min="1" max="50" aria-label="units" value={{pat_num}} (input)="onInputPat($event)"></mat-slider><br>
+                                <label>Most practitioners on average see 10-12 patients per day</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-l">
+                            <h4>How many treatment plans does each practitioner present each day?</h4>
+                            <input type="number" min="1" max="20" (change)="onChangePlan($event)" value={{plan_num}}>
+                        </div>
+                        <div class="item-r">
+                            <div class="lsl">
+                                <mat-slider tickInterval="1000" step="1" min="1" max="20" aria-label="units" value={{plan_num}} (input)="onInputPlan($event)"></mat-slider><br>
+                                <label>Most practitioners on average present 3-4 treatment plans per day.</label>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container  *ngIf="selected == 321;">
+                    <div class="start-se">
+                        <div class="st-t">
+                            <h4>Smile! You already qualify - our starter plan is free!</h4>
+                        </div>
+                        <div class="imgbox">
+                            <img class="img" src="/assets/img/campaign/price/Asset_12.png">
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="body-r">
+            <div class="rt">
+                <h2>RESULTS</h2>
+            </div>
+            <div class="chart-g">
+                <div class="chart-body">
+                    <ngx-charts-pie-chart
+                    [view]="view"
+                    [results]="data"
+                    [gradient]="gradient"
+                    [legend]="showLegend"
+                    [legendPosition]="legendPosition"
+                    [labels]="showLabels"
+                    [scheme]="colorScheme"
+                    [doughnut]="isDoughnut"
+                    >
+                    </ngx-charts-pie-chart>
+                    <div class="chart-ru">{{your}}</div>
+                </div>
+                
+            </div>
+            <div class="chart-txtbox">
+                <div class="txtbox-r">
+                    <p>You’re seeing on average</p>
+                    <span>{{pat}}</span><br>
+                    <p>patients<br>per month</p>
+                </div>
+                <div class="txtbox-l">
+                    <p>You present on average</p>
+                    <span>{{treat}}</span><br>
+                    <p>treatment plans<br>per month</p>
+                </div>
+            </div>
+            <hr>
+            <div class="chart-bot">
+                <p>Your target is</p>
+                <span>{{your}}</span>
+                <p>treatment plans communicated via the platform per month.</p>
+                <p>Reach this target, and your subscription is automatically free for that month.</p>
+            </div>           
+        </div>
+    </div>
+</div>

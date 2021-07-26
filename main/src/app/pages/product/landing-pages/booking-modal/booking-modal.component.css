@@ -1,0 +1,29 @@
+.modal-heading {
+	margin: -24px -24px 20px;
+  }
+  
+  .header-title-product {
+	color: #fff;
+	padding: 24px;
+  }
+
+  .btn-close {
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	color: #fff;
+	width: auto;
+	min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+
+
+	mat-dialog-content .row.flex {
+		flex-wrap: wrap;
+	}
+
+	.row.flex mat-form-field.full-width {
+		margin-right: 0;
+	}
+  }

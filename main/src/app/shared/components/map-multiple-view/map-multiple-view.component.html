@@ -1,0 +1,198 @@
+<div class="full-width clearfix row">
+  <h1 class="dataHeader">
+    <!-- {{"ContractTitle"}} -->
+    {{title}}
+    <!-- <span class="badge" countUp *ngIf="positions && positions.length>0  " [endVal]="positions |  FilterArrayMultipleValue: filterMultiAttributes :  filterMultiValues  |  FilterArrayMultipleContainValue : filterMultiContainAttributes :  filterMultiContainValue  |  WithoutArrayMultipleValue  : filterWithoutMultiAttributes :  filterWithoutMultiValue | lengthOfArray"></span> -->
+
+  </h1>
+ 
+</div>
+
+<div class="row clearfix full-width   rel" *ngIf="positions && positions.length>0  ">
+  <div class="pull-right closeModal">
+    <button class="btn-close btn-clear mat-button" *ngIf="isModal==true" (click)="closeEvent()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+
+  <mat-card class="rm-p">
+      <div class="colour-stripe"></div>
+    <div class="row clearfix padded">
+       <p class="pull-left two-thrd-width small mt">
+    {{description}}. <span *ngIf="practiceAddress || profileAddress" class="text-center">
+
+        Select extra zoom options from the Action menu.
+    </span>
+    
+  </p>
+        <button mat-raised-button [matMenuTriggerFor]="actionsMenu" class="actionMenuToggle pull-right mt mb">
+            Actions <mat-icon>more_vert</mat-icon>
+          </button>
+  
+          <mat-menu #actionsMenu="matMenu">
+
+            <button mat-menu-item (click)="changeToCurrentPractice()" *ngIf="practiceAddress" type="button">
+                <mat-icon class="fas fa-landmark"></mat-icon> 
+                <span>{{"My Practice Address"}}</span>
+              </button>
+          
+              <button mat-menu-item (click)="changeToCurrentProfil()" *ngIf="profileAddress" type="button">
+                <mat-icon class="fas fa-home"></mat-icon> 
+                <span>{{"My Address"}}</span>
+              </button>
+          
+              <button mat-menu-item (click)="changeToCurrent()" type="button">
+                <mat-icon>location_on</mat-icon> 
+                <span>{{"My Current Location"}}</span>
+              </button>
+         
+  
+        </mat-menu>
+    </div>
+
+    <agm-map class="mapDisplay mb " [latitude]="toNumber(center.Latitude || positions[0].Latitude)" [longitude]="toNumber(center.Longitude || positions[0].Longitude)"
+      [zoom]="zoom" [styles]="styles">
+
+
+      <agm-marker *ngFor="let position of positions |  FilterArrayMultipleValue: filterMultiAttributes :  filterMultiValues  |  FilterArrayMultipleContainValue : filterMultiContainAttributes :  filterMultiContainValue  |  WithoutArrayMultipleValue  : filterWithoutMultiAttributes :  filterWithoutMultiValue"
+        [iconUrl]="position?.item?.icon || defaultIcon" [latitude]="toNumber(position.Latitude)" [longitude]="toNumber(position.Longitude)"
+        [markerDraggable]="false" (markerClick)="selectItem(position.item)">
+
+        <agm-snazzy-info-window [isOpen]="position.isOpen || false" [maxWidth]="600" [maxHeight]="300"
+          [closeWhenOthersOpen]="false">
+          <ng-template>
+
+
+
+            <p class="text-center" *ngIf="position && position.label && !position.item['markerTitle'] ">
+              <strong> {{position['label'] }} </strong></p>
+
+
+            <p class="text-center" *ngIf="position && position.item && position.item[markerDescriptionAttribute] && !position.item['markerTitle'] ">
+              {{
+              position.item[markerDescriptionAttribute] }}</p>
+
+          </ng-template>
+        </agm-snazzy-info-window>
+
+      </agm-marker>
+
+      <agm-marker *ngIf="practiceAddress" [iconUrl]="practiceMarker" [latitude]="toNumber(practiceAddress.Latitude)"
+        [longitude]="toNumber(practiceAddress.Longitude)" [markerDraggable]="false" (markerClick)="selectItem(practiceAddress.item)">
+
+        <agm-snazzy-info-window [isOpen]="practiceAddress.isOpen || false" [maxWidth]="600" [maxHeight]="300"
+          [closeWhenOthersOpen]="false">
+          <ng-template>
+
+
+            <p class="text-center" *ngIf="practiceAddress && practiceAddress.item && practiceAddress.item['markerTitle']"><strong>
+                {{ practiceAddress.item['markerTitle'] }}</strong> </p>
+
+            <p class="text-center" *ngIf="practiceAddress && practiceAddress.item && practiceAddress.item['markerTitle']">
+              {{ practiceAddress.item[markerDescriptionAttribute] }} </p>
+
+
+          </ng-template>
+        </agm-snazzy-info-window>
+
+      </agm-marker>
+
+      <agm-marker *ngIf="profileAddress" [iconUrl]="profileMarker" [latitude]="toNumber(profileAddress.Latitude)"
+        [longitude]="toNumber(profileAddress.Longitude)" [markerDraggable]="false" (markerClick)="selectItem(profileAddress.item)">
+
+        <agm-snazzy-info-window [isOpen]="profileAddress.isOpen || false" [maxWidth]="600" [maxHeight]="300"
+          [closeWhenOthersOpen]="false">
+          <ng-template>
+
+
+            <p class="text-center" *ngIf="profileAddress && profileAddress.item && profileAddress.item['markerTitle']"><strong>
+                {{ profileAddress.item['markerTitle'] }}</strong> </p>
+
+            <p class="text-center" *ngIf="profileAddress && profileAddress.item && profileAddress.item['markerTitle']">
+              {{ profileAddress.item[markerDescriptionAttribute] }} </p>
+
+
+          </ng-template>
+        </agm-snazzy-info-window>
+
+      </agm-marker>
+
+      <agm-marker *ngIf="currentPossition" [iconUrl]="userMarker" [latitude]="toNumber(currentPossition.Latitude)"
+        [longitude]="toNumber(currentPossition.Longitude)" [markerDraggable]="false" (markerClick)="selectItem(currentPossition.item)">
+
+        <agm-snazzy-info-window [isOpen]="true" [maxWidth]="300" [maxHeight]="300" [closeWhenOthersOpen]="false">
+          <ng-template>
+
+
+            <p class="text-center"><strong>
+                Your current location</strong> </p>
+
+
+
+
+          </ng-template>
+        </agm-snazzy-info-window>
+
+      </agm-marker>
+
+
+    </agm-map>
+
+
+
+  </mat-card>
+
+  <div class="row clearfix" *ngIf="currentPossition">
+
+      <mat-list>
+        <h3>All pratices near to you</h3>
+        <div class="row clearfix">
+          <p class="qtr-width">Choose the distance radius</p>
+          <div class="row clearfix">
+            <mat-form-field class="qtr-width">
+                <mat-select [(ngModel)]="selectedRadius" (ngModelChange)="onSelectedChange($event)">
+                  <mat-option value="5">5 kms</mat-option>
+                  <mat-option value="10">10 kms</mat-option>
+                  <mat-option value="20">20 kms</mat-option>
+                  <mat-option value="30">30 kms</mat-option>
+                  <mat-option value="40">40 kms</mat-option>
+                  <mat-option value="50">50 kms</mat-option>
+                </mat-select>
+            </mat-form-field>
+          </div>
+
+        </div>
+        <div class="row clearfix">
+          <div class="thrd-width">
+              <mat-list-item *ngFor="let item of nearList">
+                  <mat-icon mat-list-icon>store</mat-icon>
+                  <h4 mat-line>{{item.label}}</h4>
+                  <button mat-icon-button (click)="viewMerchant(item['ID'])"><mat-icon>visibility</mat-icon></button>
+                </mat-list-item>
+          </div>
+
+        </div>
+
+      </mat-list>
+
+  </div>
+  
+  <!-- <div class="full-width clearfix row text-center   ">
+
+    <button mat-raised-button color="accent" (click)="changeToCurrentPractice()" *ngIf="practiceAddress" type="button">
+      <mat-icon>location_on</mat-icon>
+      <span>{{"My Practice Address"}}</span>
+    </button>
+
+    <button mat-raised-button color="accent" (click)="changeToCurrentProfil()" *ngIf="profileAddress" type="button">
+      <mat-icon>location_on</mat-icon>
+      <span>{{"My Address"}}</span>
+    </button>
+
+    <button mat-raised-button color="accent" (click)="changeToCurrent()" type="button">
+      <mat-icon>location_on</mat-icon>
+      <span>{{"My Current Location"}}</span>
+    </button>
+  </div> -->
+
+</div>

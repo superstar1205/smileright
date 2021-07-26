@@ -1,0 +1,217 @@
+::ng-deep app-simple404 {
+    background: rgb(0,138,203);
+    background: -moz-linear-gradient(90deg, rgba(0,138,203,1) 0%, rgba(27,139,221,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0,138,203,1) 0%, rgba(27,139,221,1) 100%);
+    background: linear-gradient(90deg, rgba(0,138,203,1) 0%, rgba(27,139,221,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008acb",endColorstr="#1b8bdd",GradientType=1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+h1 {
+    font-size: 1.6em;
+    margin-top: 1rem;
+}
+.noContent {
+    max-width: 800px;
+    margin: 2% auto 0;
+    position: relative;
+    z-index: 2;
+}
+.imageBg {
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+.character {
+    margin: 0 auto;
+    max-width: 400px;
+    display: block;
+}
+.button-row {
+    margin-bottom: -42px;
+    margin-top: 40px;
+}
+/* aeroplane */
+
+.backgroundColour {
+    width: auto;
+    height: 30vh;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    position: relative;
+    max-height: 350px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    max-height: 400px;
+    margin: 2% auto 0;
+    padding-top: 0;
+    position: absolute;
+    z-index: 99;
+    overflow: hidden;
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+/**
+ * Clouds
+ */
+ .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+
+  .cloud {
+    position: absolute;
+    top: 20%;
+    width: 300px;
+    right: 0;
+    opacity: 1;
+  }
+
+  .cloud.front {
+    z-index: 9;
+  }
+
+  .cloud.distant {
+    z-index: 1;
+  }
+
+  .cloud.background {
+    z-index: 1;
+  }
+
+  /*Cloud Sizing*/
+  .cloud.smaller {
+    margin-right: 400px;
+    width: 100px;
+    margin-top: 50px;
+  }
+
+  .cloud.small {
+    margin-right: 200px;
+    width: 150px;
+  }
+
+  .cloud.big {
+    width: 500px;
+    margin-top: 50px;
+    margin-right: 150px;
+  }
+
+  .cloud.massive {
+    width: 600px;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+
+
+  /*Cloud: Animation*/
+  .cloud {
+    -webkit-animation-name: cloud-movement;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+
+    -moz-animation-name: cloud-movement;
+    -moz-animation-timing-function: linear;
+    -moz-animation-direction: forwards;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 8s;
+
+    animation-name: cloud-movement;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+  }
+
+  .slow {
+    -webkit-animation-duration: 9.2s;
+    -moz-animation-duration: 9.2s;
+    animation-duration: 9.2s;
+  }
+
+  .slower {
+    -webkit-animation-duration: 11.2s;
+    -moz-animation-duration: 11.2s;
+    animation-duration: 11.2s;
+  }
+
+  .slowest {
+    -webkit-animation-duration: 13.5s;
+    -moz-animation-duration: 13.5s;
+    animation-duration: 13.5s;
+  }
+
+  .super-slow {
+    -webkit-animation-duration: 20.5s;
+    -moz-animation-duration: 20.5s;
+    animation-duration: 20.5s;
+  }
+
+  @-webkit-keyframes cloud-movement {
+    0% {
+      opacity: 0.1;
+      -webkit-transform: translateX(300px);
+      -moz-transform: translateX(300px);
+      transform: translateX(300px);
+    }
+    10% {
+
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-1000px);
+      -moz-transform: translateX(-1000px);
+      transform: translateX(-1000px);
+    }
+  }
+
+
+
+  @media (max-width: 991px) {
+    .character {
+        max-width: 60%;
+    }
+    h1 {
+        font-size: 4em;
+        margin-top: 1rem;
+    }
+    .button-row {
+        margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin-top: 1rem;
+    }
+  }

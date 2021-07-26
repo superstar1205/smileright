@@ -1,0 +1,390 @@
+.close {
+  float: right;
+  margin-left: 4px;
+}
+
+p.detail-p {
+  margin: 5px 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.row.clearfix.cardheader.primary-gradient-img {
+  padding: 16px 24px;
+}
+
+p.detail-p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.white-background {
+  background-color: #fff;
+}
+
+h3.white {
+  color: #fff !important;
+}
+
+.row.clearfix.document {
+  margin: 0 -16px;
+}
+
+.buttonrow button {
+  margin: 0 5px 5px;
+}
+
+::ng-deep app-ep-document-view mat-dialog-content {
+  /* margin: 0 !important; */
+}
+
+::ng-deep app-ep-document-view mat-dialog-content.mat-dialog-content {
+  padding-bottom: 5px;
+  max-height: calc(65vh - 100px);
+  margin: 0 -16px !important;
+}
+
+::ng-deep app-ep-document-view .mat-dialog-actions {
+  display: block;
+  padding: 12px;
+  margin: 0 !important;
+}
+
+::ng-deep app-ep-document-view .mat-dialog-actions p {
+  color: #707070;
+}
+
+.titleArea .small mat-icon {
+  width: auto;
+  height: auto;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+h2.summary-header.white {
+  color: #fff;
+}
+
+h2 span.numberPill {
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0px 8px;
+  letter-spacing: 1px;
+  top: -3px;
+  border-radius: 20px;
+  position: relative;
+}
+
+h2 .subLabel {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.inModal button.btn-close {
+  float: right;
+  color: #fff;
+}
+
+.row.titleArea.clearfix.full-width h2 {
+  width: 100%;
+  max-width: 80%;
+}
+
+
+
+::ng-deep .mat-mini-fab.btn-dl .mat-button-wrapper {
+  padding: 0;
+  position: relative;
+  /* top: 8px; */
+  display: inline-block;
+  line-height: 24px;
+}
+
+print-btn {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 5px;
+}
+
+/*.document {
+    height: calc(100% - 60px);
+}*/
+/*.view-container {
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+}*/
+
+/*.view-container img {
+    width: 100%;
+    min-height: 800px;
+    height: auto;
+}*/
+.two-thrd-width label {
+  position: relative;
+}
+
+button.btn-small.mat-button {
+  padding: 2px 0px;
+  line-height: 24px;
+  margin: 2px 0 0;
+}
+
+button.btn-small.mat-button mat-icon {
+  margin-right: 4px;
+}
+
+.two-thrd-width.flex,
+.thrd-width.flex {
+  align-items: center;
+  vertical-align: middle;
+}
+
+mat-icon.fas.fa-external-link-alt {
+  font-size: 1.1rem;
+  width: auto;
+  height: auto;
+  margin-top: 3px;
+}
+
+.negative-marging {
+  margin-bottom: -40px !important;
+}
+
+/* .row.clearfix.text-center.noOVerflow {
+  overflow: scroll;
+} */
+iframe,
+embed {
+  width: 100%;
+  min-height: 35vh;
+  background: #000;
+  height: auto;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+::ng-deep app-blob-view .cardheader {
+  box-sizing: border-box;
+  float: none;
+}
+
+::ng-deep app-blob-view iframe {
+  min-height: calc(100vh - 500px);
+}
+
+.cardheader p {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.whiteColor {
+  color: white;
+}
+
+div.margin-div {
+  margin: 5px !important;
+}
+
+.drop-buttons {
+  z-index: 990;
+}
+
+.drop-buttons {
+  bottom: -25px !important;
+}
+
+.close {
+  float: right;
+  margin-left: 4px;
+}
+
+.btn-close.white {
+  color: #fff;
+}
+
+
+.p-small {
+  font-size: 10px;
+}
+
+.p-small mat-icon {
+  font-size: 16px;
+}
+
+
+.p-small-icon mat-icon {
+  font-size: 16px;
+}
+
+
+.img-thumbnail {
+  width: 100px;
+  text-align: center;
+  background: #fbfbfb;
+  padding: 5px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, .05);
+}
+
+
+
+
+::ng-deep .userIconViewthumbnail .ep-view-img:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #06c18d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+
+
+::ng-deep .userIconViewthumbnail .ep-view-img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100% !important;
+  position: relative;
+}
+
+::ng-deep .headNavViewthumbnail.userIconViewthumbnail {
+  width: 40px;
+}
+
+::ng-deep .headNavViewthumbnail.userIconViewthumbnail .ep-view-img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 4px !important;
+  margin: 0px;
+  position: relative;
+  top: 0;
+  object-fit: contain;
+  background-size: cover;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.ep-view-img-locked {
+  background-size: cover;
+  width: 100%;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-position: center center;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  min-height: 500px;
+}
+
+
+
+.no-file-fnd {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+
+}
+
+
+.div-inner {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+
+}
+
+.icon-locked {
+  font-size: 60px !important;
+  color: white !important;
+}
+
+
+@media screen and (max-width: 600px) {
+  ::ng-deep app-ep-document-view h2.summary-header.white {
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 5px !important;
+  }
+
+}
+
+@media screen and (max-width: 321px) {
+
+  ::ng-deep app-ep-document-view h2.summary-header.white {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 5px !important;
+  }
+}
+
+
+.view-container embed,
+.view-container object {
+  display: block;
+  width: 100%;
+  height: calc(65vh - 100px);
+}
+
+
+::ng-deep .document iframe img {
+  max-width: 100%;
+}
+
+
+.row.clearfix.document {
+  margin: 0 -16px;
+}
+
+
+
+img.img-jpg,
+img.img-png {
+  max-width: 100%;
+}
+
+
+
+.animate.contain {
+  overflow: hidden;
+}
+
+
+mat-icon.large-icon {
+  font-size: 2rem;
+  width: auto;
+  height: auto;
+}
+
+
+
+.animate.contain {
+  overflow: hidden;
+}

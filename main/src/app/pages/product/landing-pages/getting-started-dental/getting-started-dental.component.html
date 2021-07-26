@@ -1,0 +1,393 @@
+<div>
+    <app-bluebg></app-bluebg>
+    <ng-container *ngIf="page == 1;">
+        <section class="step1">
+        <div class="top container">
+            <div class="top-leftbox">
+                <div class="top-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                    <h1>Everything you need to go digital</h1>
+                    <p>Welcome to the first step on your journey to growing your practice! This page will help you and your team with everything they need to start communicating digitally.</p>
+                </div>
+            </div>
+            <div class="top-rightbox" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                <div class="imgbox">
+                    <img class="img" src="/assets/img/campaign/Assets/Asset_6.png">
+                </div>
+            </div>
+        </div>
+        <div class="main container">
+            <div class="title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <h2>Getting Started</h2>
+                <p>A new platform can be overwhelming - there are so many new features to explore and you aren't sure where to start. Taking those first few steps can be daunting, but the hard part is over! Decisions like these are just one of many towards creating a successful practice. <br><strong>Choose a step to get started.</strong></p>
+            </div>
+            <div class="intro flex">
+                <div class="intro-fi intro-wrap">
+                    <div class="intro-con"  data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="intro-numbox" (click)="pageS(2)">
+                            <div class="intro-num"><h2>1</h2><div class="back-hover"></div></div>
+                        </div>
+                        <div class="intro-txt"><h4>Review Your Profile</h4></div>
+                    </div>
+                </div>
+                <div class="intro-se intro-wrap">
+                    <div class="intro-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="intro-numbox" (click)="pageS(3)">
+                            <div class="intro-num"><h2>2</h2><div class="back-hover"></div></div>
+                        </div>
+                        <div class="intro-txt"><h4>Sending Treatment Plans</h4></div>
+                    </div>
+                </div>
+                <div class="intro-th intro-wrap">
+                    <div class="intro-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="intro-numbox" (click)="pageS(4)">
+                            <div class="intro-num"><h2>3</h2><div class="back-hover"></div></div>
+                        </div>
+                        <div class="intro-txt"><h4>Getting Paid</h4></div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-bot" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <p><span class="strong">Important</span> - The practice manager should have your portal set up and ready to go with all the correct settings, treatment templates and more. If not, be sure to mention it to your practice manager or principal dentist to confirm this is done. Alternatively, click on the button below to follow the setup instructions.</p>
+                <button (click)="pageS(2)" mat-stroked-button class="btn">
+                    Portal Manager Setup <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="guid flex">
+            <div class="container guid-main" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                <div class="half-width img-box-left">
+                    <div class="guid-imgbox"><img class="img" src="/assets/img/campaign/Assets/Asset_7.png"></div>
+                </div>
+                <div class="half-width txt-box">
+                    <div class="txt" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                        <h2>Read Me!</h2>
+                        <p>We've created a detailed User Guide to help take you through each feature of your practice portal. With insights and helpful links to articles, you will be a portal pro in no time!</p>
+                        <button mat-stroked-button class="btn" (click)='openNewTab()'>
+                            Download User Guide <mat-icon>chevron_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visit flex">
+            <div class="container visit-main">
+                <div class="visit-imgbox" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                    <img class="img" src="/assets/img/campaign/Assets/Asset_8.png">
+                </div>
+                <div class="visit-text" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                    <p>Need some more detailed help? Visit the help centre located in your portal for access to easy to follow how-to articles</p>
+                </div>
+                <button mat-stroked-button (click)='openNewTab1()' class="btn" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    View Help Centre <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="book flex">
+            <div class="container book-main">
+                <div class="book-title">
+                    <h2>Still need help? Get in touch!</h2>
+                </div>
+                <div class="book-contact">
+                    <p>Email: {{practiceAddress}}</p>
+                    <p>Phone: {{practiceNumber}}</p>
+                    <p>Monday - Friday: 9:00am to 7:00pm AEST</p>
+                </div>
+                <div class="book-bot">
+                    <p>Alternatively, you can book in some training with our experts. Training is <span class="strong">FREE</span> with unlimited access to courses that will help you and your team become portal pros!</p>
+                </div>
+                <button mat-stroked-button (click)='openNewTab2()' class="btn">
+                    Book Training <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        </section>
+    </ng-container>
+    <ng-container  *ngIf="page == 2;">
+        <section class="step2">
+            <div class="top flex container">
+                <div class="top-leftbox">
+                    <div class="top-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <h1>Review your profile</h1>
+                        <p>Personalise your profile so patients and team members see you in the best possible light</p>
+                    </div>
+                </div>
+                <div class="top-rightbox" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                    <div class="imgbox">
+                        <img class="img" src="/assets/img/campaign/Assets/Asset_2.png">
+                    </div>
+                </div>
+            </div>
+            <div class="main container">
+                <div class="title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    <h2>Settings</h2>
+                    <p>Just logged into your portal for the first time? Your screen should like something like this.</p>
+                </div>
+                <div class="step2-imgbox"  data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                    <img class="img" src="/assets/img/campaign/Assets/Asset_9.png">
+                </div>
+                <div class="step2-txt">
+                    <p>Like we mentioned preiviously, your practice manager or principal dentist should have your portal settings filled out. All that is left for you to do is fill out your personal details. Let’s start!</p>
+                    <p>Click on your name in the top right-hand corner and go to 'my profile'. Here is a helpful checklist along with how-to articles with detailed instructions to get you on the right track:</p>
+                </div>
+                <div class="artic">
+                    <div class="art-con"  data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Bookmark Portal</span> - You should bookmark the portal landing page for easy access when logging in.</p></div>
+                        <div class="art-art">
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:view-code/setting-up-your-profile"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Contact Details</span> - Add/confirm your best contact details, your name, and your position in the practice.</p></div>
+                        <div class="art-art">
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:view-code/setting-up-your-profile"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Personal Description</span> - Your personal profile helps your team members and patients identify you within your practice. It's also a way for people to get to know you - tell a fun story about yourself or about your dreams.</p></div>
+                        <div class="art-art">
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:view-code/setting-up-your-profile"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Profile Photo</span> - Upload a clear picture of yourself. Remember you are representing the practice and patients will be able to see this, so try to stick =on the profiessional side.</p></div>
+                        <div class="art-art">
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:view-code/setting-up-your-profile"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Social Media Links</span> - If you have any socials you want to share, maybe a LinkedIn page, connect it with an easy link.</p></div>
+                        <div class="art-art">
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:view-code/setting-up-your-profile"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-tab">
+                <div class="step2-bot">
+                    <div class="left-btn">
+                        <button (click)="pageS(1)" mat-stroked-button class="btn">
+                            <mat-icon>chevron_left</mat-icon> Start
+                        </button>
+                    </div>
+                    <div class="right-btn">
+                        <button (click)="pageS(3)" mat-stroked-button class="btn">
+                            Step Two <mat-icon>chevron_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+    <ng-container *ngIf="page == 3;">
+        <section class="step3">
+            <div class="top flex container">
+                <div class="s3-top-leftbox top-leftbox">
+                    <div class="s3-top-txt top-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <h1>Sending Treatment Plans</h1>
+                        <p>Paper is a thing of the past, it’s time to go digital! We have made thing easy with just a few clicks you will be communicating digitally in no time.</p>
+                    </div>
+                </div>
+                <div class="s3-top-rightbox top-rightbox" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                    <div class="s3-top-txt imgbox">
+                        <img class="img" src="/assets/img/campaign/Assets/Asset_10.png">
+                    </div>
+                </div>
+            </div>
+            <div class="main container">
+                <div class="title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    <h2>What do I need to do for my patients?</h2>
+                </div>
+                <div class="step2-txt" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    <p>It's essential you send digital treatment plans to <span class="strong">ALL</span> your patients, not just ones who might want finance. Why should only some patients get the digital experience, informed consent materials and communication tools, while others get a boring "black and white" document?</p>
+                    <p>Remember, Smile Right is about patient communication and education, not just finance. We've put together a checklist to help you communicate digital treatment from start to finish:</p>
+                </div>
+                <div class="artic">
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Prepare Patient in Portal</span> - Your patients should be already imported into your portal, if not visit the previous step to see how. Is your patient new? No problem! All you need is a name, mobile and email to communicate.</p></div>
+                        <div class="art-art">
+                            <div class="step3-art">
+                                <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:viewcode/sending-a-treatment-invitation)"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                                <a href="https://vimeo.com/389155530/f8d2ff4355"><mat-icon class="icon-art art-video"><span class="material-icons-outlined">play_circle_filled</span></mat-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">After Consultation</span> - Once your patient has had their consultation, complete the invitation process and press send, and the job is done.</p></div>
+                        <div class="art-art">
+                            <div class="step3-art">
+                                <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:viewcode/sending-a-treatment-invitation)"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                                <a href="https://vimeo.com/389155530/f8d2ff4355"><mat-icon class="icon-art art-video"><span class="material-icons-outlined">play_circle_filled</span></mat-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Send Treatment in 30 Seconds</span> - Save more time by using treatment
+                            templates. These prepopulate an offer for Treatment including price, images, videos, informed consent material and more. Use one provided by Smile Right or clone and modify to suit your practice.</p></div>
+                        <div class="art-art">
+                            <div class="step3-art">
+                                <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:viewcode/sending-a-treatment-invitation)"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                                <a href="https://vimeo.com/389155530/f8d2ff4355"><mat-icon class="icon-art art-video"><span class="material-icons-outlined">play_circle_filled</span></mat-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div class="art-icon">
+                            <mat-icon class="icon-done"><span class="material-icons-outlined">done</span></mat-icon>
+                        </div>
+                        <div class="art-txt"><p><span class="strong">Keep Track of Invitations</span> - Sit back and get ready - your patients will start communicating with you electronically via the platform. This includes confirmation on treatment, queries, messages, profile, and health history updates etc., be sure to stay updated. You can check the status on each invitation by going to Invitations > Treatment, here you can see a colour coded and detail view of all your treatments. You also have the bell notification to help you track everything that happens on your portal. Finally, you will receive email notifications of all activity on the platform.</p></div>
+                        <div class="art-art">
+                            <div class="step3-art">
+                                <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:viewcode/sending-a-treatment-invitation)"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                                <a href="https://vimeo.com/389155530/f8d2ff4355"><mat-icon class="icon-art art-video"><span class="material-icons-outlined">play_circle_filled</span></mat-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-mid flex">
+                <div class="container mid-main">
+                    <div class="title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                        <h2>Discussing Treatment</h2>
+                        <p>Once you’ve sent an invitation to your patient, you can pull up their patient card to discuss treatment and show helpful documentation and videos. Help your patient understand their recommended treatment plan through helpful visual tools, and even help patients apply for a Smile Right payment plan, all before they leave the chair!</p>
+                    </div>
+                    <div class="artict">
+                        <div class="artict-cont" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                            <h4>Read the ‘How-To’ article > </h4>
+                            <a href="https://app.smileright.com.au/wiki/(wikiPageRoute:viewcode/sending-a-treatment-invitation)"><mat-icon class="icon-art"><span class="material-icons-outlined">feed</span></mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="step3-imgbox" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                        <img class="img" src="/assets/img/campaign/Assets/Asset_11.png">
+                    </div>
+                </div>
+            </div>
+            <div class="bot-tab">
+                <div class="step2-bot">
+                    <div class="left-btn">
+                        <button (click)="pageS(2)" mat-stroked-button class="btn">
+                            <mat-icon>chevron_left</mat-icon> Step One
+                        </button>
+                    </div>
+                    <div class="right-btn">
+                        <button (click)="pageS(4)" mat-stroked-button class="btn">
+                            Step Three <mat-icon>chevron_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+    <ng-container *ngIf="page == 4;">
+        <section class="step4">
+            <div class="top flex container">
+                <div class="s3-top-leftbox top-leftbox">
+                    <div class="s3-top-txt top-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <h1>Getting Paid</h1>
+                        <p>Provided treatment? Now it’s time to get paid by putting in a settlement request.</p>
+                    </div>
+                </div>
+                <div class="s3-top-rightbox top-rightbox" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                    <div class="s4-imgbox imgbox">
+                        <img class="img" src="/assets/img/campaign/Assets/Asset_12.png">
+                    </div>
+                </div>
+            </div>
+            <div class="main container">
+                <div class="title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    <h2>Settlement Request</h2>
+                </div>
+                <div class="step2-txt">
+                    <p>Once treatment has been provided, you can request a settlement for the procedure amount and what you have invoiced your patient. There is no limit to the number of requests you can make.</p>
+                    <p>Your practice manager or the treatment coordinator/receptionist will complete this process as it requires a few things from the patient before they leave.</p>
+                </div>
+                <div class="step4-con">
+                    <div class="s4-txtbox" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                        <div class="s4-txt">
+                            <h3>Sound like a job for you instead?</h3>
+                            <p>Click the button below for settlement request instructions or alternatively visit the help centre.</p>
+                            <button mat-stroked-button class="btn" routerLink="/part">
+                                How-To <mat-icon>chevron_right</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="s4-imgbox" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                        <div class="s4-img"><img class="img" src="/assets/img/campaign/Assets/Asset_13.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-mid flex">
+                <div class="container mid-main">
+                    <div class="title">
+                        <h2>Helpful Tools</h2>
+                    </div>
+                    <div class="step-itembox">
+                        <div>
+                            <div class="item-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                                <div class="item-icon">
+                                    <mat-icon class="icon-left"><span class="step4-icon material-icons">zoom_in</span></mat-icon>
+                                </div>
+                                <div class="item-txt">
+                                    <p><span class="strong">Product Lookup:</span> Used to search for all the supplier products available on the platform and will display any information relating to the product selected, including supporting documents, images and videos. Search by Item Code, brand or product. Can also be used for a variety of things, including research, staff training, patient presentation, invitation templates, treatment planning and more!</p>
+                                </div>
+                            </div>
+                            <div class="item-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                                <div class="item-txt">
+                                    <p><span class="strong">Financial Calculator:</span> This is a helpful feature! If a patient is enquiring about payment options, costs or repayments, use this feature to show/tell your patient and answer any query they might have on Smile Right payment options. Input the treatment value, and the calculator will show all options available.</p>
+                                </div>
+                                <div class="item-icon">
+                                    <mat-icon class="icon-left"><span class="step4-icon material-icons">attach_money</span></mat-icon>
+                                </div>
+                            </div>
+                            <div class="item-con" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                                <div class="item-icon">
+                                    <mat-icon class="icon-left"><span class="step4-icon material-icons">notifications</span></mat-icon>
+                                </div>
+                                <div class="item-txt">
+                                    <p><span class="strong">Activity Bell:</span> Every action or interaction either by a team member or patient that happens on the platform will give you a notification. It would help if you viewed these notifications regularly to stay up to date with what is happening. You can mark notifications as read, or "star" them if they are essential and return to them later. To view a full audit trail, click the communications tab in the blue bar and see activities and communication to and from the platform.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-tab">
+                <div class="step2-bot">
+                    <div class="left-btn">
+                        <button (click)="pageS(3)" mat-stroked-button class="btn">
+                            <mat-icon>chevron_left</mat-icon> Step Two
+                        </button>
+                    </div>
+                    <div class="right-btn">
+                        <button routerLink="/part" mat-stroked-button class="btn">
+                            Back to Start <mat-icon>chevron_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+</div>

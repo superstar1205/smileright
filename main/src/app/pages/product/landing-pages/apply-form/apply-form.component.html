@@ -1,0 +1,269 @@
+<div *ngIf="amount && productGroup && merchantID  " class="clearfix">
+
+
+  <div class="row modal-heading primary-gradient rel clearfix" *ngIf="!productID && step==1" @simpleFadeAnimation>
+    <button class="btn-close btn-clear mat-button abs-right" (click)="close()">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <h2 class="sr-title header-title-product rm-m">Please select a payment option to calculate your possible repayments!
+    </h2>
+  </div>
+
+  <div class="row modal-heading primary-gradient rel clearfix" *ngIf="step==2">
+    <button class="btn-close btn-clear mat-button abs-right" (click)="close()">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <h2 class="sr-title header-title-product rm-m">Please confirm your details so we can help arrange your appointment!
+    </h2>
+  </div>
+
+  <mat-dialog-content>
+
+
+    <!-- calcualtor steps -->
+    <ng-container class="step-1" *ngIf="step==1" @simpleFadeAnimation>
+
+      <!-- product list -->
+      <div *ngIf="amount && productGroup && merchantID && !productID " @simpleFadeAnimation class="row clearfix mt">
+        <app-suitable-product-compact-list [frequency]="'1'" [canSelect]="true" [amount]="amount"
+          [merchantKey]="merchantID" (select)="selectProduct($event)" (disableBackButton)="disableBackButton()"
+          [groupCode]="productGroup" class="">
+        </app-suitable-product-compact-list>
+      </div>
+
+      <!-- calculate chosen product -->
+      <div *ngIf="productID" class="" @simpleFadeAnimation>
+        <!-- <mat-card class=""> -->
+        <app-product-calculator [displayDeposit]="false" [isPatientContribution]="false" [moreInfo]="false"
+          [isLandingPage]="true" [dentalInfo]="true" [ProductID]="productID" [dynamicAmount]="false" [amount]="amount"
+          (estimation)="estimation($event)"></app-product-calculator>
+        <!-- </mat-card> -->
+      </div>
+
+
+      <!-- back to product picker -->
+
+
+
+
+
+    </ng-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- insert details form -->
+    <ng-container class="step-2" *ngIf="step==2" @simpleFadeAnimation>
+
+      <form #applyForm="ngForm">
+
+
+        <!-- ideal booking time area -->
+        <div class="row clearfix">
+          <div class="details column">
+            <p *ngIf="patient">{{patient['firstName']}}, Let your dentist know what time might suit you best for an
+              appointment.
+              The practice will then contact you to arrange a suitable appointment date.</p>
+
+            <div class="row clearfix">
+
+              <p class="small">Select the best day and time that suits you:</p>
+
+              <div class="row clearfix flex">
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Best day</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let day of days" [value]="day.value">
+                      {{day.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Best time</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let time of times" [value]="time.value">
+                      {{time.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+
+
+              <div class="row clearfix flex" *ngIf="!merchantID && !bookingURL">
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>State</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let state of states" [value]="state.value">
+                      {{state.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Postcode</mat-label>
+                  <input matInput placeholder="Postcode" name="postcode" required>
+                </mat-form-field>
+              </div>
+
+
+              <!-- temporary booking url -->
+              <div class="row clearfix" *ngIf="bookingURL">
+                <p><strong>Booking URL:</strong> {{bookingURL}}</p>
+                <button mat-raised-button color="accent" (click)="bookFromUrl()">Booking URL</button>
+              </div>
+
+
+              <div class="row clearfix">
+
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>What are you most concerned about with your smile? </mat-label>
+                  <textarea matInput placeholder="Please enter your thoughts here..."></textarea>
+                </mat-form-field>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- details section -->
+        <div class="details column">
+
+          <div class="row clearfix flex">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Gender</mat-label>
+              <mat-select placeholder="Gender" name="gender" [(ngModel)]="patient.gender" required>
+                <mat-option *ngFor="let g of genders" [value]="g.Code">
+                  {{ g.Label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Salutation</mat-label>
+              <mat-select placeholder="Salutation" name="salutation" [(ngModel)]="patient.title" required>
+                <mat-option *ngFor="let t of titles" [value]="t.Label">
+                  {{ t.Label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="row clearfix flex">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>First name</mat-label>
+              <input matInput placeholder="First Name" name="firstname" [(ngModel)]="patient.firstName" required>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Surname</mat-label>
+              <input matInput placeholder="Last Name" name="lastname" [(ngModel)]="patient.lastName" required>
+            </mat-form-field>
+          </div>
+
+          <div class="row clearfix flex">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Phone number</mat-label>
+              <input matInput placeholder="Mobile Number" name="mobile" pattern="([0-9]{10})"
+                [(ngModel)]="patient.mobile" required>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email address</mat-label>
+              <input matInput placeholder="Email Address" name="email" [(ngModel)]="patient.email"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+            </mat-form-field>
+          </div>
+
+        </div>
+
+
+        <!-- proceed button -->
+        <div class="row clearfix" *ngIf="productID" @simpleFadeAnimation>
+          <!-- back button -->
+          <button mat-raised-button color="primary" (click)="step=1">Back</button>
+
+          <!-- proceed to application -->
+          <button mat-raised-button color="accent" class="applyBtn btn-large pull-right"
+            [class.loading]="processing == true"
+            [disabled]="applyForm.invalid || !productID || !amount || !duration || !productGroup || !merchantID || !frequency  "
+            (click)="apply()">Apply now! <mat-icon *ngIf="processing==false" class="fas fa-hand-point-right"></mat-icon>
+            <mat-icon *ngIf="processing==true" class="rotate fas fa-spinner"></mat-icon>
+          </button>
+
+        </div>
+
+      </form>
+
+    </ng-container>
+
+
+
+
+
+    <!-- <div class="booking-cta">
+      <div class="container text-center">
+        <p class="white rm-mt">Want a free evaluation to see if {{productName}} is right for you? </p>
+        <button class="btn-large" mat-raised-button (click)="launchBookingModal()">Book an appointment</button>
+      </div>
+    </div> -->
+
+
+  </mat-dialog-content>
+
+
+
+
+  <!-- proceed button -->
+  <!-- <hr *ngIf="productID"> -->
+  <div class="row clearfix border-top" *ngIf="productID && step==1" @simpleFadeAnimation>
+
+
+
+    <!-- <button mat-raised-button color="accent" class="applyBtn btn-large pull-right" (click)="step2()">Continue!
+        <mat-icon class="fas fa-hand-point-right"></mat-icon>
+      </button> -->
+
+
+    <button mat-raised-button color="accent" class="applyBtn btn-large pull-right" [class.loading]="processing == true"
+      [disabled]=" !productID || !amount || !duration || !productGroup || !merchantID || !frequency  "
+      (click)="proceedNow()">Apply now! <mat-icon *ngIf="processing==false" class="fas fa-hand-point-right"></mat-icon>
+      <mat-icon *ngIf="processing==true" class="rotate fas fa-spinner"></mat-icon>
+    </button>
+
+    <button mat-raised-button *ngIf="productID && !disableBack" color="primary" class="back-btn pull-left btn-large"
+      (click)="productID=''" @simpleFadeAnimation>Back</button>
+
+  </div>
+
+</div>

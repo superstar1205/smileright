@@ -1,0 +1,42 @@
+<div class="rel text-center cdia">
+
+  <div class="card-header primary-gradient-img clearfix confirmModal" [ngClass]="icon">
+    <div class="row clearfix">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button white" matDialogClose>
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class="row titleArea clearfix">
+        <mat-icon class="white pull-left">{{icon}}</mat-icon>
+        <h2 class="summary-header rm-m">
+          {{title}}
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!--
+  <mat-icon class="xlarge-modal-icon accent-color">{{icon}}</mat-icon>
+  <h2 mat-dialog-title class="sr-title rm-mb mt">{{title}}</h2> -->
+  <mat-dialog-content>
+
+
+
+    <div class="row clearfix mb">
+      <div [innerHTML]="description | safeHtml"> </div>
+    </div>
+
+    <div class="text-center mb" *ngIf=" isInformation==true">
+      <button mat-raised-button (click)="onInformation()" color="primary">{{informationLabel}}</button>
+    </div>
+
+  </mat-dialog-content>
+  <mat-dialog-actions class="button-row text-center">
+    <button mat-raised-button matDialogClose *ngIf="isNo" >{{noLabel}}</button>
+
+    <button mat-raised-button (click)="onYes()" color="accent" *ngIf="yesLabel">{{yesLabel}}</button>
+
+    <button mat-raised-button *ngIf="isSecondConfirmation==true" (click)="onYesSecond()"
+      color="primary">{{yesSecondLabel}}</button>
+
+  </mat-dialog-actions>
+</div>

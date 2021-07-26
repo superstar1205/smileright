@@ -1,0 +1,73 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "frontend"
+  },
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": ["assets"],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "test": "test.ts",
+    "tsconfig": "tsconfig.app.json",
+    "testTsconfig": "tsconfig.spec.json",
+    "prefix": "app",
+    "styles": [
+      "./assets/styles/animate.css",
+      "../node_modules/angular-archwizard/archwizard.css",
+      "../node_modules/metismenu/dist/metisMenu.min.css",
+      "./assets/styles/headings.css",
+      "./assets/styles/_variables.scss",
+      "./assets/styles/styles.scss",
+      "./assets/styles/theme.scss",
+      "styles.css",
+      "../node_modules/plyr/dist/plyr.css",
+      "../node_modules/snazzy-info-window/dist/snazzy-info-window.css",
+      "../node_modules/aos/dist/aos.css"
+    ],
+    "scripts": [
+
+      "../node_modules/metismenu/dist/metisMenu.min.js",
+      "../node_modules/validatorjs/dist/validator.js",
+      "../node_modules/plyr/dist/plyr.js",
+      "../node_modules/aos/dist/aos.js",
+      "./assets/scripts/calwidget.js"
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "local": "environments/environment.local.ts",
+      "prod": "environments/environment.prod.ts",
+      "dev": "environments/environment.dev.ts",
+      "staging-buzzus": "environments/environment.staging.buzzus.ts",
+      "staging-pay4paws": "environments/environment.staging.pay4paws.ts",
+      "prod-pay4paws": "environments/environment.prod.pay4paws.ts",
+      "staging": "environments/environment.staging.ts"
+    }
+  }],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [{
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

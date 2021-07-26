@@ -1,0 +1,91 @@
+hr.small {
+  margin: 10px 0 !important;
+}
+
+.error-gradient {
+  background: #cb2d3e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ef473a, #cb2d3e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ef473a, #cb2d3e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.row.titleArea.clearfix.full-width mat-icon {
+  margin-top: 5px;
+}
+
+h2.summary-header.sr-title.white {
+  color: #fff;
+}
+
+h2 .subLabel {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.inModal button.btn-close {
+  float: right;
+  color: #fff;
+  min-width: 0;
+}
+
+.row.titleArea.clearfix.full-width h2 {
+  width: 100%;
+  max-width: 80%;
+}
+
+.card-header.error-gradient.inModal {
+  margin: -24px -24px 0;
+  padding: 24px 24px 40px 24px;
+  color: #fff;
+}
+
+.card-header.error-gradient.inModal p,
+.card-header.error-gradient.inModal h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header.error-gradient.inModal h2 {
+  padding-top: 0;
+  text-transform: capitalize;
+  padding-left: 54px;
+}
+
+.card-header.inModal .titleArea {
+  max-width: 80%;
+  float: left;
+}
+
+.card-header.error-gradient.inModal label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.greyBar {
+  margin: 10px -24px;
+  background: #e3e3e3;
+  padding: 6px 24px;
+}
+
+.greyBar p {
+  margin: 0;
+  padding: 0;
+}
+
+img.bannerImg {
+  width: auto;
+  margin: -38px -24px 20px;
+  max-width: calc(100% + 48px);
+  display: block;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .greyBar {
+    margin: 10px -16px;
+    padding: 6px 16px;
+  }
+
+}

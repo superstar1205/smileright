@@ -1,0 +1,60 @@
+<div class="rel text-center cdia">
+  <form #resetForm="ngForm">
+    <div class="card-header primary-gradient-img clearfix confirmModal" [ngClass]="icon">
+      <div class="row clearfix">
+        <!-- Modal dismiss button -->
+        <button class="btn-close btn-clear mat-button white" matDialogClose (click)="onNo()">
+          <mat-icon>clear</mat-icon>
+        </button>
+        <div class="row titleArea clearfix">
+          <mat-icon class="white pull-left">{{icon}}</mat-icon>
+          <h2 class="summary-header rm-m">
+            {{title}}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <mat-dialog-content>
+
+      <div class="row clearfix mb text-center">
+        <div [innerHTML]="description | safeHtml"> </div>
+      </div>
+
+      <mat-form-field class="clearfix full-width mb" appearance="outline" *ngIf="isTextArea==true">
+        <mat-label>{{textLabel}}</mat-label>
+        <input matInput [(ngModel)]="text" placeholder="{{textLabel}}" [required]="isTextInputRequired"
+          name="textLabel">
+
+      </mat-form-field>
+
+      <!-- <div class="clearfix full-width mb " *ngIf="isDateInput==true">
+        <app-date-input class=" full-width" [isTime]="false" [label]="dateLabel" [minDate]="minDate"
+          (selectedDate)="selectDate($event)">
+        </app-date-input>
+      </div>
+
+
+      <div class="clearfix full-width mb " *ngIf="isDateTimeInput==true">
+        <app-date-input class=" full-width" [isTime]="true" [label]="dateTimeLabel" [minDate]="minDate"
+          (selectedDate)="selectDateTime($event)">
+        </app-date-input>
+      </div> -->
+
+
+      <mat-form-field class="clearfix full-width mb text-input" appearance="outline" *ngIf="isTextInput==true">
+        <mat-label>{{messageLabel}}</mat-label>
+        <textarea matInput placeholder="{{messageLabel}}" [(ngModel)]="message" name="replymsg"
+          [required]="isTextAreaRequired"></textarea>
+      </mat-form-field>
+
+    </mat-dialog-content>
+    <mat-dialog-actions class="button-row text-center">
+      <button mat-raised-button (click)="onNo()">{{noLabel}}</button>
+      <!-- Can optionally provide a result for the closing dialog. -->
+      <button mat-raised-button (click)="onYes()"
+        [disabled]="!resetForm.form.valid || (isDateRequired==true && !date) || ( isDateTimeRequired==true && dateTime)"
+        color="accent">{{ yesLabel}}</button>
+    </mat-dialog-actions>
+  </form>
+</div>

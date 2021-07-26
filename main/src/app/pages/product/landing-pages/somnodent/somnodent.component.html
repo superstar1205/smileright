@@ -1,0 +1,197 @@
+<!-- <app-bluebg></app-bluebg>
+ -->
+<div class="headVid">
+  <video id="headplayer" class="headingPlayer">
+    <source src="https://s3.amazonaws.com/storagy-invisalign/Invisalign_videos/assets/videos/home_loop.mp4" type="video/mp4">
+  </video>
+</div>
+<div *ngIf="merchant">
+  <div class="container main">
+
+
+    <section class="introduction clearfix">
+      <div class="text pull-right half-width">
+        <div class="col-left">
+
+          <h1 class="white-header">
+            <!-- <img class="ips-logo" src="/assets/img/third-party/img-e.max-logo-white.png" alt="IPS e.max" /> -->
+            HAHA, TEETH
+          </h1>
+          <p class="white rm-m">Teeth are disgusting but we all have them so I guess you better spend money on the
+            things right</p>
+
+        </div>
+      </div>
+      <div class="pull-left half-width">
+        <img class="hero" src="/assets/img/veneer-img.png" />
+      </div>
+    </section>
+    <section class="features">
+      <mat-card class="add-mb">
+        <div class="row clearfix reduced">
+
+          <p class="lead larger text-center">Traditionally, we associate ceramics with tableware or china. Today,
+            special
+            ceramics are also used in dentistry to give patients lifelike, natural-looking smiles.
+          </p>
+
+          <h3 class="accent background text-center"><span class="white-bg">Good looking, long lasting. IPS e.max<sup>&reg;</sup></span></h3>
+
+          <div class="row clearfix">
+            <div class="half-width">
+              <div class="col-left">
+                <p class="lead rm-mt">IPS e.max combines beauty with high performance in the most impressive way, as it
+                  is
+                  comprised of materials that demonstrate exceptional life-like esthetics along with fracture resilient
+                  toughness.</p>
+                <p>The all-ceramic dental crowns and restorations made from e.max are natural-looking and contain no
+                  metal. Depending on the correction you want to make, your dentist will work with you to select the
+                  best
+                  option whether it be crowns, veneers, a bridge or implants.</p>
+              </div>
+            </div>
+            <div class="half-width">
+              <div class="col-right">
+                <div class="row clearfix">
+                  <h3 class="rm-mt text-center">
+                    An E.max restoration can help fix:
+                  </h3>
+                </div>
+                <div class="row clearfix text-center featurettes">
+
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-colour.png">
+                    <h3 class="warn rm-mt">Discolored or stained teeth</h3>
+                  </div>
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-crooked.png">
+                    <h3 class="warn rm-mt">Crooked teeth</h3>
+                  </div>
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-chip.png">
+                    <h3 class="warn rm-mt">Chipped or cracked teeth</h3>
+                  </div>
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-decay.png">
+                    <h3 class="warn rm-mt">Decayed teeth</h3>
+                  </div>
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-metal.png">
+                    <h3 class="warn rm-mt">Older dental work utilizing metal</h3>
+                  </div>
+                  <div class="thrd-width">
+                    <img class="tooth-icon" src="/assets/img/icons/tooth-shape.png">
+                    <h3 class="warn rm-mt">Shape or form of teeth</h3>
+                  </div>
+
+                </div>
+                <div class="row clearfix text-center">
+                  <p class="small rm-m"><em>As well as many other issues!</em></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+
+      <div class="extra-margin">
+        <div class="row clearfix reduced mb">
+          <h3 class="accent larger background text-center"><span class="grey-bg">IPS e.max<sup>&reg;</sup> - Just right
+              for you!</span></h3>
+
+          <div class="row clearfix">
+
+            <div class="half-width centered">
+              <div class="column rel">
+                <p class="lead rm-mt">No matter what your dental situation is, IPS e.max<sup>&reg;</sup>
+                  all-ceramic material will bring back the smile to
+                  your face.</p>
+
+
+                <div class="plyr__video-embed" id="player">
+                  <iframe src="https://player.vimeo.com/video/311596017?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+                    width="640" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix mt mb text-center">
+            <button mat-raised-button color="accent" (click)="readStories()">Read IPS e.max<sup>&reg;</sup> success
+              stories <mat-icon>chevron_right</mat-icon></button>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="grey" *ngIf="campaign">
+    <div class="container">
+      <div class="">
+        <div class="row clearfix reduced mb">
+          <h2 class="accent larger background text-center rm-mt"><span class="">Get the beautiful smile you've always
+              wanted</span></h2>
+          <p class="lead text-center mb">Fill in the form below to shcedule an evaluation appointment to talk to your
+            dentist about IPS e.max<sup>&reg;</sup>.</p>
+          <div class="row clearfix flex">
+
+            <div class="half-width flex">
+              <div class="col-left">
+                <mat-card class="rm-bp">
+                  <div class="row clearfix logostrip text-center">
+                    <img src="/assets/img/third-party/make-it-emax-logo.png" />
+
+                  </div>
+                  <p class="larger text-center">Find out if the IPS e.max<sup>&reg;</sup> treatment is right for you.
+                    Request an appointment
+                    today and the friendly team at {{merchant['TradingAs']}} will be in touch to confirm a time
+                    suitable to you.
+                    For peace of mind, act now!</p>
+
+                  <div class="row clearfix dealArea rel">
+                    <div class="half-width">
+                      <img src="/assets/img/emax-promo-footer.png" class="promoPos" />
+                      &nbsp;
+                    </div>
+
+                    <!-- <div class="half-width text-right rel">
+                      <h1 class="offerValue">$99</h1>
+                      <h3 class="white rm-mb">Initial consultation</h3>
+                    </div> -->
+
+
+                    <div class="half-width text-right rel">
+                      <h3 class="white rm-m">from as little as</h3>
+                      <h1 class="offerValue">{{minAmount | customCurrency}}</h1>
+                      <h3 class="white rm-mt">per day</h3>
+
+                      <button mat-raised-button color="accent" (click)="applyEvent()">Apply now !
+                        <mat-icon>chevron_right</mat-icon></button>
+                    </div>
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+            <div class="half-width centered flex">
+              <div class="row clearfix well">
+                <app-lead-form-slim></app-lead-form-slim>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+</div>

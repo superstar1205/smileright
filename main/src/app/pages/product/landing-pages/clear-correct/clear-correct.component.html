@@ -1,0 +1,150 @@
+<section class="contactus">
+    <div class="contactus-main flex">
+        <div class="text">
+            <p>{{practiceName}}</p>
+        </div>
+        <div class="button-box">
+            <button mat-stroked-button class="contactus-btn">
+                Contact Us
+            </button>
+        </div>
+    </div>
+</section>
+<section class="head-banner">
+    <div class="banner-imgbox" data-aos="fade-up" data-aos-delay="00" data-aos-once="false">
+        <img class="img" src="/assets/img/campaign/clearcorrect/Asset_1.png">
+        <div class="banner-logobox">
+            <img class="img" src="/assets/img/campaign/clearcorrect/logo.png">
+        </div>
+    </div>
+</section>
+
+<section class="top">
+    <div class="container text-center align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="400" data-aos-once="false">
+        <p class="top-p">ClearCorrect has helped hundreds of thousands of patients achieve their dream smiles with their breakthrough aligner technology. And once you’ve got a smile you love, you may just find you can’t help but show it off - what are you waiting for?</p>
+        <button mat-raised-button class="btn">
+            Treatment from just <strong>$$</strong>/day* <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</section>
+
+<section class="tooth flex">
+    <div class="half-width tooth-textbox">
+        <div class="tooth-text" data-aos="fade-right" data-aos-delay="400" data-aos-once="false"> 
+            <h3>Straighter teeth don’t just look better; they work better too. Poorly-aligned teeth can interfere with bite function, can wear out faster, and are more prone to cavities.</h3>
+            <p>Gone are the days of metal mouth as the only solution for a confident smile! Clear aligners combine the physical force of plastic with advanced digital planning, for precise tooth movement.</p>
+        </div>
+    </div>
+    <div class="half-width tooth-imgbox"  data-aos="fade-left" data-aos-delay="400" data-aos-once="false"></div>
+</section>
+
+<section class="intro">
+    <div class="intro-main flex">
+        <div class="half-width intro-imgbox" data-aos="fade-right" data-aos-delay="400" data-aos-once="false">
+            <img class="intro-img" src="/assets/img/campaign/clearcorrect/Asset_3.png">
+        </div>
+        <div class="half-width text-box intro-txtbox">
+            <div class="intro-contentbox">
+                <div class="intro-content" data-aos="fade-left" data-aos-delay="400" data-aos-once="false">
+                    <h4>Comfortable</h4>
+                    <p>Compared to traditional wires and brackets, clear aligners are comfortable.</p>
+                </div>
+                <div class="intro-content" data-aos="fade-left" data-aos-delay="400" data-aos-once="false">
+                    <h4>Removable</h4>
+                    <p>It’s easy to remove aligners and eat whatever you like - no wires to for food to get trap in.</p>
+                </div>
+                <div class="intro-content" data-aos="fade-left" data-aos-delay="400" data-aos-once="false">
+                    <h4>Discreet</h4>
+                    <p>Clear aligners show off your smile, so most people won’t even notice you’re wearing them.</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+
+<section class="payment">
+    <div class="payment-imgbox" data-aos="fade-right" data-aos-delay="400" data-aos-once="false"><img class="img" src="/assets/img/campaign/clearcorrect/Asset5.png"></div>
+    <div class="payment-main container" data-aos="fade-up" data-aos-delay="400" data-aos-once="false">
+        <h3>We offer payment plans!</h3>
+        <p>Thanks to Smile Right, the ClearCorrect treatment could be improving your smile for much less than you might expect...</p>
+        <div class="payment-title justify-content-center text-center"><h2>Treatment from just {{price}}/day*</h2></div>
+        <button mat-stroked-button class="payment-btn">
+            Find out more <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</section>
+
+<section class="biomin">
+    <div class="biomin-main flex">
+        <div class="half-width biomin-imgbox" data-aos="fade-left" data-aos-delay="400" data-aos-once="false"></div>
+        <div class="half-width biomin-txtbox">
+            <div class="biomin-content">
+                <p  data-aos="fade-right" data-aos-delay="400" data-aos-once="false" >Your new smile begins with a consult where an impression is taken and the treatment planning process begins.</p>
+                <p  data-aos="fade-right" data-aos-delay="400" data-aos-once="false">Your ClearCorrect aligners are then custom created for your smile transformation with precision.</p>
+                <p  data-aos="fade-right" data-aos-delay="400" data-aos-once="false">By following your custom treatment plan, you will quickly notice your clear aligners your dream smile appear before your eyes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="search">
+    <div class="container search-main" data-aos="fade-up" data-aos-delay="400" data-aos-once="false">
+        <h3>Is ClearCorrect the solution you’ve been searching for?</h3>
+        <p>Come see us at {{practiceName}} for a consultation to begin your smile journey, and with our bite-sized payment plans you don’t have to worry about any out of pocket costs. You can Smile Now, and Pay Later!</p>
+        <p>If you have any questions relating to this treatment or associated products, please call {{practiceName}} <br>on {{practiceNumber}}</p>
+        <button mat-stroked-button class="btn">
+            Book an Appointment <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</section>
+
+<section class="map">
+    <div class="map-main flex">
+        <div class="map-mapbox">
+            <div class="map-map">
+                <app-map-view></app-map-view>
+                <label class="map-name">Practice name</label>
+            </div>
+        </div>
+        <div class="map-text">
+            <div>
+                <div class="practice">
+                    <h3>Practice Hours</h3>
+                    <p>Monday:</p>
+                    <p>Tuesday:</p>
+                    <p>Wednesday:</p>
+                    <p>Thursday:</p>
+                    <p>Friday:</p>
+                    <p>Saturday:</p>
+                    <p>Sunday:</p>
+                </div>
+                <div class="contact">
+                    <h3>Contact Us</h3>
+                    <p>{{practiceAddress}}</p>
+                    <p>{{practiceNumber}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="social">
+    <div class="container social-main">
+        <h3>Follow Our Socials!</h3>
+        <div class="social-iconbox">
+            <a href="" class="icon"><i class='fab'>&#xf16d;</i></a>
+            <a href="" class="icon"><i class='fab'>&#xf081;</i></a>
+            <a href="" class="icon"><i class='fab'>&#xf082;</i></a>
+            <a href="" class="icon"><i class='fab'>&#xf0d4;</i></a>
+        </div>
+    </div>
+</section>
+
+<section class="bottom">
+    <div class="container bottom-main">
+        <p>* Disclaimer: Please note: pricing is indicative only, and price may vary between patients. We can only establish the final cost of treatment once the consultation has occurred.</p>
+        <div class="bottom-imgbox">
+            <img src="/assets/img/campaign/clearcorrect/bolo.png" class="blogo" alt="logo">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,356 @@
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 26px;
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 2.6rem;
+}
+h4{
+    font-size: 24px;
+}
+p{
+    font-size: 1.3rem;
+    line-height: 2.15rem;
+    font-weight: 300;
+    font-family: "Nunito", sans-serif !important;
+}
+button{
+    font-size: 1.3rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 10px 28px;
+    font-family: "Nunito", sans-serif !important;
+    margin: 40px auto 0;  
+}
+.top-p, .tooth-text>h3, .tooth-text>p, .intro-content>p, .biomin-content>p, .search-main>p, .practice>p, .contact>p{
+    color: #666;
+}
+.text>p, .intro-content>h4, .biomin-content>h4, .search-main>h3, .practice>h3, .contact>h3, .social-main>h3{
+    color:#1a2147
+}
+.payment-main>h3, .payment-main>p, .payment-main>h2{
+    color: #fff;
+}
+.practice>h3, .contact>h3, .practice>p, .contact>p{
+    line-height: 1.5rem !important;
+}
+.contactus{
+    background-color: #fff;
+    padding: 1rem;
+}
+.contactus-main{
+    justify-content: space-between;
+    text-align: center;
+}
+.button-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactus-btn{
+    background-color: none;
+    padding: 0.375rem 1rem;
+    margin: 0 auto;
+    border: 2px solid #1a2147;
+}
+.head-banner{
+    width: 100%;
+}
+.banner-imgbox{
+    position: relative;
+    width: 100%;
+}
+.banner-logobox{
+    width: 18%;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+.img{
+    width: 100%;
+}
+.container{
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 0px;
+}
+.text-box{
+    padding: 60px 60px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.top{
+    background-color: #fff;
+    padding: 80px 0;
+}
+.top-p{
+    max-width: 920px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 0px auto;
+}
+.btn{
+    background-color: #1a2147;
+    color: #fff;
+}
+
+.tooth{
+    background-color: #f1f1f1;
+}
+.tooth-textbox{
+    padding: 80px 20px 80px 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    order: 1;
+}
+.tooth-text{
+    float: right;
+    max-width: 468px;
+    text-align: left;
+}
+.tooth-imgbox{
+    background: url(/assets/img/campaign/pola/Asset2.png) center left/cover;
+    min-height: 400px;
+    order: 2;
+}
+.intro-imgbox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 600px;
+    padding: 30px 30px 30px 0px;
+}
+.intro-img{
+    max-width: 480px;
+    float: right;
+}
+.intro-contentbox{
+    max-width: 480px;
+}
+.payment{
+    background-color: #0887b3;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0rem;
+}
+.payment-main{
+    max-width: 800px !important;
+    padding: 0rem 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.payment-title{
+    max-width: 350px;
+    margin: 0px auto;
+}
+.payment-btn{
+    background-color: none;
+    padding: 10px 60px;
+    border: 2px solid #fff;
+    z-index: 2;
+}
+.payment-imgbox{
+    position: absolute;
+    bottom: -8rem;
+    right: 5rem;
+    width: 500px;
+    z-index: 1;
+}
+.biomin{
+    background-color: #fff;
+    z-index: 10;
+}
+.biomin-txtbox{
+    padding: 80px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.biomin-content{
+    max-width: 480px;
+}
+.biomin-imgbox{
+    display: flex;
+    align-items: center;
+}
+.biomin-img{
+    max-width: 140%;
+    width: auto;
+}
+.search{
+    background-color: #f1f1f1;
+    padding: 5rem 0rem;
+}
+.search-main{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.map{
+    padding: 0rem;
+}
+.map-mapbox{
+    width: 65%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map-map{
+    width: 100%;
+    position: relative;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.map-name{
+    position: absolute;
+    top: 1rem;
+    color: #040101;
+    left: 1rem;
+}
+.map-text{
+    width: 35%;
+    padding-left: 3rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.app-map-view {
+    height: 100%;
+    min-height:unset;
+    display: block;
+}
+.social{
+    background-color: #f1f1f1;
+    padding: 3rem 0rem;
+}
+.social-main{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#1a2147;
+}
+.social-iconbox{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.icon{
+    font-size: 2rem;
+    color: #1a2147;
+    padding: 0rem 2rem;
+}
+.bottom{
+    background-color: #2b2b2b;
+    padding: 3rem 0rem;
+}
+.bottom-main{
+    max-width: 1000px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-main>p{
+    font-size: 16px;
+    color: #929292;
+
+}
+.bottom-imgbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blogo{
+    width: 132px;
+}
+
+@media(max-width: 1700px){
+    .biomin{
+        overflow: hidden;
+    }
+}
+@media(max-width: 1000px){
+    .container{
+        max-width: 100%;
+        padding: 0rem 1rem;
+    }
+    .text-box{
+        padding: 2.5rem 2rem;
+    }
+    .biomin-img{
+        max-width: 100%;
+    }
+}
+@media(max-width: 900px){
+    .banner-logobox{
+        width: 162px;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+    .tooth-imgbox{
+        background: url(/assets/img/campaign/pola/Asset2.png) center center/cover;
+    }
+    .tooth-textbox{
+        padding: 20px;
+    }
+    .intro-imgbox{
+        min-height: 400px;
+        padding: 20px;
+    }
+    .intro-img{
+        max-width: 100%;
+        float: right;
+    }
+    .map-main{
+        flex-direction: column;
+    }
+    .map-mapbox{
+        width: 100%;
+    }
+    .map-text{
+        width: 100%;
+        padding: 1rem;
+        padding-left: 1rem;
+    }
+}
+@media(max-width: 767px){
+    .text-box{
+        padding: 1rem 1rem;
+    }
+    .contactus-main, .tooth, .intro-main, .biomin-main{
+        flex-direction: column;
+    }
+    .tooth-textbox{
+        order: 3;
+    }
+    .tooth-text{
+        float: left;
+    }
+    .tooth-imgbox{
+        background: url(/assets/img/campaign/pola/Asset2.png) center center/cover;
+    }
+    .biomin-txtbox{
+        padding: 0rem;
+    }
+    .biomin-img{
+        margin: 0px 0px;
+    }
+    .icon{
+        padding: 0rem 1rem;
+    }
+}
+@media(max-width: 375px){
+    button{
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin: 40px auto 0;  
+    }
+}

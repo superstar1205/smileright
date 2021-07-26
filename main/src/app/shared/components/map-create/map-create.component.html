@@ -1,0 +1,34 @@
+<div class="full-width">
+  <p>
+    Enter 3 first letters of your address to open the list
+  </p>
+  <!-- <md-input-container class="full-width">
+    <input name="adress1" mdInput placeholder="Adress (exemple: 32 Kincumber Dr, CROYDON VIC ) " required>
+  </md-input-container> -->
+
+  <form class="example-form">
+    <mat-form-field class="full-width" appearance="outline">
+      <input name="address" type="text" #input placeholder="Adress (exemple: 32 Kincumber Dr, CROYDON VIC )" aria-label="Number"
+        matInput (keyup)="onSearchAddress(input.value)" [value]="input.value" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let addr of addresses" [value]="addr.DisplayLine" (onSelectionChange)="onAddressSelected(addr)">
+          {{ addr.DisplayLine }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <div class="full-width">
+      <app-map-view *ngIf="address" [positions]="[address.Geocode]" [addressLine]="address"></app-map-view>
+    </div>
+
+    <!-- google-->
+    <div class="full-width">
+      <mat-form-field class="full-width" appearance="outline">
+        <input name="adress2" matInput #search placeholder="Adress (exemple: 32 Kincumber Dr, CROYDON VIC )" required>
+      </mat-form-field>
+      <div class="full-width">
+        <app-map-view *ngIf="addressByGoogle" [positions]="[addressByGoogle]" [addressLine]="addressLine"></app-map-view>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,45 @@
+<div class="app-merchant-trading-hours-view-panel clearfix">
+  <div class="card-header primary-gradient-img  clearfix inModal" *ngIf="isModal == true">
+    <div class="row clearfix">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button white" matDialogClose (click)="closeEvent()">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <!-- merchant calculated name -->
+      <div class="row titleArea clearfix">
+        <h2 class="summary-header rm-m">
+          Business Hours
+          <span *ngIf="merchantTimezone" class="subLabel">Practice timezone:
+            <span style="font-weight: 600">{{ merchantTimezone }}</span></span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="pull-right">
+    <button class="btn-close btn-clear  pull-right mat-button">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div> -->
+  <div *ngIf="isModal == false">
+    <h2 class="sr-title m-h2 rm-mt">Business Hours</h2>
+    <p *ngIf="merchantTimezone" class="large">
+      Merchant Timezone:
+      <span style="font-weight: 600">{{ merchantTimezone }}</span>
+    </p>
+  </div>
+
+  <mat-dialog-content>
+    <mat-list>
+      <mat-list-item *ngFor="let t of tradingHours" class="flex flexList busHours">
+        <span class="small" *ngIf="t['NotOpen'] == '0'"><span
+            class="dayLabel">{{ t["DayOfWeek.Label.Singular"] }}</span>
+          <span class="tradingHour">{{ util.timeConvert(t["OpeningTime"].slice(0, 5)) }} -
+            {{ util.timeConvert(t["ClosingTime"].slice(0, 5)) }}</span></span>
+        <span class="small" *ngIf="t['NotOpen'] == '1'"><span
+            class="dayLabel">{{ t["DayOfWeek.Label.Singular"] }}</span>
+          <span class="tradingHour">Close</span></span>
+      </mat-list-item>
+    </mat-list>
+  </mat-dialog-content>
+</div>

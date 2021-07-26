@@ -1,0 +1,211 @@
+<div class="loading" *ngIf="!productObject || !estimateObject || !durationObject || !ProductID">
+  <!-- css loader -->
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div><!-- /css loader -->
+</div>
+
+
+<div class="clearfix merchant-calculator calculator " [class.customers]="isModal==true"
+  *ngIf="productObject && estimateObject && durationObject && ProductID">
+  <div class="calcContainer " [class.active]="isModal==true">
+
+
+    <div class="row clearfix mt mb heading" [class.primary-gradient]="isModal==true || isLandingPage==true">
+      <div class=" row clearfix" *ngIf="isModal==true">
+        <!-- Modal dismiss button -->
+        <button class="btn-close btn-clear mat-button  pull-right" (click)="closePage()" mat-dialog-close>
+          <mat-icon>clear</mat-icon>
+        </button>
+      </div>
+      <button *ngIf="ProductID && ProductID!='00000000000000000000000000000000'" mat-raised-button
+        class="pull-right viewProduct" color="accent" matTooltip="View Product " (click)="openProductViewDialog()">
+        <mat-icon>business_center</mat-icon> Product details
+      </button>
+
+
+      <h1 class="sr-title text-center rm-mb" *ngIf="productObject &&  productObject['MarketingLabel']">
+        {{productObject['MarketingLabel']}} </h1>
+    </div>
+
+    <div class="grey-area row clearfix">
+
+      <div class="row clearfix flex">
+        <div class="arrow_box">
+          <p class="rm-m">Regular repayment</p>
+          <h1 class="sm-h1 sr-title rm-m">
+            {{(toNumber(estimateObject['Repayments.Regular'])+toNumber(estimateObject['Fees.Account_Keeping.Approx.PerRepayment'])) | customCurrency }}
+          </h1>
+          <p class="rm-m">{{estimateObject['Frequency.Units'] }}</p>
+        </div>
+
+
+        <div class="info_object">
+          <p class="">
+            Your estimated first repayment will be
+            <strong>{{(toNumber(estimateObject['Deposit'])
+            +toNumber(estimateObject['Repayments.First'] )  +toNumber(estimateObject['Fees.Account_Keeping.Approx.PerRepayment'] ) ) | customCurrency }}</strong>
+            (First repayment &amp;
+            Deposit if required), with a <strong>total treatment value of {{amount | customCurrency}}*</strong>
+          </p>
+          <div class="row clearfix" *ngIf="textVisible==true">
+          <p class="" *ngIf="isModal==true || isLandingPage==true">Before proceeding with your chosen payment
+            option, you can adjust the repayment period and frequency to best suit your situation.</p>
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+<div class="col-mob">
+
+
+    <div *ngIf=" isTop==true &&  moreInfo == true" class=" clearfix  full-width  pull-right detailsMoreRight">
+      <mat-checkbox name="currencySymbol" (change)="moreInfoEvent()" class="pull-right " color="primary"
+        [(ngModel)]="_moreInfo">
+        More Details
+      </mat-checkbox>
+    </div>
+
+
+
+    <div class="clearfix full-width selFreq row">
+      <div class="" *ngIf="isFrequency == true">
+        <div class="clearfix row">
+          <h3 class="primary text-center rm-mt">Select repayment frequency</h3>
+          <mat-button-toggle-group class="btn-group text-center periodSelect full-width" [(ngModel)]="frequency"
+            (ngModelChange)="changeFrequency()">
+            <mat-button-toggle *ngFor="let freq of frequencys" [value]="freq" class="text-center full-width">
+              {{durationLabel(freq)}}
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3 class="primary clearfix larger text-center">Select loan duration</h3>
+    <div class="selector-row row clearfix mb" *ngIf="dynamicAmount==true">
+      <app-amount-slider-input (selectAmount)="selectAmount($event)"
+        [minAmount]="productObject['Parameter.MinLoanValue']" [maxAmount]="productObject['Parameter.MaxLoanValue']"
+        [amount]="amountInput"></app-amount-slider-input>
+    </div>
+
+
+    <div class="selector-row row clearfix ">
+      <app-duration-slider-input [frequency]="frequency" [minPeriod]="minDuration" [maxPeriod]="maxDuration"
+        [period]="durationInput" (selectPeriod)="selectDuration($event)"></app-duration-slider-input>
+    </div>
+
+
+
+    <div class="clearfix full-width  row">
+      <div class="thrd-width "
+        *ngIf="isPatientContribution == true &&  isFrequency == true && toNumber(amount) > toNumber(productObject['Parameter.MinLoanValue']) ">
+        <div class="col-right clearfix depositBox">
+          <mat-checkbox name="depositInc43" (ngModelChange)="changeContribution()" [(ngModel)]="depositInc">Include
+            deposit</mat-checkbox>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="clearfix row full-width"
+      *ngIf="depositInc==true && isPatientContribution == true && isFrequency == true   ">
+      <!-- show if deposit required -->
+      <mat-form-field class="d full-width fadeInDown">
+        <input name="contribution2" matInput value="" class="mat-block"
+          [max]="toNumber(amount) - toNumber(productObject['Parameter.MinLoanValue'])  "
+          (change)="changePatientContribution()" [(ngModel)]="patientContribution" placeholder="Customer Contribution, which should be less than {{(toNumber(amount ) - toNumber(productObject['Parameter.MinLoanValue'])) |
+          customCurrency}}">
+      </mat-form-field>
+    </div>
+
+
+    <div class="clearfix row full-width" *ngIf=" isFrequency == false">
+      <div class="patient-contribution  clearfix pull-left thrd-width "
+        *ngIf="isPatientContribution == true  && toNumber(amount) > toNumber(productObject['Parameter.MinLoanValue']) ">
+        <mat-checkbox name="depositInc22" (ngModelChange)="changeContribution()" [(ngModel)]="depositInc">Customer
+          Contribution </mat-checkbox>
+      </div>
+      <!-- show if deposit required -->
+      <mat-form-field *ngIf="depositInc==true && isPatientContribution == true   " class="d two-thrd-width fadeInDown">
+        <input name="contribution2" matInput value="" class="mat-block"
+          [max]="toNumber(amount) - toNumber(productObject['Parameter.MinLoanValue'])  "
+          (change)="changePatientContribution()" [(ngModel)]="patientContribution" placeholder="Customer Contribution , which should be less than {{(toNumber(amount ) - toNumber(productObject['Parameter.MinLoanValue'])) |
+          customCurrency}}">
+      </mat-form-field>
+    </div>
+
+
+
+    <div *ngIf=" isTop!=true &&  moreInfo == true" class=" clearfix full-width  ">
+      <mat-checkbox name="currencySymbol" (change)="moreInfoEvent()" class="pull-right " color="primary"
+        [(ngModel)]="_moreInfo">
+        More Details
+      </mat-checkbox>
+    </div>
+
+    <div class="row full-width clearfix flex mt mb" *ngIf="isTop!=true && retailInfo==true">
+      <div class="full-width  ">
+        <div class="column text-center breakdown">
+          <p class=""> Minimum Deposit Required</p>
+          <hr class=" display-block text-center">
+          <h1 class="sm-h1 sr-title rm-mb">{{(toNumber(estimateObject['Deposit'])) | customCurrency }}
+          </h1>
+          <p class="small rm-mt"></p>
+        </div>
+      </div>
+      <div class="full-width  ">
+        <div class="column text-center breakdown ">
+          <p class="">Interest Rate</p>
+          <hr class=" display-block text-center">
+          <h1 class="sm-h1 sr-title rm-mb">{{toNumber(estimateObject['Interest.Rate'] )/100 | percent:'2.1-1' }}</h1>
+        </div>
+      </div>
+      <div class="full-width  " *ngIf="dentalInfo==false">
+        <div class="column text-center breakdown highlight">
+          <p class="">Regular Repayments</p>
+          <hr class=" display-block text-center">
+          <h1 class="sm-h1 sr-title rm-mb">{{regulatPayment | customCurrency }}</h1>
+          <p class="small rm-mt"> {{durationLabel(frequency)}}</p>
+        </div>
+      </div>
+      <div class="full-width  " *ngIf="dentalInfo==false">
+        <div class="column text-center breakdown">
+          <p class="">Total Paid</p>
+          <hr class=" display-block text-center">
+          <h1 *ngIf="productObject['SubType']=='Payment Plan'" class="sm-h1 sr-title rm-mb">{{
+            (toNumber(estimateObject['Repayments.Total'])+toNumber(estimateObject['Deposit'])) | customCurrency }}</h1>
+          <h1 *ngIf="productObject['SubType']!='Payment Plan'" class="sm-h1 sr-title rm-mb">{{estimateObject['Repayments.Total']
+            | customCurrency }}</h1>
+        </div>
+      </div>
+    </div>
+
+
+    <p class="small"><strong>*</strong> Please note: Prices is an indication only and price may vary between patients. A
+      final price can only be established once consultation has occurred.</p>
+
+</div>
+
+  </div>
+
+
+
+  <div *ngIf="isProceedButton==true && productObject && estimateObject && durationObject && ProductID"
+    class=" clearfix full-width text-center add-mb" [class.customers]="isModal==true">
+
+    <button mat-raised-button class="btn-large nextBtn" type="submit" color="accent" (click)="proceedButton() ">
+
+      Next <mat-icon>chevron_right</mat-icon>
+
+    </button>
+
+  </div>
+</div>

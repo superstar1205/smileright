@@ -1,0 +1,121 @@
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+    border-bottom: 1px solid #ededed;
+}
+.mat-expanded mat-expansion-panel-header {
+    border-bottom: 1px solid #f1f1f1;
+}
+mat-accordion.mat-accordion {
+    margin-left: -24px;
+    margin-right: -24px;
+    display: block;
+}
+.mat-dialog-actions {
+    justify-content: space-between;
+}
+.mat-dialog-title {
+	margin-bottom: 5px;
+}
+h5.subtitle.rm-mt {
+    color: #7c8690;
+    font-size: 0.95rem;
+}
+mat-icon.head {
+	position: relative;
+    top: 4px;
+}
+mat-icon.shift {
+	position: relative;
+	top: -2px;
+}
+
+/***********************************/
+.modal-heading {
+    margin: -16px -24px 20px;
+}
+.header-title-product {
+    color: #fff;
+    padding: 24px;
+}
+mat-panel-title.primary-color {
+    font-size: 1.17rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+mat-panel-title mat-icon {
+    margin-right: 15px;
+}
+.white-background {
+    background-color: #fff;
+    margin: -24px 0;
+}
+
+.btn-close.btn-clear.mat-button.abs-right {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    color: #fff;
+    width: auto;
+    min-width: 0;
+}
+.row.clearfix.contentArea {
+    padding-top: 16px;
+}
+::ng-deep app-product-view-modal .container {
+    padding-bottom: 15px;
+}
+
+::ng-deep app-product-view-modal mat-expansion-panel {
+    box-shadow: none !important;
+}
+::ng-deep app-product-view-modal mat-expansion-panel .mat-expansion-panel-header {
+    padding: 5px 16px 0;
+    border-top: 1px solid #e3e3e3;
+}
+::ng-deep app-product-modal mat-expansion-panel .mat-expansion-panel-body {
+    padding: 16px 24px;
+}
+::ng-deep app-product-view-modal mat-expansion-panel mat-panel-title mat-icon {
+    margin-right: 16px;
+}
+::ng-deep app-product-view-modal mat-expansion-panel .panel-content {
+    padding: 0 16px;
+}
+
+::ng-deep app-product-modal table td.cell-header {
+    background: #1b8bdd;
+    font-weight: bold;
+    color: #fff;
+}
+::ng-deep app-product-modal table td {
+    padding: 6px;
+}
+.featureTitle {
+  display: flex;
+  align-items: center;
+}
+.featureTitle mat-icon {
+    margin-right: 11px;
+}
+
+@media (max-width: 768px) {
+    .row.full-width.primary-gradient {
+        padding: 2px;
+        margin-bottom: -10px;
+        box-sizing: border-box;
+    }
+}
+
+p.small {
+    font-size: .55rem;
+    font-weight: 300;
+}
+
+::ng-deep app-product-view-modal ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::ng-deep app-product-view-modal ::-webkit-scrollbar-thumb {
+    background: #e3e3e3;
+}

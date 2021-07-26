@@ -1,0 +1,239 @@
+<section class="heading-banner clearfix">
+  <div class="container banner-logo-container">
+    <img
+      class="banner-logo-img"
+      src="/assets/img/sdi/banner-logo.png"
+    /> 
+  </div>
+</section>
+
+<!-- intro -->
+<section class="bg-white mid-cta">
+  <div class="container">
+    <div class="intro-container">
+      <p *ngIf="patient" class="text-black text-align-left">
+        Hi {{ patient.firstName }},
+      </p>
+      <h2 class="text-black text-center font-weight-normal">Achieve a</h2>
+      <h1 class="intro text-black text-center">WHITER BRIGHTER SMILE</h1>
+      <h2 class="text-black text-center font-weight-normal">
+        With Pola Teeth Whitening!
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="bg-blue">
+  <div class="container brand-intro-container">
+    <div class="brand-intro-texts-item">
+      <h2 class="text-white text-center">AUSTRALIAN MADE.</h2>
+      <h2 class="text-white text-center">INTERNATIONALLY KNOWN.</h2>
+    </div>
+    <div class="brand-intro-img-item">
+      <img
+        class="brand-intro-img"
+        src="/assets/img/sdi/pola0-removebg-preview.png"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="mid-cta bg-white">
+  <div class="container prod-main-container">
+    <div class="prod-container">
+      <div class="prod-text-item">
+        <h2 class="text-black prod-title">
+          Save time with our Advanced Tooth Whitening System
+        </h2>
+        <p class="text-align-justify text-black">
+          Minimal chair time is required! The total treatment will take less
+          than 30 minutes* - that means increased comfort, and satisfaction.
+        </p>
+      </div>
+      <div class="prod-img-item">
+        <img src="/assets/img/sdi/pola1-removebg-preview.png" class="prod-img" />
+      </div>
+    </div>
+    
+    <div class="prod-container">
+      <div class="prod-text-item">
+        <h2 class="text-black prod-title">Super Fast Take-Home Tooth Whitening</h2>
+        <p class="text-align-justify text-black">
+          PolaDay can be applied at home yourself using our easy-to-use trays.
+          From just 15 minutes, once or twice per day, you will see changes
+          immediately!
+        </p>
+      </div>
+      <div class="prod-img-item">
+        <img src="/assets/img/sdi/pola2-removebg-preview.png" class="prod-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- contact practice -->
+<section class="bg-blue">
+  <div class="container">
+    <div class="contact-practice-container">
+      <img class="contact-practice-img" src="/assets/img/sdi/doctor-tooth-transparent.png">
+      <div class="contact-practice-right text-center">
+        <h2 class="text-white"><strong>NEED TIME TO PAY?</strong></h2>
+        <p class="text-white">From just {{minAmount | customCurrency}} a day, that's something to smile about.</p>
+        <p class="text-white">Contact {{ getPracticeName() }} for more information.</p>
+        <a href="#!" class="cta-btn">CLICK HERE!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="booking-cta" *ngIf="campaign && campaign.ID && merchant && merchant.ID">
+  <div class="container text-center">
+    <p class="white rm-mt">Want a free evaluation to see if Pola Teeth Whitening are right for you? </p>
+    <button class="btn-large" mat-raised-button (click)="launchBookingModal()">Book an appointment</button>
+  </div>
+</div>
+
+<section>
+  <div class="mid-cta container">
+    <h1 class="text-blue text-center">OPTIONS FOR EVERYONE!</h1>
+    <div class="horizontal-line"></div>
+    <div class="option-container">
+      <div class="option-item">
+        <div class="option-item-text-item">
+          <h3 class="text-black">pola day cp</h3>
+          <p class="text-black">TAKE HOME TOOTH WHITENING SYSTEM</p>
+        </div>
+        <div class="option-item-img-item">
+          <img src="/assets/img/sdi/pola0-removebg-preview.png" class="option-item-img" />
+        </div>
+      </div>
+      <div class="option-item">
+        <div class="option-item-text-item">
+          <h3 class="text-black">pola day + pola night</h3>
+          <p class="text-black">TAKE HOME TOOTH WHITENING SYSTEM</p>
+        </div>
+        <div class="option-item-img-item">
+          <img src="/assets/img/sdi/pola0-removebg-preview.png" class="option-item-img" />
+        </div>
+      </div>
+    </div>
+
+    <div class="option-container">
+      <div class="option-item">
+        <div class="option-item-text-item">
+          <h3 class="text-black">pola office+</h3>
+          <p class="text-black">IN-OFFICE TOOTH WHITENING SYSTEM</p>
+        </div>
+        <div class="option-item-img-item">
+          <img src="/assets/img/sdi/pola0-removebg-preview.png" class="option-item-img" />
+        </div>
+      </div>
+      <div class="option-item">
+        <div class="option-item-text-item">
+          <h3 class="text-black">pola office</h3>
+          <p class="text-black">IN-OFFICE TOOTH WHITENING SYSTEM</p>
+        </div>
+        <div class="option-item-img-item">
+          <img src="/assets/img/sdi/pola0-removebg-preview.png" class="option-item-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video">
+
+  <div class="container">
+
+    <p class="lead">
+      So how does it work? Watch the video below and find out more information, step by step!
+    </p>
+
+
+    <div class="video-frame">
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+          src="https://player.vimeo.com/video/364453958?byline=0"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen"
+          allowfullscreen></iframe></div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+<!-- BOTTOM TEETH -->
+<section class="bg-white">
+  <div class="mid-cta container bottom-teeth-container">
+    <div class="bottom-teeth-before-item">
+      <h2 class="text-black text-center">Before Treatment</h2>
+      <img src="/assets/img/sdi/before.png" class="bottom-teeth-img" />
+    </div>
+    <div class="bottom-teeth-after-item">
+      <h2 class="text-black text-center">After Treatment</h2>
+      <img src="/assets/img/sdi/after.png" class="bottom-teeth-img" />
+    </div>
+    <div class="bottom-logo">
+      <img src="/assets/img/sdi/bottom-logo.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+
+<section class="lower-info" #target *ngIf="campaign && campaign.ID && merchant && merchant.ID && minAmount>0">
+
+
+  <div class="container text-center">
+    <h2 class="blue">Think Pola Teeth Whitening is the treatment you've been needing?
+    </h2>
+
+    <p class="lead">
+      You can find out for sure by getting your treatment journey started today. To register your interest or
+      learn more about how we can improve your smile, click below to check out the cost calculator and see how
+      affordable your dream smile really is with our payment plans...
+    </p>
+
+
+    <div class="row clearfix flex">
+      <div class="two-thrd-width centered">
+
+        <mat-card class="rm-bp mat-elevation-z6">
+
+          <div class="row clearfix dealArea rel flex">
+            <div class="half-width rel full-height img">
+              <img src="/assets/img/dentists-clear-aligner.png" alt="Smile-Right-Payment-Options" class="promoPos" />
+            </div>
+            <div class="half-width text-left rel">
+              <div class="col-right">
+                <ng-container *ngIf="merchant">
+                  <h3 class="white rm-m">from as little as</h3>
+                  <h1 class="offerValue">{{minAmount | customCurrency}}</h1>
+                  <h3 class="white rm-mt mb">per day</h3>
+                </ng-container>
+
+                <ng-container *ngIf="!merchant">
+                  <h3 class="white rm-mt add-mb">Book an appointment now... It's more affordable than you might think!</h3>
+                </ng-container>
+                <button *ngIf="merchant" mat-raised-button color="accent" class="btn-large"
+                (click)="launchApplyModal()">Apply now !
+                <mat-icon>chevron_right</mat-icon></button>
+
+              <button *ngIf="!merchant" mat-raised-button color="accent" class="btn-large"
+                (click)="launchBookingModal()">Book an appointment
+                <mat-icon>chevron_right</mat-icon></button>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+
+      </div>
+    </div>
+
+    <p class="small add-mt">Disclaimer: Please note: Prices is an indication only and price may vary between patients. A
+      final price can only be established once consultation has occurred.</p>
+  </div>
+
+</section>

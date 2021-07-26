@@ -1,0 +1,415 @@
+<div class="full-width  mb"
+  [ngClass]="{'container-customer-background': isModal !=true , 'add-padding-top': isModal !=true}"
+  id="container-customer-background" [hidden]="!merchant || footerOnly == true">
+  <app-bluebg *ngIf="showBackground == true && isModal!=true"></app-bluebg>
+
+
+
+  <div class="row clearfix " [ngClass]="{'container': isModal !=true}">
+
+
+
+
+
+    <div class="card-header primary-gradient-img  clearfix inModal" *ngIf="isModal == true">
+      <div class="row clearfix">
+        <!-- Modal dismiss button -->
+        <button class="btn-close btn-clear mat-button white" (click)="closeEvent()">
+          <mat-icon>clear</mat-icon>
+        </button>
+        <!-- merchant calculated name -->
+
+        <div [hidden]="!merchant" class="merchant-profile-container-modal pull-left mr " id="profile-background">
+        </div>
+
+
+        <div class="row titleArea clearfix">
+
+          <h2 class="summary-header rm-m">
+            Appointment Request
+
+            <span *ngIf="merchant" class="subLabel">with {{merchant['TradingAs']}}</span>
+
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <form #difApplyForm="ngForm">
+
+      <mat-dialog-content [ngClass]="{'no-modal-height': isModal !=true}">
+
+        <div class="bg-white header clearfix" *ngIf="merchant && showPracticeName && isModal != true">
+          <app-header-product id="application-header" [merchant]="merchant">
+          </app-header-product>
+        </div>
+
+
+        <section class="clearfix introduction" *ngIf="showHeader == true && isModal!=true">
+          <div class="full-width cover-background text-center" id="cover-background">
+            <div [hidden]="!merchant" class="merchant-profile-container clearfix" id="profile-background"></div>
+          </div>
+        </section>
+
+        <section *ngIf="merchant" class="row clearfix">
+          <mat-card *ngIf="isCreated != true" [ngClass]="{'firstCard': isModal !=true , 'no-box-card': isModal ==true}">
+
+            <h3 *ngIf="pageTitle && isModal!=true" class="accent mt  larger text-center background">
+              <span>{{ pageTitle }} </span>
+            </h3>
+
+            <p *ngIf="pageDescription && isModal==true" class=" mb text-center">
+              {{ pageDescription }}
+            </p>
+
+
+            <p *ngIf="pageDescription && isModal!=true " class="lead mb text-center">
+              {{ pageDescription }}
+            </p>
+            <p class="lead mb text-center" *ngIf="isModal!=true">
+              Once requested, we will then contact during regular office hours to
+              confirm a suitable appointment date and time.
+            </p>
+            <div class="row clearfix flex-auto full-width">
+              <mat-form-field class="full-width mr" appearance="outline">
+                <mat-label>First name</mat-label>
+                <input name="firstName" matInput placeholder="First name" [(ngModel)]="firstName" required />
+              </mat-form-field>
+
+              <mat-form-field class="full-width ml" appearance="outline">
+                <mat-label>Surname</mat-label>
+                <input name="lastName" matInput placeholder="Surname" [(ngModel)]="lastName" required />
+              </mat-form-field>
+            </div>
+
+            <div class="row clearfix flex-auto full-width">
+              <mat-form-field class="full-width mr" appearance="outline">
+                <mat-label>Mobile number</mat-label>
+                <input name="mobile" matInput placeholder="Mobile number" [(ngModel)]="mobile" required />
+              </mat-form-field>
+
+              <mat-form-field class="full-width ml" appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" matInput
+                  placeholder="Email address" [(ngModel)]="email" required />
+              </mat-form-field>
+            </div>
+
+            <div class="row clearfix flex-auto full-width">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Postcode</mat-label>
+                <input name="postCode" matInput placeholder="Postcode" [(ngModel)]="postCode"
+                  (change)="changePostCode()" required />
+              </mat-form-field>
+
+              <mat-form-field class="full-width" *ngIf="states && states.length > 0" appearance="outline">
+                <mat-label>State</mat-label>
+                <mat-select name="state" [(ngModel)]="state" required>
+                  <mat-option *ngFor="let state of states" [value]="state.State">
+                    {{ state.State }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <p *ngIf="isModal!=true" class="lead mb text-center">
+              Please select the best day and time that suits you
+            </p>
+
+            <p *ngIf="isModal==true" class=" mb text-center">
+              Please select the best day and time that suits you
+            </p>
+
+
+            <div class="row clearfix flex-auto full-width">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Best time for you</mat-label>
+                <mat-select name="bestContactTime" [(ngModel)]="bestContactTime" required>
+                  <mat-option *ngFor="let b of bestContactTimes" [value]="b.Code">
+                    {{ b.Label }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="row clearfix flex-auto full-width" *ngIf="types && types.length > 0">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Reason for Appointment</mat-label>
+                <mat-select name="bestContactTimetypess" [(ngModel)]="type" (ngModelChange)="addSubType()" required>
+                  <mat-option *ngFor="let b of types" class="label2" [value]="b">
+                    {{ b.Label }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <p class="clearfix full-width small no-margin" *ngIf="type && type.Label2">
+                {{ replaceAllString(type.Label2) }}
+              </p>
+            </div>
+            <div class="row clearfix flex-auto full-width" *ngIf="subTypes && subTypes.length > 0">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Please give us more details</mat-label>
+                <mat-select name="bestContactTimetypesubTypes" [(ngModel)]="subType" required>
+                  <mat-option *ngFor="let b of subTypes" class="label2" [value]="b">
+                    {{ b.Label }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <p class="clearfix full-width small no-margin" *ngIf="subType && subType.Label2">
+                {{ replaceAllString(subType.Label2) }}
+              </p>
+            </div>
+
+            <div class="row clearfix flex-auto full-width">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Anything else you would like us to know?</mat-label>
+                <textarea name="comments" matInput placeholder="Please enter your thoughts or comments here..."
+                  [(ngModel)]="comment"></textarea>
+              </mat-form-field>
+            </div>
+
+            <div class="row clearfix  text-center" *ngIf="isModal==true">
+              <p *ngIf="merchant['Appointment_Cancelling_Policy']">
+                By proceeding I agree with
+                <a [routerLink]="" (click)="onClickTerms()">Terms and Conditions</a>
+                for online book.
+              </p>
+
+            </div>
+
+            <div class="row clearfix text-center" *ngIf="isModal!=true">
+              <p *ngIf="merchant['Appointment_Cancelling_Policy']" class="mb">
+                By proceeding I agree with
+                <a [routerLink]="" (click)="onClickTerms()">Terms and Conditions</a>
+                for online book.
+              </p>
+
+              <button color="accent" mat-raised-button class="btn-large" [disabled]="difApplyForm.invalid"
+                (click)="book()">
+                Submit <span *ngIf="bookingURL"> &amp; book now </span>
+                <mat-icon>chevron_right </mat-icon>
+              </button>
+            </div>
+
+          </mat-card>
+          <mat-card *ngIf="isCreated == true" class="firstCard">
+            <div class="row clearfix typesOfDentist add-mb mt mr ml" data-aos-once="true" data-aos="fade-right">
+              <div class="half-width text-center">
+                <img src="/assets/img/dentist_watch_1.png" class="help-icon" alt="Specialist dentistry services" />
+              </div>
+              <div class="half-width" *ngIf="merchant">
+                <h2 class="sr-title sm-h2 primary rm-mt text-center">Thank you !</h2>
+                <p class="lead">
+                  {{ merchant["TradingAs"] }} have recieved your request and will be
+                  in touch during regular business hours to confirm your booking.
+                </p>
+
+                <p class="lead">
+                  If you have any queries,Please call us:
+                  <strong>{{ merchant["phones.Number"] | customPhone }}</strong>
+                </p>
+              </div>
+            </div>
+          </mat-card>
+        </section>
+      </mat-dialog-content>
+
+      <mat-dialog-actions *ngIf="isModal==true" class="row clearfix text-center full-width">
+        <div class="button-row  text-center">
+
+
+          <button color="accent" mat-raised-button class="btn-large" [disabled]="difApplyForm.invalid" (click)="book()">
+            Submit <span *ngIf="bookingURL"> &amp; book now </span>
+            <mat-icon>chevron_right </mat-icon>
+          </button>
+        </div>
+
+      </mat-dialog-actions>
+
+
+    </form>
+  </div>
+
+
+
+</div>
+
+<div class="full-width clearfix booking-container footer-booking-desktop"
+  *ngIf="(footerOnly == true || showContact == true) && merchant && isModal!=true">
+  <mat-card class="booking-cta flex" [style.color]="contactColor" [style.background-color]="contactBackgroundColor">
+    <div class="full-width flex clearfix">
+      <div class="footer-logo inline pull-left">
+        <img *ngIf="merchantProfile" class="footer-img" [src]="merchantProfile" />
+      </div>
+
+      <div class="full-width">
+        <div class="row clearfix flex text-center full-width">
+          <div class="full-width">
+            <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+              *ngIf="merchant['TradingAs']">
+              {{ merchant["TradingAs"] }}
+            </p>
+
+            <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+              *ngIf="merchant['phones.Number']">
+              {{ merchant["phones.Number"] | customPhone }}
+            </p>
+
+            <p class="small left-footer-text text-left rm-m mr full-width clearfix" [style.color]="contactColor"
+              *ngIf="merchant['addresses.Calculated']">
+              {{ merchant["addresses.Calculated"] }}
+            </p>
+
+            <p class="small left-footer-text text-left rm-m mr full-width clearfix" (click)="openLink(merchant['URL'])"
+              [style.color]="contactColor" *ngIf="merchant['URL']">
+              {{ cleanURL( merchant["URL"]) }}
+            </p>
+          </div>
+          <div class="full-width text-right">
+            <div class="clearfix open-hours-container">
+
+              <button mat-raised-button color="" class="contact-us-button mr" (click)="contact()"
+                matTooltip="Contact Us">
+                Contact Us
+              </button>
+
+
+              <button mat-raised-button color="" class="open-hours-button mr" (click)="tradingHours()"
+                matTooltip="Opening Hours">
+                Opening Hours
+              </button>
+            </div>
+            <div class="text-right icon-social-media clearfix" *ngIf="
+                merchant['Facebook'] ||
+                merchant['URL'] ||
+                merchant['Twitter'] ||
+                merchant['Tumblr'] ||
+                merchant['Vimeo'] ||
+                merchant['YouTube'] ||
+                merchant['Instagram'] ||
+                merchant['Pinterest'] ||
+                merchant['LinkedIn']
+              ">
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Facebook']" class="mr fab fa-facebook-f"
+                (click)="openLink(merchant['Facebook'])" aria-label="Facebook" matTooltip="Facebook">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Twitter']" class="mr fab fa-twitter"
+                (click)="openLink(merchant['Twitter'])" aria-label="Twitter" matTooltip="Twitter">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Tumblr']" class="mr fab fa-tumblr"
+                (click)="openLink(merchant['Tumblr'])" aria-label="Tumblr" matTooltip="Tumblr">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Vimeo']" class="mr fab fa-vimeo-v"
+                (click)="openLink(merchant['Vimeo'])" aria-label="Vimeo" matTooltip="Vimeo">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['YouTube']" class="mr fab fa-youtube"
+                (click)="openLink(merchant['YouTube'])" aria-label="YouTube" matTooltip="YouTube">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Instagram']" class="mr fab fa-instagram"
+                (click)="openLink(merchant['Instagram'])" aria-label="Instagram" matTooltip="Instagram">
+              </mat-icon>
+
+              <mat-icon [style.color]="contactColor" *ngIf="merchant['Pinterest']" class="mr fab fa-pinterest-p"
+                (click)="openLink(merchant['Pinterest'])" aria-label="Pinterest" matTooltip="Pinterest">
+              </mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="clearfix"></p>
+  </mat-card>
+
+</div>
+
+
+<div class="full-width clearfix booking-container footer-booking-mobile"
+  *ngIf="(footerOnly == true || showContact == true) && merchant && isModal!=true">
+  <mat-card class="booking-cta flex" [style.color]="contactColor" [style.background-color]="contactBackgroundColor">
+    <div class="full-width   clearfix">
+      <div class=" text-center  mt  clearfix full-width ">
+        <img *ngIf="merchantProfile" class="footer-img-mobile" [src]="merchantProfile" />
+      </div>
+
+      <div class="row clearfix  text-center full-width">
+
+        <div class="row clearfix  text-center full-width">
+          <h2 class="text-green text-uppercase rm-mb " [style.color]="contactColor" *ngIf="merchant['TradingAs']">
+            {{ merchant["TradingAs"] }}</h2>
+
+          <p class="small left-footer-text  rm-m mr full-width clearfix" [style.color]="contactColor"
+            *ngIf="merchant['phones.Number']">
+            {{ merchant["phones.Number"] | customPhone }}
+          </p>
+
+          <p class="small left-footer-text  rm-m mr full-width clearfix" [style.color]="contactColor"
+            *ngIf="merchant['addresses.Calculated']">
+            {{ merchant["addresses.Calculated"] }}
+          </p>
+
+          <p class="small left-footer-text  rm-m mr full-width clearfix" (click)="openLink(merchant['URL'])"
+            [style.color]="contactColor" *ngIf="merchant['URL']">
+            {{ cleanURL(merchant["URL"]) }}
+          </p>
+        </div>
+        <div class="full-width clearfix text-center mt">
+
+          <button mat-raised-button color="" class="mr " (click)="contact()" matTooltip="Contact Us">
+            Contact Us
+          </button>
+
+
+          <button mat-raised-button color="" (click)="tradingHours()" matTooltip="Opening Hours">
+            Opening Hours
+          </button>
+        </div>
+        <div class="full-width clearfix text-center  mt" *ngIf="
+                merchant['Facebook'] ||
+                merchant['URL'] ||
+                merchant['Twitter'] ||
+                merchant['Tumblr'] ||
+                merchant['Vimeo'] ||
+                merchant['YouTube'] ||
+                merchant['Instagram'] ||
+                merchant['Pinterest'] ||
+                merchant['LinkedIn']
+              ">
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Facebook']" class="mr fab fa-facebook-f"
+            (click)="openLink(merchant['Facebook'])" aria-label="Facebook" matTooltip="Facebook">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Twitter']" class="mr fab fa-twitter"
+            (click)="openLink(merchant['Twitter'])" aria-label="Twitter" matTooltip="Twitter">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Tumblr']" class="mr fab fa-tumblr"
+            (click)="openLink(merchant['Tumblr'])" aria-label="Tumblr" matTooltip="Tumblr">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Vimeo']" class="mr fab fa-vimeo-v"
+            (click)="openLink(merchant['Vimeo'])" aria-label="Vimeo" matTooltip="Vimeo">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['YouTube']" class="mr fab fa-youtube"
+            (click)="openLink(merchant['YouTube'])" aria-label="YouTube" matTooltip="YouTube">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Instagram']" class="mr fab fa-instagram"
+            (click)="openLink(merchant['Instagram'])" aria-label="Instagram" matTooltip="Instagram">
+          </mat-icon>
+
+          <mat-icon [style.color]="contactColor" *ngIf="merchant['Pinterest']" class="mr fab fa-pinterest-p"
+            (click)="openLink(merchant['Pinterest'])" aria-label="Pinterest" matTooltip="Pinterest">
+          </mat-icon>
+        </div>
+      </div>
+    </div>
+    <p class="clearfix"></p>
+  </mat-card>
+</div>

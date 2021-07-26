@@ -1,0 +1,83 @@
+agm-map {
+  height: 600px;
+  display: block;
+}
+
+::ng-deep app-address-input agm-map {
+  height: 300px;
+  display: block;
+  margin: 10px -24px 20px !important;
+}
+
+
+.adressNotFound {
+  height: 300px;
+}
+
+.container {
+  height: 100%;
+}
+
+strong {
+  margin: 5px;
+}
+
+.container.mapModal {
+  padding: 0;
+  margin: -24px !important;
+  width: auto !important;
+  max-width: none;
+}
+
+::ng-deep app-map-view .pull-right.closeModal {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 9999;
+}
+
+
+::ng-deep app-map-view {
+  min-height: 230px;
+  display: block;
+}
+
+.loadingMap {
+  padding: 0;
+  display: block;
+  max-width: 200px;
+  position: relative;
+  margin: -30px auto 0;
+}
+.loadingMap img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.loadingMap p {
+  color: #565656;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+::ng-deep app-map-view .si-content-wrapper {
+  min-width: 180px;
+  padding: 5px 20px;
+}
+
+@media (max-width: 768px) {
+  agm-map {
+    height: 300px;
+    display: block;
+    margin: -16px -16px 20px;
+  }
+  ::ng-deep app-address-input agm-map {
+    height: 300px;
+    display: block;
+    margin: 10px -24px 20px !important;
+  }
+}
+
+::ng-deep .si-frame.si-content-wrapper {
+  padding: 5px !important;
+}

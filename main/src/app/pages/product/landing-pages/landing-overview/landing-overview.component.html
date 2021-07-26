@@ -1,0 +1,211 @@
+<div class="row clearfix">
+
+  <!-- separate containers for each product page. This must be added in addition to a route -->
+
+  <div class="animate" *ngIf="applied==false">
+    <app-emax *ngIf="code=='emax'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-emax>
+
+    <app-philips-zoom-in-office *ngIf="code=='philipszoominoffice'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()">
+    </app-philips-zoom-in-office>
+
+    <app-invisalign *ngIf="code=='invisalign'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-invisalign>
+
+    <app-lanap-protocol *ngIf="code=='lanap'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-lanap-protocol>
+
+    <app-philips-zoom-take-home *ngIf="code=='philipszoomtakehome'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()">
+    </app-philips-zoom-take-home>
+
+    <app-kor-take-home *ngIf="code=='kortakehome'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-kor-take-home>
+
+    <app-oventus *ngIf="code=='oventus'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-oventus>
+
+    <app-smilestyler *ngIf="code=='smilestyler'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-smilestyler>
+
+    <app-suresmile *ngIf="code=='suresmile'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-suresmile>
+
+    <app-iveri-take-home *ngIf="code=='iveritakehome'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-iveri-take-home>
+
+    <app-somnodent *ngIf="code=='somnodent'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-somnodent>
+
+    <app-angel-aligner *ngIf="code=='angel-align'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-angel-aligner>
+
+    <app-clear-correct *ngIf="code=='clear-correct'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-clear-correct>
+
+    <app-clear-path *ngIf="code=='clear-path'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-clear-path>
+
+    <app-inman *ngIf="code=='inman'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-inman>
+
+    <app-simpli5 *ngIf="code=='simpli5'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-simpli5>
+
+    <app-spark *ngIf="code=='spark'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-spark>
+
+    <app-truline *ngIf="code=='truline'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-truline>
+
+    <infection-control *ngIf="code=='infectioncontrol'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient"></infection-control>
+
+    <coronavirus-dos-and-donts *ngIf="code=='coronavirus-dos-and-donts'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient"></coronavirus-dos-and-donts>
+
+    <app-sdi-take-home *ngIf="code=='sditakehome'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-sdi-take-home>
+
+
+    <app-ultra-dent-in-office *ngIf="code=='ultradentinoffice'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()">
+    </app-ultra-dent-in-office>
+
+    <app-going-green *ngIf="code=='goinggreen'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [minAmount]="minAmount" [patient]="patient" [code]="code" (apply)="apply()"></app-going-green>
+
+    <!-- generic appointment booking page -->
+    <app-book-appointment *ngIf="code=='book-an-appointment'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-book-appointment>
+
+    <app-boutique boutique *ngIf="code=='boutique'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-boutique>
+
+
+    <app-opalescence boutique *ngIf="code=='opalescence'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-opalescence>
+
+
+
+    <app-pola boutique *ngIf="code=='pola'" [userData]="userData" [merchant]="merchant" [campaign]="campaign"
+      [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-pola>
+
+
+
+
+    <app-getting-started-coordinator boutique *ngIf="code=='getting-started-coordinator'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-getting-started-coordinator>
+
+
+    <app-getting-started-dental boutique *ngIf="code=='getting-started-dental'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-getting-started-dental>
+
+
+    <app-getting-started-marketing boutique *ngIf="code=='getting-started-marketing'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-getting-started-marketing>
+
+
+    <app-getting-started-practice-manager boutique *ngIf="code=='getting-started-practice-manager'"
+      [userData]="userData" [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount"
+      (apply)="apply()"></app-getting-started-practice-manager>
+
+
+
+
+
+    <app-partner-pricing-calculator boutique *ngIf="code=='partner-pricing-calculator'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-partner-pricing-calculator>
+
+    <app-partner-pricing-free boutique *ngIf="code=='partner-pricing-free'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-partner-pricing-free>
+
+
+
+    <app-partner-pricing-general boutique *ngIf="code=='partner-pricing-general'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-partner-pricing-general>
+
+    <app-partner-pricing-plans boutique *ngIf="code=='partner-pricing-plans'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-partner-pricing-plans>
+
+
+    <app-partner-let-get-started boutique *ngIf="code=='partner-let-get-started'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-partner-let-get-started>
+
+    <app-getting-started-home boutique *ngIf="code=='getting-started-home'" [userData]="userData"
+      [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-getting-started-home>
+
+
+    <app-consumer-communication-introduction boutique *ngIf="code=='consumer-communication-introduction'"
+      [userData]="userData" [merchant]="merchant" [campaign]="campaign" [patient]="patient" [minAmount]="minAmount"
+      (apply)="apply()"></app-consumer-communication-introduction>
+
+    <app-consumer-smile-right boutique *ngIf="code=='consumer-smile-right'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()"></app-consumer-smile-right>
+
+    <app-consumer-we-listened boutique *ngIf="code=='consumer-we-listened'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-consumer-we-listened>
+
+
+
+
+    
+    <app-hygiene-bad-breath boutique *ngIf="code=='hygiene-bad-breath'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-bad-breath>    
+
+    <app-hygiene-confirmation boutique *ngIf="code=='hygiene-confirmation'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-confirmation> 
+
+    <app-hygiene-dental-tips boutique *ngIf="code=='hygiene-dental-tips'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-dental-tips>   
+
+    <app-hygiene-periodontist boutique *ngIf="code=='hygiene-periodontist'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-periodontist>  
+
+    <app-hygiene-recal1 boutique *ngIf="code=='hygiene-recal1'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-recal1>  
+
+    <app-hygiene-recal2 boutique *ngIf="code=='hygiene-recal2'" [userData]="userData" [merchant]="merchant"
+      [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+    </app-hygiene-recal2>
+
+    <app-dentist-general-info boutique *ngIf="code=='dentist-general-info'" [userData]="userData" [merchant]="merchant"
+    [campaign]="campaign" [patient]="patient" [minAmount]="minAmount" (apply)="apply()">
+  </app-dentist-general-info>
+
+  </div>
+  <section
+    *ngIf="userData && merchant && campaign && minAmount && userData['Amount'] && userData['ProductGroup'] && applied==true "
+    class="application full-width text-center animate" #applyArea>
+
+    <app-bluebg class="applyBg"></app-bluebg>
+
+    <div class="animate formContainer">
+      <div class="row clearfix">
+        <apply-form (create)="createEvent($event)" class="animate text-center" [patient]="patient"
+          [amount]="userData['Amount']" [productGroup]="userData['ProductGroup']" [campaignID]="campaignID"
+          [merchantID]="campaign['Merchant_key']" [productName]="code"></apply-form>
+      </div>
+      <div class="row clearfix">
+        <button mat-raised-button color="primary" (click)="goBack()">
+          <mat-icon>chevron_left</mat-icon> Back to product
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,263 @@
+<div class="white-background card clearfix row full-width " *ngIf="(targetType && target) || (targetType=='us')">
+
+
+
+  <div class="full-width row clearfix contact-header" *ngIf="targetType=='us'">
+    <button class="btn-close btn-clear mat-button modalCloser" *ngIf="isModal==true" (click)="close()">
+      <mat-icon>clear</mat-icon>
+    </button>
+
+    <div class="column">
+      <div class=" row clearfix qtr-width">
+
+        <img class="headNavImg userIconImg site_logo" />
+
+      </div>
+      <div class=" clearfix thr-qtr-width">
+
+        <p class="lead rm-mb shadow-text">Use the form below to get in touch with {{brandName}} via. E-mail.</p>
+        <p class="small shadow-text">Alternatively, our direct contact details can be found on the next tab.</p>
+
+
+
+
+      </div>
+    </div>
+
+    <div class="deep primary-gradient"></div>
+    <div class="deep site_background"></div>
+  </div>
+
+  <div class="full-width row clearfix contact-header short" *ngIf="targetType!='us'">
+    <button class="btn-close btn-clear mat-button modalCloser" *ngIf="isModal==true" (click)="close()">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <div class="column">
+      <div class=" row clearfix qtr-width">
+        <app-ep-document-view-image class="headNavcustomer userIconContactHeader" [defaultPicture]="defaultPic" [document]="userPic"></app-ep-document-view-image>
+      </div>
+      <div class="thr-qtr-width text-left">
+        <p class="lead rm-mb shadow-text">Use the form below to contact <Strong> {{target.name}} </Strong> via
+          email.</p>
+        <div class="row clearfix full-width flex ">
+          <p *ngIf="target.email" class="small full-width shadow-text ">
+            <mat-icon>email</mat-icon>
+            {{target.email}}
+          </p>
+          <p *ngIf="target.mobile" matTooltip="Mobile Phone" class="small full-width shadow-text ">
+            <mat-icon>phone_iphone</mat-icon>
+            {{target.mobile | customPhone }}
+          </p>
+          <p *ngIf="target.phoneHome" matTooltip="home Phone" class="small full-width shadow-text ">
+            <mat-icon>phone_forwarded</mat-icon>
+            {{target.phoneHome| customPhone:'landLine'}}
+          </p>
+          <p *ngIf="target.phoneWork" matTooltip="Work Phone" class="small full-width shadow-text ">
+            <mat-icon>work</mat-icon>
+            {{target.phoneWork| customPhone:'landLine'}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="deep primary-gradient"></div>
+    <div class="deep site_background"></div>
+  </div>
+
+  <mat-dialog-content class="contact">
+
+    <div class="full-width row clearfix">
+      <form #contactForm="ngForm" class="row clearfix">
+        <div class="row clearfix " *ngIf="messageSent == false">
+          <!-- <div class="half-width"> -->
+          <div class="row clearfix mb" *ngIf="asProfile==true || asPractice==true  || asInvitation==true">
+            <label class="text-center">
+
+              {{howLabel}}
+            </label>
+            <hr>
+            <mat-button-toggle-group name="contactTypes" class="btn-group flex full-width text-center" [(ngModel)]="contactType">
+              <mat-button-toggle class="text-center " *ngIf="asGuest==true" [value]="'guest'">
+               As guest
+              </mat-button-toggle>
+              <mat-button-toggle class="text-center" *ngIf="asInvitation==true" [value]="'invitation'">
+                Your invitation
+              </mat-button-toggle>
+              <mat-button-toggle class="text-center " *ngIf="asProfile==true" [value]="'profile'">
+                Your profile
+              </mat-button-toggle>
+              <mat-button-toggle class="text-center " *ngIf="asPractice==true" [value]="'practice'">
+                Your practice
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div class="row clearfix" *ngIf="asGuest==true && asProfile==false && asPractice==false &&  asInvitation==false  ">
+            <div class="full-width">
+              <div class="icons-col">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="emailGuest1" matInput class="mat-block" placeholder="Email " [(ngModel)]="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                    required>
+                </mat-form-field>
+              </div>
+              <div class="icons-col">
+                <mat-icon>person</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="firstnameGuest1" matInput class="mat-block" placeholder="First name " [(ngModel)]="firstName"
+                    required>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="lastnameGuest1" matInput class="mat-block" placeholder="Last name " [(ngModel)]="lastName"
+                    required>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix" *ngIf="asProfile==true || asPractice==true  || asInvitation==true ">
+
+            <div class="full-width" *ngIf="contactType=='guest'">
+              <div class="icons-col">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="emailGuest" matInput class="mat-block" placeholder="Email " [(ngModel)]="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                    required>
+                </mat-form-field>
+              </div>
+              <div class="icons-col">
+                <mat-icon>person</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="firstnameGuest" matInput class="mat-block" placeholder="First name " [(ngModel)]="firstName"
+                    required>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="lastnameGuest" matInput class="mat-block" placeholder="Last name " [(ngModel)]="lastName"
+                    required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="full-width" *ngIf="contactType=='profile' && profile">
+              <div class="icons-col">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="emailProfile" matInput class="mat-block" [disabled]='true' placeholder="Email "
+                    [(ngModel)]="profile['emails.Email']" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                </mat-form-field>
+              </div>
+              <div class="icons-col">
+                <mat-icon>person</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="nameProfile" matInput class="mat-block" [disabled]='true' placeholder="Name" [(ngModel)]="profile.CalculatedName">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="full-width" *ngIf="contactType=='practice' && practice">
+              <div class="icons-col">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="emailPractice" matInput class="mat-block" [disabled]='true' placeholder="Email "
+                    [(ngModel)]="practice['emails.Email']" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                </mat-form-field>
+              </div>
+              <div class="icons-col">
+                <mat-icon>person</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="namePractice" matInput class="mat-block" [disabled]='true' placeholder="Name" [(ngModel)]="practice.CalculatedName">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="full-width" *ngIf="contactType=='invitation' && invitation">
+              <div class="icons-col">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="emailinvitation" matInput class="mat-block" [disabled]='true' placeholder="Email "
+                    [(ngModel)]="invitation['email']" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                </mat-form-field>
+              </div>
+              <div class="icons-col">
+                <mat-icon>person</mat-icon>
+              </div>
+              <div class="row-content-col">
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="firstnameInvitation" matInput class="mat-block" placeholder="First name " [(ngModel)]="invitation['FirstName']"
+                    [disabled]='true'>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                  <input name="lastnameInvitation" matInput class="mat-block" placeholder="Last name " [(ngModel)]="invitation['LastName']"
+                    [disabled]='true'>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+
+          <!-- <div class="half-width"> -->
+          <div class="row clearfix">
+            <div class="icons-col">
+              <mat-icon>announcement</mat-icon>
+            </div>
+            <div class="row-content-col">
+              <mat-form-field class="full-width" *ngIf="subjectArray.length<=0">
+                <input name="subject" matInput class="mat-block" placeholder="{{subjectLabel}}" [(ngModel)]="subject"
+                  required>
+              </mat-form-field>
+
+              <div class="row clearfix">
+                <mat-form-field class="full-width" *ngIf="subjectArray.length>0">
+
+                  <mat-select name="subjectList" class="full-width" [(ngModel)]="subject" name="theme" placeholder="{{subjectLabel}}"
+                    required>
+                    <mat-option *ngFor="let s of subjectArray" [value]="s">
+                      {{s}}
+                    </mat-option>
+                  </mat-select>
+
+                </mat-form-field>
+              </div>
+
+            </div>
+          </div>
+          <div class="row clearfix well">
+            <mat-form-field class="full-width" appearance="outline">
+              <textarea name="message" matInput class="messageArea" placeholder="Your Message" [(ngModel)]="message"
+                required></textarea>
+            </mat-form-field>
+          </div>
+          <!-- </div> -->
+        </div>
+
+        <div class="row clearfix text-center animated fadeInDown" *ngIf="messageSent == true">
+          <h2 class="sm-h2 sr-title">Thanks!</h2>
+          <p>{{thankLabel}}</p>
+        </div>
+
+        <div class="full-width text-center" *ngIf="messageSent == false">
+          <button mat-raised-button class="btn-large contact-us" type="submit" color="accent" nextStep (click)="contactSend()"
+            [disabled]="!contactForm.form.valid">
+            <mat-icon>email</mat-icon> {{sendLabel}}
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </mat-dialog-content>
+</div>

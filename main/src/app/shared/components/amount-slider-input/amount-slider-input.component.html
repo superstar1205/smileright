@@ -1,0 +1,22 @@
+<!--  Amount required slider -->
+<div class="row clearfix consumer-slider">
+  <div class="half-width">
+    <div class="col-left row clearfix rel inlined-label flex">
+      <label class=" half-width slider-label inline accent-color">{{ label }}</label>
+      <mat-form-field class=" half-width inline slider-inputs">
+        <input matInput name="amountRequired" [min]="minAmount" [max]="maxAmount" placeholder=""  (ngModelChange)="changeAmountValue($event)" [(ngModel)]="amount" currencyMask>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="half-width">
+    <div class="col-right">
+      <div class="row clearfix rel">
+        <!-- range slider for amount required -->
+        <mat-slider class="full-width" [min]="minAmount" [max]="maxAmount" step="{{step}}" [(ngModel)]="amount" thumbLabel (change)="updateAmountValue($event)"></mat-slider>
+
+        <p class="min-amount small">{{minAmount | customCurrency}}</p>
+        <p class="max-amount small">{{maxAmount | customCurrency}}</p>
+      </div>
+    </div>
+  </div>
+</div>

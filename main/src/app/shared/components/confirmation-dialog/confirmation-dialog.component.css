@@ -1,0 +1,78 @@
+::ng-deep app-access-modal button mat-icon {
+  vertical-align: baseline !important;
+}
+
+
+.confirmation-dialog-card-header button {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  min-width: 30px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+
+.confirmation-dialog-card-header h2 {
+  color: #fff;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 2px 15px rgba(0, 0, 0, 0.5);
+  font-size: 1.85rem;
+  width: 100%;
+  margin: -24px -24px -5px -24px;
+  padding: 24px;
+  background: rgba(28, 138, 221, 0.75);
+}
+
+::ng-deep app-access-modal .confirmation-dialog-card-header h2 {
+  background: rgba(28, 138, 221, 0.75);
+}
+
+h6.modalHeading {
+  font-size: 21px;
+  margin: 20px 0 10px;
+}
+
+.buttonrow.flex {
+  justify-content: space-between;
+}
+
+.buttonrow.flex button {
+  margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+  button {
+    margin: 0 auto;
+    display: block;
+  }
+  mat-dialog-content {
+    text-align: center;
+  }
+
+  .confirmation-dialog-card-header h2 {
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4), 0 2px 25px rgba(0, 0, 0, 0.4);
+    font-size: 1.65rem;
+    margin-bottom: 5px;
+    text-align: center;
+    background: rgba(28, 138, 221, 0.65);
+    padding: 5px 10px;
+    width: auto;
+  }
+  .confirmation-dialog-card-header button {
+    color: #5a5a5a;
+  }
+  h6.modalHeading {
+    font-size: 18px;
+    margin: 5px 0 10px;
+    text-align: center;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background: #f2f2f2;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+}

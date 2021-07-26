@@ -1,0 +1,29 @@
+.buttons-content .btn-outline-accent {
+	color: #fff;
+	margin: 2px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4), 0 1px 5px rgba(0,0,0,0.2);
+	padding: 3px 6px;
+	font-weight: 600;
+	width: auto;
+	font-size: 1.1rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+
+}
+.how-to-apply .btn-outline-accent mat-icon {
+	position: relative;
+	top: -3px;
+}
+
+
+
+section.how-to-apply {
+    padding: 60px 0;
+}
+
+section.how-to-apply.background {
+	background: #e3e3e3;
+}
+

@@ -1,0 +1,93 @@
+<div class="row clearfix " *ngIf="merchant && merchantID">
+
+  <div class="card-header primary-gradient-img  clearfix inModal">
+    <div class="row clearfix">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button white" (click)="closeEvent()">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <!-- merchant calculated name -->
+
+
+
+
+      <div class="row titleArea clearfix">
+
+        <h2 class="summary-header rm-m">
+          Contact Us
+
+
+          <span class="subLabel"> Use the form below to get in touch with {{merchant['TradingAs']}}</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <form #difApplyForm="ngForm">
+
+    <mat-dialog-content [ngClass]="{'no-modal-height': isModal !=true}">
+
+
+      <section *ngIf="merchant" class="row clearfix">
+
+
+
+        <div class="row clearfix full-width flex-auto ">
+          <mat-form-field class="full-width mr clearfix " appearance="outline">
+            <mat-label>First name</mat-label>
+            <input name="firstName" matInput placeholder="First name" [(ngModel)]="firstName" required />
+          </mat-form-field>
+
+
+
+          <mat-form-field class="full-width ml clearfix " appearance="outline">
+            <mat-label>Surname</mat-label>
+            <input name="lastName" matInput placeholder="Surname" [(ngModel)]="lastName" required />
+          </mat-form-field>
+
+        </div>
+
+
+        <div class="row clearfix full-width ">
+
+
+
+          <mat-form-field class="full-width clearfix" appearance="outline">
+            <mat-label>Email address</mat-label>
+            <input name="email" matInput placeholder="Email address"
+              pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [(ngModel)]="email" required />
+          </mat-form-field>
+        </div>
+
+
+        <mat-form-field class="full-width clearfix " appearance="outline">
+          <mat-label>Subject</mat-label>
+          <input name="Subject" matInput placeholder="Subject" [(ngModel)]="subject" required />
+        </mat-form-field>
+
+
+        <div class="row clearfix">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Your Message</mat-label>
+            <textarea name="message" matInput placeholder="Your Message" class="text-area-msg" [(ngModel)]="message"
+              required></textarea>
+          </mat-form-field>
+        </div>
+
+      </section>
+    </mat-dialog-content>
+    <mat-dialog-actions class="row clearfix text-center full-width">
+      <div class="button-row  text-center">
+
+
+        <button color="accent" mat-raised-button class="btn-large" [disabled]="difApplyForm.invalid" (click)="send()">
+          Submit
+          <mat-icon>chevron_right </mat-icon>
+        </button>
+      </div>
+
+    </mat-dialog-actions>
+
+  </form>
+
+</div>

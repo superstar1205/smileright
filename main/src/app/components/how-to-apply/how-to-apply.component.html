@@ -1,0 +1,15 @@
+<section class="how-to-apply" [class.background]="hasBackground == true">
+
+	<div class="container">
+		<div class="row clearfix text-center">
+			<!-- <button mat-raised-button class="btn-outline-accent btn-large mat-accent" (click)="onHowToApply()" title="How to apply">How to Apply
+				<mat-icon class="fas fa-hand-point-right"></mat-icon>
+			</button> -->
+
+			<button mat-raised-button class="btn-outline-accent btn-large mat-accent" [routerLink]="['/consumer/', {outlets: {'page': ['how-to-apply']}}]"  title="How to apply">How to Apply
+				<mat-icon class="fas fa-hand-point-right"></mat-icon>
+			</button>
+		</div>
+	</div>
+
+</section>

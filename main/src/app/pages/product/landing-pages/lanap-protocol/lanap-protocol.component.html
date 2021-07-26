@@ -1,0 +1,257 @@
+<app-bluebg></app-bluebg>
+<div *ngIf="merchant">
+  <div class="container main">
+
+
+    <section class="introduction clearfix">
+      <div class="text pull-right half-width">
+        <div class="col-left">
+
+          <h1 class="white-header">
+            Solve gum disease without the pain</h1>
+          <p class="white rm-m">LANAP<sup>&reg;</sup> laser surgery is a simple, low pain, non-invasive treatment now
+            on
+            offer at
+            <strong>{{merchant['TradingAs']}}!</strong></p>
+        </div>
+      </div>
+      <div class="pull-left half-width">
+        <img class="hero" src="/assets/img/lanap-laser.png" />
+      </div>
+    </section>
+    <section class="features">
+      <mat-card class="add-mb">
+        <div class="row clearfix reduced">
+
+          <p class="lead larger text-center">Over 50% of adults have gum disease - an infection below the gum line. Gum
+            disease is linked to
+            several health problems and only a small percentage of adults get the treatment they
+            need.</p>
+
+          <h3 class="accent background text-center"><span class="white-bg">What's the big deal with Gum Disease?</span></h3>
+
+          <div class="row clearfix">
+            <div class="half-width">
+              <div class="col-left">
+                <p class="lead">Gum disease isn't often talked about, but it can have a big impact on your life if not
+                  addressed.</p>
+                <p>It's been linked to several health problems - from heart disease, stroke, diabetes, breast cancer
+                  and
+                  pre-term babies - as well as impacting your mental health as Patients often feel less confident and
+                  worry about losing their teeth. </p>
+                <p>Traditional treatments for gum disease involve cutting and suturing, however with the LANAP<sup>&reg;</sup>
+                  protocol, <strong>{{merchant['TradingAs']}}</strong> can now offer you a solution without the pain or
+                  lengthy
+                  recovery times.</p>
+              </div>
+            </div>
+            <div class="half-width">
+              <div class="col-right">
+
+                <div class="row clearfix">
+
+                  <div class="half-width text-center padded">
+                    <div class="rel">
+                      <mat-icon fontSet="fas" fontIcon="fa-exclamation-circle" class="exclaim"></mat-icon>
+                      <mat-icon fontSet="fas" fontIcon="fa-heart" class="icon heart"></mat-icon>
+                    </div>
+                    <p>People with gum disease are <strong>twice as likely</strong> to have <strong>heart disease</strong>.</p>
+                  </div>
+                  <div class="half-width text-center padded">
+                    <div class="rel">
+                      <mat-icon fontSet="fas" fontIcon="fa-exclamation-circle" class="exclaim"></mat-icon>
+                      <mat-icon fontSet="fas" fontIcon="fa-brain" class="icon brain"></mat-icon>
+                    </div>
+                    <p>Those diagnosed with acute ischemic <strong>stroke</strong> (brain injury caused by a blocked
+                      blood vessel) are more likely to have gum disease.</p>
+                  </div>
+
+
+
+                </div>
+                <div class="row clearfix text-right">
+                  <button mat-raised-button color="accent">Learn more about gum disease <mat-icon>chevron_right</mat-icon></button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+
+      <div class="extra-margin">
+        <div class="row clearfix reduced mb">
+          <h3 class="accent larger background text-center"><span class="grey-bg">So what's the LANAP<sup>&reg;</sup>
+              protocol?</span></h3>
+
+          <div class="row clearfix">
+            <div class="half-width">
+              <div class="col-left rel">
+                <div class="plyr__video-embed" id="player">
+                  <iframe src="https://player.vimeo.com/video/310463146?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+                    width="640" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="half-width">
+              <div class="col-right">
+                <p class="lead rm-mt">The LANAP protocol is a laser-based treatment for gum disease that involves no
+                  cutting or suturing.</p>
+
+                <p>There is substantially less pain and discomfort during and after the procedure compared to
+                  traditional
+                  surgery. This patient-friendly procedure helps you get healthy again comfortably, without fear.
+                  Generally the LANAP protocol is less invasive than traditional surgery and helps maintain a beautiful
+                  smile.</p>
+
+                <p>The LANAP® protocol uses the specific wavelength PerioLase<sup>&reg;</sup> MVP-7<sup>&trade;</sup>
+                  dental laser to vaporise bacteria deep within the pockets of the gums while leaving healthy tissue
+                  intact.
+                  Patients undergoing this type of treatment enjoy fast healing times and more predictable results.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix mt mb text-center">
+            <button mat-raised-button color="accent">Want to learn more about LANAP? <mat-icon>chevron_right</mat-icon></button>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="container">
+        <div class="row clearfix">
+
+
+          <mat-card class="add-mb">
+            <h3 class="accent larger background text-center"><span class="white-bg">LANAP<sup>&reg;</sup> Patient
+                Benefits</span></h3>
+
+            <div class="row clearfix">
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-heartbeat" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Faster Healing</h3>
+                <p class="rm-mt" mat-line>LANAP<sup>&reg;</sup> treatment is minimally invasive and allows the body to
+                  recover and
+                  heal more quickly.</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-hand-holding-heart" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Less Discomfort</h3>
+                <p class="rm-mt" mat-line>Patients report less discomfort during and after surgery.</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-ban" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>No Cut, No Sew, No Fear </h3>
+                <p class="rm-mt" mat-line>The LANAP protocol uses laser light energy to eliminate the bacteria that
+                  cause
+                  gum
+                  disease, and help your mouth recover faster</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-hourglass-half" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Minimal Recovery Time</h3>
+                <p class="rm-mt" mat-line>Most patients can immediately return to their daily routine.</p>
+              </div>
+            </div>
+
+            <div class="row clearfix">
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-teeth" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Little to No Gum Recession</h3>
+                <p class="rm-mt" mat-line>Because the procedure doesn’t require cutting the gums, there is less risk
+                  ofrecession
+                  andyour beautiful smile is maintained.</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-teeth-open" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Reduction in Gum Inflammation and Bleeding</h3>
+                <p class="rm-mt" mat-line>The PerioLase<sup>&reg;</sup> MVP-7<sup>&trade;</sup> targets inflammatory
+                  bacteria
+                  without injuring healthy tissue.</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-tooth" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Saves Teeth</h3>
+                <p class="rm-mt" mat-line>Patients can keep their natural teeth sometimes even when the teeth have been
+                  deemed
+                  ‘hopeless’ with traditional treatments. Keeping your natural teeth has been linked to a longer
+                  lifespan!</p>
+              </div>
+              <div class="qtr-width padded">
+                <mat-icon fontSet="fas" fontIcon="fa-pills" class="icon small accent"></mat-icon>
+                <h3 class="primary sm-h3 rm-mb" mat-line>Safe for patients with Health Concerns</h3>
+                <p class="rm-mt" mat-line>LANAP<sup>&reg;</sup> protocol is safe for patients with health concerns such
+                  as
+                  diabetes, HIV, hemophilia, or those taking medications such as Plavix or aspirin.</p>
+              </div>
+            </div>
+
+
+          </mat-card>
+
+        </div>
+      </div>
+
+
+
+    </section>
+  </div>
+
+  <section class="grey"  *ngIf="campaign">
+    <div class="container">
+      <div class="">
+        <div class="row clearfix reduced mb">
+          <h2 class="accent larger background text-center rm-mt"><span class="">How do I get started?</span></h2>
+          <p class="lead text-center mb">Worried you might have gum disease? Complete the form below to shcedule an
+            evaluation appointment to see if the LANAP<sup>&reg;</sup> procedure is right for you.</p>
+          <div class="row clearfix flex">
+
+            <div class="half-width">
+              <div class="col-left">
+                <mat-card class="rm-bp">
+                  <h3 class="primary larger background text-center rm-mb"><span class="white-bg">Introductory Offer</span></h3>
+                  <p class="larger text-center">Find out if the LANAP treatment is right for you. Request an
+                    appointment today and the friendly team at {{merchant['TradingAs']}} will be in touch to confirm a
+                    time suitable to you. For peace of mind, act now!</p>
+
+                  <div class="row clearfix dealArea rel" >
+                    <div class="half-width">
+                      <img src="/assets/img/laser-promo-footer.png" class="promoPos" />
+                      &nbsp;
+                    </div>
+                    <!-- <div class="half-width text-right rel">
+                      <h1 class="offerValue">$99</h1>
+                      <h3 class="white rm-mb">Xray and consultation</h3>
+                    </div> -->
+
+                    <div class="half-width text-right rel">
+                      <h3 class="white rm-m">from as little as</h3>
+                      <h1 class="offerValue">{{minAmount | customCurrency}}</h1>
+                      <h3 class="white rm-mt">per day</h3>
+
+                      <button mat-raised-button color="accent" (click)="applyEvent()">Apply now !
+                        <mat-icon>chevron_right</mat-icon></button>
+                    </div>
+
+
+
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+            <div class="half-width flex flexCol">
+              <div class="row clearfix well flexColHigh">
+                <app-lead-form-slim></app-lead-form-slim>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

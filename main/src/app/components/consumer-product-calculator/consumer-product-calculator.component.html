@@ -1,0 +1,75 @@
+<div class="card-header primary-gradient-img  clearfix inModal" *ngIf="isModal == true">
+  <div class="row clearfix">
+    <!-- Modal dismiss button -->
+    <button class="btn-close btn-clear mat-button white" matDialogClose (click)="closeEvent()">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <!-- merchant calculated name -->
+
+    <div [hidden]="!merchant" class="merchant-profile-container-modal pull-left mr " id="profile-background">
+    </div>
+
+
+    <div class="row titleArea clearfix">
+
+      <h2 class="summary-header rm-m">
+        What are my options?
+
+        <span class="subLabel">Find the payment option that suits your budget</span>
+
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+<mat-dialog-content [ngClass]="{'no-modal-height': isModal !=true}">
+  <div class="row clearfix" *ngIf="(selectedProductType == 'GPF' || selectedProductType == 'SPCF') && isModal==true"
+    @ngIfAnimation>
+    <!--  new calculator -->
+    <mat-card class="mat-elevation-z8 text-center calcContainer  animate" [ngClass]="{ 'no-box-card': isModal ==true}">
+      <h2 class="sm-h2 mobile-view-h2 rm-mt  " [ngClass]="{ 'add-mb': isModal !=true}"><span class="primary">Step 1:</span> What is the approximate cost of your
+        treatment?
+      </h2>
+      <app-amount-slider-input [showProductStraightAway]="true" (selectAmount)=getAmount($event)>
+      </app-amount-slider-input>
+    </mat-card>
+
+  </div>
+
+
+
+
+
+  <div class="controls text-center" id="products" *ngIf="isModal!=true">
+
+    <h1 class="sm-h1 primary">What are my options?</h1>
+    <h2 class="primary sm-h2 mobile-view-h2 rm-mt "  [ngClass]="{ 'add-mb': isModal !=true}">Find the payment option that suits your budget:</h2>
+
+  </div>
+
+
+  <div class="row clearfix" *ngIf="(selectedProductType == 'GPF' || selectedProductType == 'SPCF') && isModal!=true"
+    @ngIfAnimation>
+    <!--  new calculator -->
+    <mat-card class="mat-elevation-z8 text-center calcContainer mb animate" [ngClass]="{ 'no-box-card': isModal ==true}">
+      <h2 class="sm-h2  mobile-view-h2 rm-mt  add-mb"  ><span class="primary">Step 1:</span> What is the approximate cost of your
+        treatment?
+      </h2>
+      <app-amount-slider-input [showProductStraightAway]="true" (selectAmount)=getAmount($event)>
+      </app-amount-slider-input>
+    </mat-card>
+
+  </div>
+  <div class="row clearfix text-center" *ngIf="amount" @ngIfAnimation>
+    <div class="column">
+      <h2 class="sm-h2 mobile-view-h2 rm-mt animate"><span class="primary">Step 2:</span> Choose a payment option that suits you
+        best:</h2>
+    </div>
+  </div>
+  <div *ngIf="amount" @ngIfAnimation>
+    <app-suitable-product-compact-list [frequency]="'1'" [amount]="amount" [merchantKey]="merchantID"
+      [groupCode]="selectedProductType" class="animate flex-auto" ></app-suitable-product-compact-list>
+  </div>
+
+</mat-dialog-content>

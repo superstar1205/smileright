@@ -1,0 +1,12 @@
+<div id="loader"  >
+  <mat-progress-bar [color]="'primary'" mode="query" [value]="50" [bufferValue]="75"></mat-progress-bar>
+</div>
+
+<router-outlet></router-outlet>
+<cookie-law name="smileRightCookiePolicy" position="top">
+  By continuing to browse the site, you're agreeing to our use of cookies. If you'd like to know more, please look at
+  our <a [routerLink]="['/consumer/', {outlets: {'page': ['privacy']}}]">Privacy Policy</a>. In addition, some
+  information on this website has been prepared by third parties and by continuing to browse the site, you agree that
+  Smile Right presents this information in good faith but accepts no liability for the content. - Finally, if you
+  consume cookies, always remember to brush your teeth.
+</cookie-law>

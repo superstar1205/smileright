@@ -1,0 +1,46 @@
+<div class="row clearfix white-background" *ngIf="documentUrl">
+  <!-- header area -->
+
+  <div class="card-header primary-gradient-img  clearfix inModal">
+    <div class="row clearfix">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button white" matDialogClose (click)="closeModalEvent()">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <!-- merchant calculated name -->
+      <div class="row titleArea clearfix">
+        <h2 class="summary-header rm-m">
+          {{title}}
+          <span class="subLabel">{{description }}</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+  <mat-dialog-content>
+    <div class="full-width row clearfix ">
+      <div class="row clearfix text-center noOVerflow" *ngIf="type=='video' && safeVideoURL ">
+        <iframe [src]="safeVideoURL" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen
+          allowfullscreen></iframe>
+      </div>
+      <div *ngIf="type=='pdf' && safeVideoURL " class="view-container">
+        <object id="iframeDoc2" name="iframeDoc2" *ngIf="browser && isMicrosoftEdge==false" [data]="safeVideoURL"
+          type="application/pdf" class="full-width  pdf-view-object">
+          <p>It appears you don't have a PDF plugin for this browser.
+            No biggie... you can click here to
+            download the PDF file.</p>
+        </object>
+        <div *ngIf="isMicrosoftEdge==true" class="full-width  clearfix">
+          <p>It appears you don't have a PDF plugin for this browser.
+            No biggie... you can click here to
+            download the PDF file.</p>
+        </div>
+      </div>
+      <div *ngIf="type=='image' && documentUrl" class="view-container">
+        <img id="jpegDoc" [attr.src]="documentUrl" class="img-jpg" />
+      </div>
+    </div>
+  </mat-dialog-content>
+
+</div>

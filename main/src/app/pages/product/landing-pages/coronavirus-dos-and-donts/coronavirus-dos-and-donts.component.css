@@ -1,0 +1,215 @@
+
+::ng-deep coronavirus-dos-and-donts #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #6d62a8;
+  background-image: linear-gradient(315deg,#7b70b5 0,#57374e 74%);
+  z-index: -1;
+  top: -350px;
+}
+
+
+::ng-deep footer {
+  background: #57374e;
+}
+
+::ng-deep coronavirus-dos-and-donts .primary {
+  color: #57374e !important;
+}
+
+.mat-icon.fas.fa-external-link-alt {
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  margin-left: 15px;
+}
+
+.intro-icon {
+  max-width: 70px;
+  margin: 0 auto 15px;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.intro-icon img {
+  width: 100%;
+}
+
+.features .qtr-width {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+section.getStarted {
+  background: #efefef;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.dentalPanel h2.background span {
+  background: #fafafa;
+}
+
+section.grey {
+  background: #f1f1f1;
+  padding: 50px 0;
+}
+
+section.introduction {
+  padding: 60px 0 0;
+  position: relative;
+}
+
+section.dentalPanel {
+  padding: 60px 0;
+}
+
+section.dentalPanel h2,
+h2.background {
+  font-size: 2.8rem;
+}
+
+.features h2.background.accent span {
+  background: #fff;
+}
+
+h1.white-header {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+img.hero {
+  width: 100%;
+  margin-bottom: -50px;
+  margin-top: -80px;
+}
+
+.reduced {
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+
+.toothRotate.stepC {
+  right: 30%;
+  top: 3%;
+  width: 250px;
+  height: 250px;
+  z-index: -1;
+}
+
+.toothRotate.small.stepD {
+  top: 3%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  z-index: -1;
+}
+
+
+.thrd-width img {
+  width: 100%;
+}
+
+p.white.larger {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+img.cor-footer {
+  width: calc(100% + 32px);
+  margin: 0 -16px -20px !important;
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+
+mat-card.warning {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  padding-top: 0;
+  background: #fff6f6;
+  color: #dd0000;
+  text-align: center;
+  padding: 0 28px 28px;
+  border: 2px solid #dd0000;
+}
+
+mat-card.warning p {
+  font-size: 400;
+}
+
+mat-icon.fas.fa-heartbeat.block {
+  background: #dd0000;
+  color: #fff;
+  padding: 13px;
+  border-radius: 50%;
+  font-size: 3rem;
+  width: auto;
+  height: auto;
+  line-height: 3rem;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  margin-top: -100px;
+}
+
+@media (max-width: 991px) {
+  img.hero {
+    width: 100%;
+    margin-bottom: -60px;
+    margin-top: -20px;
+  }
+
+  p.white.larger {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  h1.white-header {
+    font-size: 2.5rem !important;
+    line-height: 2.8rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 0;
+    position: relative;
+  }
+
+  section.dentalPanel h2 {
+    font-size: 2.2rem;
+  }
+
+  img.perc.mobShow {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+}
+
+.panel.flex {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .introduction .col-left {
+    text-align: center;
+  }
+  .thrd-width img{
+    width: 100%;
+    max-width: 250px;
+}
+}
+
+@media (max-width: 321px) {
+  h1.white-header {
+    font-size: 1.9rem !important;
+    line-height: 2.1rem;
+  }
+}

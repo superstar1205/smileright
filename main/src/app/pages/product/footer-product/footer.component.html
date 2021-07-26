@@ -1,0 +1,36 @@
+<footer class="product">
+  <div class="container" *ngIf="merchant">
+    <div class="clearfix flex flex-center">
+      <!-- Left Buttons -->
+      <div class="mobile-center">
+
+        <div class="row clearfix dentalInfo">
+          <p class="rm-m white small"><strong>{{merchant['TradingAs']}}</strong></p>
+          <p class="rm-m white small">{{merchant['addresses.Calculated']}}</p>
+      
+        </div>
+        
+        <div class="row clearfix navigation">
+          <a class="footer-link mob" [routerLink]="['/consumer/', {outlets: {'page': ['home']}}]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Smile Right</a>
+          <a class="footer-link mob" [routerLink]="['/consumer/', {outlets: {'page': ['terms']}}]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              Terms &amp; Conditions</a>
+          <a class="footer-link mob" [routerLink]="['/consumer/', {outlets: {'page': ['privacy']}}]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              Privacy</a>
+        </div>
+      </div>
+      <!-- Right buttons, logo -->
+      <div class="pull-right logoSet">
+        <a [routerLink]="['/consumer/main', {outlets: {'consumerPageRoute': ['home']}}]" title="Powered by Smile Right"><!-- <img class="footer-logo inline" [src]="getLogoImage(settings['BrandingLogoImage'])" /> --><img alt="Smile Right logo" class="footer-logo inline" src="/assets/img/poweredby-smileright.png" /></a>
+      </div>
+    </div>
+    <!-- BrandingLogoImage -->
+    <div class="row clearfix">
+      <hr>
+      <!-- Disclaimer message -->
+      <p class="small text-center disclaimer" id="disclaimer">
+        {{settings['snapLine']}}<br /><br />{{settings['copyRight']}}
+      </p>
+  </div>
+  </div>
+</footer>

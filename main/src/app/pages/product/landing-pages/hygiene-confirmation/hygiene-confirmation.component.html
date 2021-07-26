@@ -1,0 +1,120 @@
+<div class="pb">
+    <app-bluebg></app-bluebg>
+    <section class="topper">
+        <div class="txt">
+            <p>{{MERCHANT_NAME}}</p>
+        </div>
+        <div class="btnbox">
+            <button mat-stroked-button class="contactus-btn">
+              Contact Us
+          </button>
+        </div>
+    </section>
+    <section class="top">
+        <div class="top-left" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+            <div class="top-txtbox">
+                <h2>Thanks for confirming your appointment!</h2>
+                <p>Here’s what you can expect at {{merchant_trading_name}}.</p>
+            </div>
+        </div>
+        <div class="top-right" data-aos="fade-left" data-aos-delay="600" data-aos-once="true">
+            <div class="top-imgbox">
+                <div class="timg">
+                    <img class="img" src="/assets/img/campaign/Tips/group-shot.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="main-top">
+            <div class="mt-main">
+                <h3 data-aos="fade-up" data-aos-delay="400" data-aos-once="true">Depending on the condition and health of your mouth, we will first check carefully for cavities, broken fillings, or possible problems with the tooth to ensure nothing is missed.</h3>
+                <hr>
+                <div class="mm-box pt4">
+                    <div class="mm-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div>
+                            <p>During this inspection we don't just look at your teeth and gums but also your tongue, throat, face and neck, looking for any signs of trouble or swelling as well as detecting any signs that might indicate oral cancer.</p>
+                            <p>An impression of your mouth will likely be taken, normally with a special tool called an intraoral scanner that takes hundreds of pictures to virtually build your mouth. This is usually followed by some X-rays to show any hidden decay between the teeth, trauma to the jaws, problems with wisdom teeth and gum disease.</p>
+                        </div>
+                    </div>
+                    <div class="mm-imgbox" data-aos="fade-left" data-aos-delay="600" data-aos-once="true">
+                        <img class="mm-img limg" src="/assets/img/campaign/Tips/dental+surgery.png">
+                    </div>
+                </div>
+                <div class="mm-box">
+                    <div class="mm-imgbox" data-aos="fade-right" data-aos-delay="600" data-aos-once="true">
+                        <img class="mm-img rimg" src="/assets/img/campaign/Tips/xray-02.png">
+                    </div>
+                    <div class="mm-txt" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                        <div>
+                            <p>Once the inspection is over, it’s time for a clean! As mentioned before, your teeth grow plaque (tartar) which is removed using an ultrasonic scaler to painlessly knock loose any larger pieces of tartar, and provide deep cleaning above and below the gum line – all with a tickling vibration.</p>
+                            <p>When all the surfaces are smooth, they are polished using an abrasive toothpaste-like material and fluoride – this powerful mix is spun around on the soon-to-be smooth and shiny teeth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mm-box">
+                    <div class="mm-txt" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <div>
+                            <p>After the examination, we will discuss any treatment recommendations, covering everything from tooth brushing techniques to your diet and nutrition, alcohol intake, and smoking.</p>
+                            <p>If there are any complications, a return visit may be required for restoration work, such as a filling or crown. For more complex work, we may need to refer you to a specialist such as an orthodontist, periodontist, oral surgeon, or endodontist.</p>
+                        </div>
+                    </div>
+                    <div class="mm-imgbox" data-aos="fade-left" data-aos-delay="600" data-aos-once="true">
+                        <img class="mm-img limg" src="/assets/img/campaign/Tips/dirty+teeth-04.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videobox">
+            <video class="video" controls data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                <source src="https://vimeo.com/530601635/8b2d21c9fe" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+        <div class="main-bot">
+            <div class="mm-box">
+                <div class=" b-box">
+                    <h3 data-aos="fade-up" data-aos-delay="600" data-aos-once="true">Want some more dental hygiene tips?</h3>
+                    <h3 data-aos="fade-up" data-aos-delay="600" data-aos-once="true">We’ve put together a some helpful tips and tools you can use to keep your mouth healthy. Click on the button below!</h3>
+                    <button mat-stroked-button routerLink="/tips" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                        FIND OUT MORE <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mapp">
+        <div class="map-main">
+            <div class="mmap-box">
+                <app-map-view></app-map-view>
+            </div>
+            <div class="mtxt-box">
+                <div>
+                    <div class="practice">
+                        <h3>Practice Hours</h3>
+                        <p>Monday:</p>
+                        <p>Tuesday:</p>
+                        <p>Wednesday:</p>
+                        <p>Thursday:</p>
+                        <p>Friday:</p>
+                        <p>Saturday:</p>
+                        <p>Sunday:</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Contact Us</h3>
+                        <p>{{practiceAddress}}</p>
+                        <p>{{practiceNumber}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foot-main">
+            <p>This email was sent to {{RECIPIENT_EMAIL}}. This email is confidential and intended only for the stated addressee(s). If you receive this in error, please inform us immediately and delete it and all copies from your system. Any unauthorized disclosure, use, or dissemination, either whole or partial is prohibited. This email and all its attachments are believed to be free of any virus, or defect, but it is the responsibility of the recipient to ensure this. {{MERCHANT_TRADING_NAME}} does not accept responsibility or liability for any loss or damage arising in any way from its receipt or use or for any errors or omissions in its contents that may arise as a result of its transmission.</p>
+            <div class="fimg-box">
+                <img class="fimg" src="/assets/img/campaign/Tips/bolo.png">
+            </div>
+        </div>
+    </section>
+</div>

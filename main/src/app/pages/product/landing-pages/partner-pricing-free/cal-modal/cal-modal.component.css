@@ -1,0 +1,141 @@
+mat-slider {
+    width: 100%;
+}
+::ng-deep app-cal-modal .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
+    background-color: #5E17EB !important;
+}
+::ng-deep app-cal-modal .mat-slider-track-background {
+    background-color: rgba(170, 132, 241, 0.5) !important;
+}
+::ng-deep app-cal-modal .mat-accent .mat-slider-thumb {
+    bottom: -17px !important;
+    right: -16px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background-color: #5E17EB !important;
+    outline: none;
+    border: 4px solid rgba(170, 132, 241, 0.75) !important;
+}
+::ng-deep app-cal-modal .mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+    height: 4px;
+    border-radius: 3px;
+}
+::ng-deep app-cal-modal .mat-slider-thumb {
+    position: absolute;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    transform: scale(.7);
+    transition: transform .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),border-color .4s cubic-bezier(.25,.8,.25,1);
+}
+::ng-deep app-cal-modal .c-donutchart{
+    margin: 0 auto;
+}
+::ng-deep app-cal-modal .c-donutchart__title{
+    color: rgba(170, 132, 241, 1) !important;
+}
+::ng-deep app-cal-modal .c-donutchart__legends{
+    display: none !important;
+}
+h3, h4{color:#222B54}
+h2{font-size: 2.5rem; color: #fff; text-align: center; margin-top: 2rem; margin-bottom: 1rem;}
+h3{font-size: 2rem;}
+h4{font-size: 19px; text-align: justify;}
+p{font-size: 1rem;color: #36467F;}
+.calm{
+    max-width: 1200px; height: 930px;
+}
+.body-main{
+    display: flex;
+    height: 100%;
+}
+.body-l{width: 66%; padding: 2rem;}
+.body-r{
+    width: 34%;
+    background-color: #222B54;
+}
+.tselbox{position: relative;}
+select{
+    font-size: 18px;
+    appearance: none;
+    border-radius: 18px;
+    color: #222B54;
+    border: 2px solid #5E17EB;
+    outline: none;
+    padding: 8px 16px;
+    margin-top: 1rem;
+    width: 36%;
+}
+.top-sel-ar{
+    position: absolute;
+    top: 22px;
+    left: 30%;
+    color: #5E17EB;
+    font-size: 20px;
+}
+input[type=number]{
+    font-size: 18px;
+    border-radius: 18px;
+    color: #222B54;
+    border: 2px solid #5E17EB;
+    outline: none;
+    padding: 8px 16px;
+    margin-top: 1rem;
+    width: 80%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.item{display: flex;}
+.item-l{width: 50%; padding-right: 2rem;}
+.item-r{width: 50%; display: flex; justify-content: center; align-items: center;}
+.lsl{width: 100%;}
+.lsl>label{font-size: 10px; margin-left: 8px; color: rgba(170, 132, 241, 1) ; text-align: center;}
+.chart-txtbox{display: flex;;
+    padding: 0rem 1rem;
+    margin: 0 auto;
+    justify-content: center;}
+.txtbox-l, .txtbox-r{
+    padding: 0rem 0.5rem; text-align: center;
+}
+.txtbox-l>p, .txtbox-r>p{font-size: 1.2rem; color: #fff; margin-top: 1rem; margin-bottom: 1rem;}
+.txtbox-r>span{font-size: 2rem; color: #5E17EB; padding: 0rem 0rem;} 
+.txtbox-l>span{font-size: 2rem; color: #8C52FF; padding: 0rem 0rem;}
+hr{width: 80%; margin: 0rem auto;}
+
+.chart-g{width: 100%; display: flex; justify-content: center; align-items: center;}
+.chart-body{width: 300px; position: relative;}
+.chart-ru{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: #CB6CE6;}
+.chart-bot{text-align: center;}
+.chart-bot>p{font-size: 1.3rem; color: #FFF;padding: 0rem 2rem; font-family: "Nunito", sans-serif !important;  margin-top: 1rem; margin-bottom: 1rem;}
+.chart-bot>span{font-size: 2.5rem; color: #CB6CE6;}
+.st-t{padding: 1rem 0rem; text-align: center;}
+.st-t>h4{text-align: center;}
+.imgbox{max-width: 330px; margin: 0 auto;}
+.img{width: 100%;}
+@media(max-width:1299px){
+    .body-main{flex-direction: column;}
+    .body-r, .body-l{width: 100%; padding: 2rem;}
+    .sed>h4{max-width: 100%;}
+}
+@media(max-width:767px){
+    .item{flex-direction: column;}
+    .item-l{width: 100%; padding-right: 0rem;}
+    .item-r{width: 100%; padding: 1rem 0rem;}
+    select{
+        width: 40%;
+        min-width: 160px;
+    }
+    .top-sel-ar{left: 33%;}
+    input[type=number]{
+        width: 40%;
+        min-width: 160px;
+    }
+}
+@media(max-width: 540px){
+    .chart-txtbox{flex-direction: column;}
+}

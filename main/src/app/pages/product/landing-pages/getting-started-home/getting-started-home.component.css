@@ -1,0 +1,107 @@
+::ng-deep app-partner-let-get-started #blueBg{
+    top: -250px !important;
+    background: #044a6c;
+    background: -webkit-gradient(linear, left top, right top, from(#249DCE), to(#2CA3A1));
+    background: linear-gradient(to right, #249DCE, #2CA3A1);
+    z-index: -1;
+}
+h1{font-size: 3.2rem;
+    line-height: 3.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 0 3px 10px rgb(0 0 0 / 25%)}
+h2{font-size: 2.25rem;}
+h3{font-size: 2rem;}
+h4{font-size: 24px;}
+p{font-size: 1.3rem;
+    line-height: 1.95rem;
+    font-weight: 300;
+    font-family: "Open Sans" !important;
+    color:#525252;}
+.container{width: 1200px;margin: 0 auto;}
+button{
+    font-size: 1.3rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 10px 28px;
+    font-family: "Nunito", sans-serif !important;
+    margin: 0px auto 0;
+}
+.top{padding-top: 3rem; display: flex; justify-content: space-between;}
+.top-leftbox{
+    display: flex;
+    align-items: center;
+    padding: 0rem 3rem;
+}
+.top-rightbox{
+    display: flex;
+    align-items: center;
+    padding: 0rem 3rem;
+}
+.imgbox{width: 450px;}
+.top-txt{max-width: 550px;}
+.top-txt>h1{color: #fff;}
+.top-txt>p{color: #fff; font-size: 26px;}
+.img{width: 100%;}
+.imgbox>.img{margin-bottom: -6px;}
+.main{
+    background: linear-gradient(to bottom, #f7f7f7, #fff, #fff, #fff, #fff);
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+    border-radius: 4px 4px 4px 4px;
+}
+.title{
+    padding-top: 2rem;
+    max-width: 890px;
+    margin: 0px auto;
+    text-align: center;
+}
+.title>p{font-size: 2.1rem;
+        line-height: 1.5;
+        font-family: "Nunito", sans-serif !important;
+        font-weight: 600;
+        color: #249DCE;}
+.img-box-right{display: flex; justify-content: flex-end;}
+.main-imgbox{width: 460px}
+.txt-box{align-items: center; padding: 1rem 1rem;}
+.txt> h2{
+    margin: 0px 0px;
+    color: #f42938;
+}
+.txt> button{background-color: #f42938;color: #fff;}
+.right-img{display: flex; justify-content: flex-end; padding: 1rem 1rem;}
+.dentist{padding: 1rem 0rem;}
+.manager{padding: 2rem 0rem;}
+.recept{padding: 3rem 0rem 5rem 0rem;}
+.maket{padding: 2rem 0rem;}
+@media(max-width: 1279px){
+    .container{width: 96%;}
+    .top-leftbox, .top-rightbox, .main{padding: 0rem 1rem;}
+    .top-txt{max-width: 500px;}
+    .main-imgbox{width: 440px}
+    .title{max-width: 96%;}
+}
+@media(max-width: 1023px){
+    .top, .dentist, .manager, .recept, .maket{flex-direction: column;}
+    .top-txt{max-width: 96%;}
+    .txt-box{width: 96% !important; margin: 0px auto; order: 2;}
+    .imgbox{width:100%;}
+    .img-box-right, .img-box-left{order: 1; margin: 0px auto; width:100%;}
+    .main-imgbox{width: 100%;}
+    .top-rightbox{margin: 0px auto;}
+    .main{padding-bottom: 3rem;}
+}
+@media(max-width: 568px){
+    h1{font-size: 2.5rem;}
+    h2{font-size: 2rem;}
+    h3{font-size: 1.8rem;}
+    .title>p{font-size:1.3rem;}
+    p, .top-txt> p{font-size: 18px;}
+    .top, .main{padding-left: 0rem; padding-right: 0rem;}
+    button{
+        font-size: 1rem;
+        padding: 5px 10px;
+        margin: 0px auto 0;
+    }
+}

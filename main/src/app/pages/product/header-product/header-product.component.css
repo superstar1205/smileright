@@ -1,0 +1,41 @@
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+}
+.partner-logo {
+    float: left;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    max-height: 60px;
+    text-decoration: none;
+    margin: 0 auto;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+.partner-logo img {
+    width: auto;
+    max-height: 60px;
+}
+p.topCta {
+    margin: 0;
+
+}
+
+@media (max-width: 1200px) {
+    
+}
+@media (max-width: 1130px) {
+    
+}
+@media (max-width: 1040px) {
+    
+}
+@media (max-width: 991px) {
+ 
+
+}

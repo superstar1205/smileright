@@ -1,0 +1,113 @@
+<div class="row modal-heading primary-gradient rel clearfix">
+  <button class="btn-close btn-clear mat-button abs-right" (click)="close()">
+    <mat-icon>clear</mat-icon>
+  </button>
+  <h2 class="sr-title header-title-product rm-m">What time suits you best?</h2>
+
+</div>
+<form #difApplyForm="ngForm">
+  <mat-dialog-content class="text-center">
+
+    <p>
+
+      <ng-container *ngIf="patient['firstName']">{{patient['firstName']}}, </ng-container>
+      Let your dentist know what time might suit you best for an appointment.
+      The practice will then contact you to arrange a suitable appointment date.
+    </p>
+
+    <div class="row clearfix">
+
+      <p class="small">Please confirm your details before proceeding:</p>
+
+      <div class="row clearfix flex">
+
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>First name</mat-label>
+          <input name="firstName" matInput placeholder="First name" [(ngModel)]="patient['firstName']" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Surname</mat-label>
+          <input name="lastName" matInput placeholder="Surname" [(ngModel)]="patient['lastName']" required>
+        </mat-form-field>
+
+      </div>
+      <div class="row clearfix flex">
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Mobile number</mat-label>
+          <input name="mobile" matInput placeholder="Mobile number" [(ngModel)]="patient['mobile']" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Email address</mat-label>
+          <input name="email" matInput placeholder="Email address" [(ngModel)]="patient['email']" required>
+        </mat-form-field>
+
+      </div>
+
+      <div class="row clearfix flex" *ngIf="!merchantID && !bookingURL">
+
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Postcode</mat-label>
+          <input name="postCode" matInput placeholder="Postcode" [(ngModel)]="postCode" (change)="changePostCode()"
+            required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" *ngIf="states && states.length>0" appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select name="state" [(ngModel)]="state" required>
+            <mat-option *ngFor="let state of states" [value]="state.State">
+              {{state.State}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+
+      <p class="small">Select the best day and time that suits you:</p>
+
+      <div class="row clearfix flex">
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Best appointment time for you</mat-label>
+          <mat-select name="bestContactTime" [(ngModel)]="bestContactTime" required>
+            <mat-option *ngFor="let b of bestContactTimes" [value]="b.Code">
+              {{b.Label}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="row clearfix">
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>What are you most concerned about with your smile? </mat-label>
+          <textarea name="comments" matInput placeholder="Please enter your thoughts or comments here..."
+            [(ngModel)]="comment"></textarea>
+        </mat-form-field>
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </mat-dialog-content>
+  <div class="row clearfix text-center">
+
+
+    <button mat-raised-button color="accent" [disabled]="difApplyForm.invalid " (click)="book()">Submit <span
+        *ngIf="bookingURL"> &amp; book now </span>
+      <mat-icon>chevron_right
+      </mat-icon>
+    </button>
+
+  </div>
+</form>

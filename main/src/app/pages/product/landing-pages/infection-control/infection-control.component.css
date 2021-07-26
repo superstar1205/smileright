@@ -1,0 +1,158 @@
+.intro-icon {
+  max-width: 70px;
+  margin: 0 auto 15px;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.intro-icon img {
+  width: 100%;
+}
+
+.features .qtr-width {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+section.getStarted {
+  background: #efefef;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.dentalPanel h2.background span {
+  background: #fafafa;
+}
+
+section.grey {
+  background: #f1f1f1;
+  padding: 50px 0;
+}
+
+section.introduction {
+  padding: 60px 0 0;
+  position: relative;
+}
+
+section.dentalPanel {
+  padding: 60px 0;
+}
+
+section.dentalPanel h2,
+h2.background {
+  font-size: 2.8rem;
+}
+
+.features h2.background.accent span {
+  background: #fff;
+}
+
+h1.white-header {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+img.hero {
+  width: 100%;
+  margin-bottom: -50px;
+  margin-top: -80px;
+}
+
+.reduced {
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+
+.toothRotate.stepC {
+  right: 30%;
+  top: 3%;
+  width: 250px;
+  height: 250px;
+  z-index: -1;
+}
+
+.toothRotate.small.stepD {
+  top: 3%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  z-index: -1;
+}
+
+
+.thrd-width img {
+  width: 100%;
+}
+
+p.white.larger {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+img.cor-footer {
+  width: calc(100% + 32px);
+  margin: 0 -16px -20px !important;
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+
+@media (max-width: 991px) {
+  img.hero {
+    width: 100%;
+    margin-bottom: -60px;
+    margin-top: -20px;
+  }
+
+  p.white.larger {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  h1.white-header {
+    font-size: 2.5rem !important;
+    line-height: 2.8rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 0;
+    position: relative;
+  }
+
+  section.dentalPanel h2 {
+    font-size: 2.2rem;
+  }
+
+  img.perc.mobShow {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+}
+
+.panel.flex {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .introduction .col-left {
+    text-align: center;
+  }
+  .thrd-width img{
+    width: 100%;
+    max-width: 250px;
+}
+}
+
+@media (max-width: 321px) {
+  h1.white-header {
+    font-size: 1.9rem !important;
+    line-height: 2.1rem;
+  }
+}

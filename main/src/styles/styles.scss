@@ -1,0 +1,555 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+
+@import url("https://fonts.googleapis.com/css?family=Nunito|Open+Sans");
+@import "variables";
+
+@import "~@angular/material/theming";
+@include mat-core();
+@import url("https://fonts.googleapis.com/css?family=Condiment");
+@import "~ngx-toastr/toastr.css";
+
+// Smileright Blue
+$md-smilerightblue: (
+  50: #e4f1fb,
+  100: #bbdcf5,
+  200: #8dc5ee,
+  300: #5faee7,
+  400: #3d9ce2,
+  500: #1b8bdd,
+  600: #1883d9,
+  700: #1478d4,
+  800: #106ecf,
+  900: #085bc7,
+  A100: #f1f6ff,
+  A200: #bed7ff,
+  A400: #8bb8ff,
+  A700: #71a8ff,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #000000,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+// Smileright Red
+$md-smilerightred: (
+  50: #fee5e7,
+  100: #fcbfc3,
+  200: #fa949c,
+  300: #f76974,
+  400: #f64956,
+  500: #f42938,
+  600: #f32432,
+  700: #f11f2b,
+  800: #ef1924,
+  900: #ec0f17,
+  A100: #ffffff,
+  A200: #ffe5e5,
+  A400: #ffb2b4,
+  A700: #ff989b,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #ffffff,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+// Smileright Magenta
+$md-smilerightmagenta: (
+  50: #fce4ec,
+  100: #f8bcd0,
+  200: #f48fb1,
+  300: #f06292,
+  400: #ec407a,
+  500: #e91e63,
+  600: #e61a5b,
+  700: #e31651,
+  800: #df1247,
+  900: #d90a35,
+  A100: #ffffff,
+  A200: #ffd0d8,
+  A400: #ff9dae,
+  A700: #ff8498,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #ffffff,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+
+$smileright-primary: mat-palette($md-smilerightblue, 500, 800);
+$smileright-accent: mat-palette($md-smilerightred, 500, 900, A100);
+$smileright-warn: mat-palette($md-smilerightmagenta);
+
+$smileright-theme: mat-light-theme(
+  $smileright-primary,
+  $smileright-accent,
+  $smileright-warn
+);
+
+@include angular-material-theme($smileright-theme);
+
+.primary-light-bg {
+  background-color: mat-color($smileright-primary, lighter);
+}
+
+.primary-bg,
+.inlined-label,
+nav.breadcrumb a {
+  background-color: mat-color($smileright-primary);
+}
+
+.primary,
+th strong,
+mat-panel-title {
+  color: mat-color($smileright-primary) !important;
+}
+.accent {
+  color: mat-color($smileright-accent) !important;
+}
+.warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+//  Flex Layout
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body,
+app {
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
+}
+
+// main {
+//   display: flex;
+//   flex: 1 1 auto;
+//   overflow-y: scroll;
+// }
+
+// main .ng-star-inserted {
+//   width: 100%;
+// }
+
+nav {
+  margin-top: 16px;
+}
+
+nav a {
+  background-color: $nav-button-color;
+  color: white;
+  padding: 8px 16px;
+  margin: 8px;
+  vertical-align: middle;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+//  footer
+
+footer {
+  background: $smileright_blue;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 15px;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+button * {
+  font-family: "Nunito", sans-serif;
+}
+h1 {
+  color: $smileright_blue;
+}
+
+.body-is-mobile .body-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.body-app-name {
+  margin-left: 8px;
+}
+
+.body-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.body-is-mobile .body-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.body-is-mobile .mat-toolbar a.nav-link {
+  display: none;
+}
+
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.mb {
+  margin-bottom: 40px !important;
+}
+
+.mt {
+  margin-top: 40px !important;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #f2f2f2;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+section.topIntro {
+  padding: 0;
+    position: relative;
+    display: block;
+    z-index: 1;
+    background: #fafafa;
+    border-radius: 3px;
+}
+section.topIntro span.contentArea {
+  position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #fafafa;
+    height: 100%;
+    width: auto;
+    padding: 60px 40px;
+    display: block;
+    border-radius: 3px;
+}
+section.topIntro:after {
+  display: block;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: #fafafa;
+    z-index: -1;
+    border-radius: 3px;
+    box-shadow: 0 -10px 50px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.1);
+}
+
+
+//  Links
+
+a.nav-link,
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:visited {
+  color: $smileright_blue;
+}
+
+
+
+//  Colours
+
+.primary {
+  color: $smileright_blue;
+}
+.accent {
+  color: $smileright_red;
+}
+
+// Icons
+
+.mat-icon.fas.fa-angle-right {
+  vertical-align: baseline !important;
+}
+
+// Merchant Colours
+
+.body-is-merchant a.nav-link,
+.body-is-merchant a.nav-link:hover,
+.body-is-merchant a.nav-link:active,
+.body-is-merchant a.nav-link:visited {
+  color: #2ca3a2;
+}
+
+.body-is-merchant .primary-light-bg {
+  background-color:#2ca3a2;
+}
+
+.body-is-merchant .primary-bg,
+.body-is-merchant .inlined-label,
+.body-is-merchant nav.breadcrumb a {
+  background-color:#2ca3a2;
+}
+
+.body-is-merchant .primary,
+.body-is-merchant th strong,
+.body-is-merchant mat-panel-title {
+  color: #2ca3a2 !important;
+}
+.body-is-merchant .accent {
+  color: #059dbf !important;
+}
+.body-is-merchant .warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+.body-is-merchant .primary {
+  color: #2ca3a2;
+}
+
+.body-is-merchant .accent {
+  color: #059dbf;
+}
+
+.body-is-merchant footer {
+  background: #2ca3a2;
+}
+
+.body-is-merchant a.nav-link.active {
+    border-bottom: 5px solid #2ca3a2 !important;
+}
+
+.body-is-merchant .mat-button.mat-primary, .body-is-merchant .mat-icon-button.mat-primary, .body-is-merchant .mat-stroked-button.mat-primary {
+  color: #2ca3a2;
+}
+
+.body-is-merchant .mat-raised-button.mat-primary, .body-is-merchant .mat-fab.mat-primary, .body-is-merchant .mat-mini-fab.mat-primary {
+    background-color: #2ca3a2;
+}
+
+
+// Invest Colours
+
+.body-is-invest a.nav-link,
+.body-is-invest a.nav-link:hover,
+.body-is-invest a.nav-link:active,
+.body-is-invest a.nav-link:visited {
+  color: #4641ca;
+}
+
+.body-is-invest .primary-light-bg {
+  background-color:#4641ca;
+}
+
+.body-is-invest .primary-bg,
+.body-is-invest .inlined-label,
+.body-is-invest nav.breadcrumb a {
+  background-color:#4641ca;
+}
+
+.body-is-invest .primary,
+.body-is-invest th strong,
+.body-is-invest mat-panel-title {
+  color: #4641ca !important;
+}
+.body-is-invest .accent {
+  color: #059dbf !important;
+}
+.body-is-invest .warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+.body-is-invest .primary {
+  color: #4641ca;
+}
+
+.body-is-invest .accent {
+  color: #059dbf;
+}
+
+.body-is-invest footer {
+  background: #4641ca;
+}
+
+.body-is-invest a.nav-link.active {
+    border-bottom: 5px solid #4641ca !important;
+}
+
+.body-is-invest .mat-button.mat-primary, .body-is-invest .mat-icon-button.mat-primary, .body-is-invest .mat-stroked-button.mat-primary {
+  color: #4641ca;
+}
+
+.body-is-invest .mat-raised-button.mat-primary, .body-is-invest .mat-fab.mat-primary, .body-is-invest .mat-mini-fab.mat-primary {
+    background-color: #4641ca;
+}
+
+
+//  mobile responsive
+
+.nav-trigger {
+  display: none !important;
+}
+
+.body-is-mobile .nav-trigger {
+  display: block !important;
+  margin-top: 8px;
+  color: #5f5f5f;
+}
+.body-is-mobile .logoSet {
+  display: none;
+}
+.body-is-mobile .mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: calc(100vh - 72px) !important;
+  overflow: auto;
+}
+.body-is-mobile mat-card.productCard.mat-card {
+  margin: 0 5px 20px !important;
+}
+
+.body-is-mobile main {
+  display: block;
+}
+
+
+
+.body-is-mobile a:focus {
+    outline: none;
+}
+
+// Blue Bg
+
+#blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  z-index: -1;
+  top: -350px;
+}
+
+#blueBg,
+#blueBg span {
+  position: absolute;
+}
+#blueBg :nth-child(2) {
+  width: 14%;
+  right: 0;
+  bottom: 40px;
+  background: #3094e2;
+}
+#blueBg :nth-child(3) {
+  width: 25%;
+  bottom: 0;
+  right: 0;
+  background: #a1ffc8;
+}
+
+.body-is-merchant #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #2ca3a2;
+  background-image: linear-gradient(315deg, #2ca3a2 0%, #059dbf 74%);
+  z-index: -1;
+  top: -240px;
+}
+
+.body-is-merchant #blueBg :nth-child(2) {
+  background: #2ca3a2;
+}
+.body-is-merchant #blueBg :nth-child(3) {
+  background: #2ca3a2;
+}
+
+.body-is-invest #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #4640ca;
+  background-image: linear-gradient(315deg, #4640ca 0%, #0a9ed6 74%);
+  z-index: -1;
+  top: -240px;
+}
+
+.body-is-invest #blueBg :nth-child(2) {
+  background: #4640ca;
+}
+.body-is-invest #blueBg :nth-child(3) {
+  background: #4640ca;
+}
+
+
+// Forms
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}

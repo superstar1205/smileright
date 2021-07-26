@@ -1,0 +1,10 @@
+span.error {
+  color: #e91e63;
+  font-size: 12px;
+}
+
+mat-icon.inline {
+  display: inline-block;
+  margin: 15px 10px 0 0;
+  color: #818181;
+}

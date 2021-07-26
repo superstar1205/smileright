@@ -1,0 +1,44 @@
+<div class="rel text-center cdia">
+  <!-- <mat-icon class="xlarge-modal-icon accent-color">{{confirmOptionDialog.icon}}</mat-icon>
+  <h2 mat-dialog-title class="sr-title rm-mb mt">{{confirmOptionDialog.title}}</h2> -->
+
+  <div class="card-header primary-gradient-img clearfix confirmModal" [ngClass]="confirmOptionDialog.icon">
+    <div class="row clearfix">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button white" matDialogClose (click)="onNo()">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class="row titleArea clearfix">
+          <mat-icon class="white pull-left">{{confirmOptionDialog.icon}}</mat-icon>
+        <h2 class="summary-header rm-m">
+            {{confirmOptionDialog.title}}
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+  <mat-dialog-content>
+
+    <div class="row clearfix">
+      <div [innerHTML]="confirmOptionDialog.confirmMessage | safeHtml"> </div>
+    </div>
+    <hr>
+    <div class="row clearfix">
+      <div [innerHTML]="confirmOptionDialog.optionsLabel | safeHtml"> </div>
+    </div>
+    <div class="row clearfix mt">
+      <mat-select placeholder="Please select" [(ngModel)]="choice" class="full-width">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+    </div>
+    <hr>
+  </mat-dialog-content>
+  <mat-dialog-actions class="button-row text-center">
+    <button mat-raised-button (click)="onNo()" matDialogClose>{{confirmOptionDialog.noMessage}}</button>
+    <!-- Can optionally provide a result for the closing dialog. -->
+    <button mat-raised-button (click)="onYes()" color="accent" [disabled]="choice==null">{{confirmOptionDialog.yesMessage}}</button>
+  </mat-dialog-actions>
+</div>

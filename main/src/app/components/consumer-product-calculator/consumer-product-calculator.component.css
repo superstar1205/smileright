@@ -1,0 +1,338 @@
+.inlineSelect {
+  display: inline-block;
+  width: auto;
+  min-width: 150px;
+  text-align: left;
+}
+
+.calcContainer {
+  overflow: hidden;
+}
+
+.calcContainer .well {
+  background: #f7f7f7;
+  padding: 0 15px;
+  border-radius: 5px;
+  /* border: 2px solid #1b8bdd; */
+}
+
+::ng-deep .calcContainer .well mat-select {
+  font-family: "Nunito", sans-serif;
+}
+
+::ng-deep .calcContainer .well .mat-select-placeholder {
+  /* color: rgb(27, 139, 221); */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.step-icon {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.options-info {
+  overflow: hidden;
+}
+
+.calcContainer .mat-select {
+  padding: 0;
+}
+
+::ng-deep .calcContainer .mat-select .mat-select-trigger {
+  padding: 15px 0;
+}
+
+
+::ng-deep .mat-slider-horizontal .mat-slider-thumb-label {
+  padding: 10px;
+  right: -24px !important;
+  top: -60px !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+.inModal button.btn-close {
+  float: right;
+  color: #fff;
+}
+
+.card-header.primary-gradient-img.inModal {
+  margin: -24px -16px 20px;
+  padding: 24px;
+  color: #fff;
+}
+
+.card-header.primary-gradient-img.inModal p,
+.card-header.primary-gradient-img.inModal h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header.primary-gradient-img.inModal h2 {
+  margin-top: 10px;
+  padding-top: 0;
+  text-transform: capitalize;
+}
+
+.card-header.primary-gradient-img.inModal label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+app-header-product {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.primary-gradient-img {
+  background: -webkit-linear-gradient(135deg, #0dbad3 0%, #0092eb 100%), url(/assets/images/background.jpg);
+  background: -moz-linear-gradient(135deg, #0dbad3 0%, #0092eb 100%), url(/assets/images/background.jpg);
+  background: linear-gradient(135deg, #0dbad3 0%, #0092eb 100%), url(/assets/images/background.jpg);
+}
+
+
+.card-header.primary-gradient-img {
+  position: relative;
+  z-index: 1;
+}
+
+.card-header.primary-gradient-img.inModal {
+  margin: -24px -16px 20px;
+  padding: 24px;
+  color: #fff;
+  position: relative;
+}
+
+.card-header.primary-gradient-img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(22.5deg, rgba(67, 67, 67, 0.02) 0%, rgba(67, 67, 67, 0.02) 29%, rgba(47, 47, 47, 0.02) 29%, rgba(47, 47, 47, 0.02) 37%, rgba(23, 23, 23, 0.02) 37%, rgba(23, 23, 23, 0.02) 55%, rgba(182, 182, 182, 0.02) 55%, rgba(182, 182, 182, 0.02) 69%, rgba(27, 27, 27, 0.02) 69%, rgba(27, 27, 27, 0.02) 71%, rgba(250, 250, 250, 0.02) 71%, rgba(250, 250, 250, 0.02) 100%), linear-gradient(67.5deg, rgba(117, 117, 117, 0.02) 0%, rgba(117, 117, 117, 0.02) 14%, rgba(199, 199, 199, 0.02) 14%, rgba(199, 199, 199, 0.02) 40%, rgba(33, 33, 33, 0.02) 40%, rgba(33, 33, 33, 0.02) 48%, rgba(135, 135, 135, 0.02) 48%, rgba(135, 135, 135, 0.02) 60%, rgba(148, 148, 148, 0.02) 60%, rgba(148, 148, 148, 0.02) 95%, rgba(53, 53, 53, 0.02) 95%, rgba(53, 53, 53, 0.02) 100%), linear-gradient(135deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 6%, rgba(251, 251, 251, 0.02) 6%, rgba(251, 251, 251, 0.02) 18%, rgba(2, 2, 2, 0.02) 18%, rgba(2, 2, 2, 0.02) 27%, rgba(253, 253, 253, 0.02) 27%, rgba(253, 253, 253, 0.02) 49%, rgba(128, 128, 128, 0.02) 49%, rgba(128, 128, 128, 0.02) 76%, rgba(150, 150, 150, 0.02) 76%, rgba(150, 150, 150, 0.02) 100%), linear-gradient(90deg, #FFF, #FFF);
+  z-index: 2;
+  mix-blend-mode: multiply;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+  transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.card-header.primary-gradient-img,
+.primary-gradient-img.heading.row {
+  border-radius: 4px 4px 0 0;
+}
+
+
+.card-header.primary-gradient-img.inModal p,
+.card-header.primary-gradient-img.inModal h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header.primary-gradient-img.inModal h2 {
+  margin-top: 10px;
+  padding-top: 0;
+  padding-left: 10px;
+  width: 100%;
+}
+
+/* .card-header.primary-gradient-img.inModal .hasIcon h2 {
+ padding-left: 50px;
+} */
+
+.card-header.primary-gradient-img.inModal .hasIcon mat-icon {
+  font-size: 2rem;
+  width: auto;
+  height: auto;
+}
+
+
+
+.card-header.primary-gradient-img.inModal label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-header .colourOverlay {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  mix-blend-mode: color;
+}
+
+.card-header .content {
+  z-index: 2;
+  position: relative;
+  margin: -24px;
+  padding: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-header.primary-gradient-img.inModal {
+    margin: -24px -16px 20px;
+    padding: 24px 16px;
+  }
+}
+
+.confirmModal button.btn-close {
+  float: right;
+  color: #fff;
+}
+
+.card-header.primary-gradient-img.confirmModal {
+  margin: -24px -16px 20px;
+  padding: 24px;
+  color: #fff;
+}
+
+.card-header.primary-gradient-img.confirmModal p,
+.card-header.primary-gradient-img.confirmModal h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header.primary-gradient-img.confirmModal h2 {
+  margin-top: 10px;
+  padding-top: 0;
+  padding-left: 42px;
+  width: 100%;
+}
+
+.card-header.confirmModal .titleArea {
+  max-width: 80%;
+  float: left;
+}
+
+.card-header.inModal .titleArea {
+  max-width: 80%;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-header.primary-gradient-img.confirmModal label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.animate.contain {
+  overflow: hidden;
+}
+
+.confirmModal mat-icon,
+mat-icon.large-icon {
+  font-size: 2rem;
+  width: auto;
+  height: auto;
+}
+
+
+.primary-gradient-img.warning {
+  background: -moz-linear-gradient(-45deg, rgba(208, 31, 118, 0.9) 0%, rgba(210, 0, 0, 0.9) 100%) !important;
+  background: -webkit-linear-gradient(-45deg, rgba(208, 31, 118, 0.9) 0%, rgba(210, 0, 0, 0.9) 100%) !important;
+  background: linear-gradient(135deg, rgba(208, 31, 118, 0.9) 0%, rgba(210, 0, 0, 0.9) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d01f76e6', endColorstr='#d05318e6', GradientType=1);
+  background-size: cover;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+
+.stacked button.btn-close {
+  float: right;
+  color: #fff;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+
+.card-header.primary-gradient-img.stacked {
+  margin: -16px -16px 20px;
+  padding: 24px;
+  color: #fff;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-header.primary-gradient-img.stacked p,
+.card-header.primary-gradient-img.stacked h2 {
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header.primary-gradient-img.stacked h2 {
+  margin-top: 10px;
+  padding-top: 0;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.card-header.stacked .titleArea {
+  float: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-header.primary-gradient-img.stacked label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.animate.contain {
+  overflow: hidden;
+}
+
+.card-header.primary-gradient-img.stacked app-ep-document-view-image {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+mat-dialog-content.stacked-card-view {
+  margin-top: -24px !important;
+  padding-top: 24px !important;
+  margin-bottom: 0;
+  padding-bottom: 24px !important;
+}
+
+
+
+h2 .subLabel {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+h2 .subLabel {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-view-h2 {
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+}

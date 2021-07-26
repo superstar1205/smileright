@@ -1,0 +1,689 @@
+input#treatmentValue {
+  font-size: 2rem;
+  height: 60px;
+}
+
+button.specPull {
+  right: 20px !important;
+}
+
+div.detailsMoreRight {
+  margin-right: 20px !important;
+}
+
+.termsContainer {
+  background: #f9f9f9;
+  margin: 0 -24px;
+  padding: 10px 24px;
+}
+
+.display-block {
+  width: 90%;
+}
+
+::ng-deep .repayment-period-slider mat-form-field .mat-form-field-infix {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.primary-gradient p,
+.primary-gradient mat-icon {
+  color: #fff;
+}
+
+.margin-btm {
+  margin-bottom: 10px;
+}
+
+.primary-gradient hr {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.breakdown hr {
+  margin: 10px 0;
+}
+
+.patient-contribution {
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+div.move-left-margin {
+  margin-left: 20px;
+}
+
+.primary-gradient mat-icon {
+  top: 0;
+}
+
+.primary-gradient {
+  margin: 0px !important;
+}
+
+.breakdown.highlight {
+  background: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .estimateCol {
+    padding: 0 15px;
+  }
+
+  app-amount-slider-input {
+    padding-top: 20px;
+    display: block;
+  }
+
+  .calcContainer.active {
+    max-height: 65vh;
+    height: 100%;
+    overflow: scroll;
+    padding: 0 15px;
+  }
+
+  .merchant-calculator button.btn-close {
+    width: auto !important;
+    min-width: 16px !important;
+    margin: 10px 10px 0 0;
+    height: auto;
+    line-height: 10px;
+    padding: 0;
+    color: #999;
+  }
+
+  .button-row.clearfix.full-width.text-center.borderTop {
+    padding-top: 10px;
+  }
+
+  ::ng-deep app-product-calculator .row.flex.full-width.clearfix {
+    display: block;
+  }
+}
+
+.back .abs-right {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.back .abs-right button {
+  max-width: 45px;
+}
+
+.breakdown.highlight:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #ffc233;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.calculator mat-card-header.text-center.mat-card-header label,
+.calculator mat-card-header.text-center.mat-card-header h1 {
+  color: #fff;
+}
+
+.total-results {
+  color: #fff;
+  background: #00b7ea;
+  background: -moz-linear-gradient(top, rgba(0, 183, 234, 1) 0, rgba(0, 158, 195, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 183, 234, 1) 0, rgba(0, 158, 195, 1) 100%);
+  background: linear-gradient(to bottom, rgba(0, 183, 234, 1) 0, rgba(0, 158, 195, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b7ea', endColorstr='#009ec3', GradientType=0);
+  padding: 10px;
+}
+
+.total-results .total-value {
+  display: block;
+  font-size: 2rem;
+}
+
+ul.valList {
+  margin: 0;
+  padding: 0;
+}
+
+ul.valList li.values {
+  display: inline-block;
+  width: 45%;
+  margin: 0 5px 10px;
+  padding: 0;
+  border: 1px solid #e9e9e9;
+  text-align: center;
+}
+
+.mat-dialog-content {
+  overflow-x: hidden;
+}
+
+button.btn-green {
+  display: none;
+}
+
+p.small {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+.min-amount {
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: -8px;
+  position: absolute;
+}
+
+.max-amount {
+  padding: 0;
+  margin: 0;
+  right: 0;
+  top: -8px;
+  position: absolute;
+}
+
+.sub-label {
+  padding-bottom: 10px;
+}
+
+.slider-inputs {
+  margin: -15px 20px 0;
+}
+
+.merchant-calculator.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.finance-header p.lead,
+mat-card-header.main-patient-card p.lead {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-top: 0;
+}
+
+::ng-deep .merchant-calculator .mainContainer {
+  margin-top: 0 !important;
+}
+
+::ng-deep .merchant-calculator .mainContainer mat-card {
+  margin-right: 15px;
+}
+
+h1 {
+  margin-left: 0;
+}
+
+::ng-deep .merchant-calculator .mainContainer h1 {
+  font-weight: 300;
+  margin: 0 0 5px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+::ng-deep .merchant-calculator .mainContainer label.mb {
+  text-align: left;
+}
+
+::ng-deep .merchant-calculator .column.text-center.breakdown {
+  width: 100%;
+  padding: 0;
+}
+
+::ng-deep .periodSelect .mat-button-toggle-checked {
+  background-color: #1b8bdd;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.large input {
+  font-size: 2.0rem;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.container.merchant-calculator {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  background: #fff !important;
+}
+
+.calculator {
+  background: #fff;
+  -webkit-transition: -webkit-transform 0.6s;
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  transition: transform 0.6s;
+  /* -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%; */
+}
+
+.dark .calculator {
+  background: #434343 !important;
+}
+
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.back {
+  padding: 24px;
+}
+
+.depositBox {
+  margin: 10px 0;
+}
+
+.heading.primary-gradient button.viewProduct {
+  position: absolute;
+  right: 20px;
+  bottom: -15px;
+}
+
+.heading.primary-gradient button.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  width: auto;
+  min-width: 0;
+}
+
+.heading.primary-gradient {
+  margin: -25px -24px 20px !important;
+  padding: 20px;
+  position: relative;
+}
+
+::ng-deep .rm-top-p .heading.primary-gradient {
+  margin-top: 0px !important;
+}
+
+
+.heading.primary-gradient .sr-title {
+  color: #fff !important;
+  margin-top: 0;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+p.instruction {
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: -20px auto 20px;
+}
+
+.breakdown h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.selFreq {
+  margin-bottom: 30px;
+}
+
+
+/* updated style  */
+
+.grey-area.row.clearfix {
+  background: #f5f5f5;
+  padding: 30px 24px 20px;
+  margin: -20px -24px 20px;
+  overflow: hidden;
+}
+
+.grey-area h1 {
+  line-height: 3.5rem;
+}
+
+.grey-area.lower {
+  margin-top: 20px !important;
+  margin-bottom: -24px !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.04), inset 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+h4.text-center.rm-mt {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.grey-area.lower .full-width.border-right {
+  border-right: 1px solid #e3e3e3;
+}
+
+mat-icon.sums {
+  height: 36px;
+  background: #ccc;
+  border-radius: 50%;
+  width: 36px;
+  position: absolute;
+  right: -18px;
+  top: 20%;
+  color: #fff;
+  line-height: 36px;
+  font-size: 20px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.info_object {
+  padding: 0 0 0 50px;
+}
+
+.info_object p {
+  font-size: 0.95rem;
+}
+
+.arrow_box {
+  position: relative;
+  background: #4CB8C4;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3CD3AD, #4CB8C4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: none;
+  border-radius: 0;
+  padding: 8px 40px;
+  margin: -30px 20px -20px -24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 7px 5px 6px -3px rgba(0, 0, 0, 0.04), 0px 5px 6px -3px rgba(0, 0, 0, 0.02), 5px 0px 8px 1px rgba(0, 0, 0, 0.08), 14px 0px 8px 2px rgba(0, 0, 0, 0.04);
+}
+
+.arrow_box:after,
+.arrow_box:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #4CB8C4;
+  border-width: 40px;
+  margin-top: -40px;
+}
+
+.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: transparent;
+  border-width: 36px;
+  margin-top: -36px;
+}
+
+.arrow_box p,
+.arrow_box h1 {
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .merchant-calculator.calculator.customers {
+
+    display: block;
+    margin: -24px -24px 0;
+    padding: 0;
+    /* max-height: 65vh;
+    overflow: auto; */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .calcContainer.active {
+    padding: 24px;
+  }
+
+  p.output {
+    font-size: 0.9rem;
+  }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .grey-area .row.clearfix.flex {
+    display: block !important;
+  }
+
+  .arrow_box {
+    position: relative;
+    border: none;
+    margin: -30px -24px -20px -24px;
+    padding: 28px 40px 12px;
+    background: #4CB8C4;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3CD3AD, #4CB8C4);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3CD3AD, #4CB8C4);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .arrow_box:after,
+  .arrow_box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .arrow_box:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #4CB8C4;
+    border-width: 30px;
+    margin-left: -30px;
+    margin-top: 0;
+  }
+
+  .arrow_box:before {
+    border-color: rgba(194, 225, 245, 0);
+
+    border-width: 36px;
+    margin-left: -36px;
+    margin-top: 0;
+  }
+
+  .info_object {
+    padding: 50px 0 0 0;
+    text-align: center;
+  }
+
+  .customers.merchant-calculator.calculator {
+    margin: -24px -24px 0 !important;
+    padding-bottom: 0;
+  }
+
+  .selFreq {
+    margin-bottom: 20px;
+  }
+
+  .grey-area.lower .full-width.border-right {
+    border-right: none;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+  }
+
+  .grey-area.lower.flex {
+    display: block;
+  }
+
+  .grey-area.lower .block {
+    display: block;
+    width: 100%;
+  }
+
+  mat-icon.sums {
+    right: calc(50% - 18px);
+    top: auto;
+    bottom: -48px;
+  }
+
+
+  .heading.primary-gradient {
+    margin: 0px -24px 20px !important;
+    padding: 16px 20px 40px;
+    position: relative;
+  }
+
+  mat-button-toggle-group.full-width {
+    margin: 0;
+    width: 100%;
+  }
+
+  p.clearfix.larger {
+    text-align: center;
+  }
+
+  .breakdown.highlight {
+    padding-bottom: 12px !important;
+  }
+
+  button.pull-right.mat-mini-fab.mat-primary {
+    right: 10px;
+  }
+
+  .customers .nextBtn {
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+
+  .heading.primary-gradient button.viewProduct {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    margin: 0 auto 0;
+    width: 155px;
+  }
+
+  app-duration-slider-input {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .col-mob {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .heading.primary-gradient {
+    margin: 24px -16px 20px !important;
+    padding: 16px 20px 40px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 599px) {
+
+  .info_object p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .heading.primary-gradient {
+    margin: 24px -16px 20px !important;
+    padding: 16px 20px 40px;
+    position: relative;
+  }
+
+  .heading.primary-gradient h1 {
+    margin-top: 40px;
+    line-height: 2.8rem;
+  }
+
+  .heading.primary-gradient button.btn-close {
+    top: 25px;
+    right: 5px;
+  }
+
+  .grey-area.row.clearfix {
+    margin: -20px -16px 20px;
+  }
+
+  p.instruction {
+    font-size: 0.9rem;
+    line-height: 1.35rem;
+  }
+
+  .grey-area.lower {
+    margin-top: 10px !important;
+    margin-bottom: -24px !important;
+  }
+
+  .heading.primary-gradient .sr-title {
+    font-size: 1.8rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  p.small {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  mat-button-toggle-group.full-width {
+
+    display: block;
+  }
+
+  mat-button-toggle-group.full-width .mat-button-toggle {
+    display: block;
+  }
+}
+
+
+
+.dark .breakdown.highlight {
+  background: #3a3a3a !important;
+}
+
+button.pull-right.viewProduct {
+  z-index: 999;
+}
+
+::ng-deep app-product-calculator form p.small {
+  color: #565656;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,52 @@
+<div class="mat-parent clearfix rel">
+  <carousel [showIndicators]="true" interval="5500" (slide)="onSlide($event)">
+    <div class="carousel-inner" role="listbox">
+
+      <slide class="item carousel-item flex" *ngFor="let t of testimony | FilterArrayMultipleValue: ['type']: type" @ngIfAnimation>
+        <div class="item flex">
+          <div class="thrd-width flex flexCol">
+            <mat-card class="test-card text-center animated fadeIn" *ngIf="visible==true">
+              <div class="avContainView" *ngIf="t.type=='guest'">
+                <img mat-card-image src="{{t.fileID}}" alt="User image">
+              </div>
+
+              <div *ngIf="t.type=='user'" [class.avContainView]="t.fileID==''">
+                <div class="avContainView" *ngIf="t.fileID!=''">
+                  <img mat-card-image src="{{t.fileID}}" alt="User image">
+                </div>
+              </div>
+
+              <mat-card-content>
+                <div class="card-body">
+                  <h4 class="name primary rm-mb"><strong><span style="text-transform:capitalize">{{t.salutation}} {{t.firstName}} {{t.lastName}}</span></strong></h4>
+                  <p class="t.tradingAs rm-m">{{t.tradingAs}}</p>
+                  <p class="address small rm-mt" *ngIf="t.suburb || t.state">{{t.suburb}} {{t.state}}
+                  </p>
+                  <h4 class="startsRating">
+                    <mat-icon class="fas fa-star" *ngIf="t.starts>=5"></mat-icon>
+                    <mat-icon class="fas fa-star" *ngIf="t.starts>=4"></mat-icon>
+                    <mat-icon class="fas fa-star" *ngIf="t.starts>=3"></mat-icon>
+                    <mat-icon class="fas fa-star" *ngIf="t.starts>=2"></mat-icon>
+                    <mat-icon class="fas fa-star" *ngIf="t.starts>=1"></mat-icon>
+                  </h4>
+
+                  <hr class="rm-m">
+
+
+                  <span *ngIf="t.content.length<=250"><p>{{t.content}}</p></span>
+                  <span *ngIf="t.content.length>250"><p>{{t.content.slice(0, 250)}}...</p></span>
+
+                  <button mat-raised-button color="primary" (click)="showMore(t['_id'])" *ngIf="t.content.length>250">Read
+                    more
+                  </button>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </slide>
+
+
+    </div>
+  </carousel>
+</div>

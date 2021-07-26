@@ -1,0 +1,8 @@
+<div *ngIf="loading==true " class=" ep-view-img loading" [style.background-image]="loadingImg"></div>
+
+<div *ngIf="doc && loading!=true" class=" ep-view-img rendered"  [style.background-image]="fileURL"></div>
+
+<div *ngIf="!doc && loading!=true" class=" ep-view-img default" [style.background-image]="defaultPicture" @ngIfAnimation></div>
+
+
+<!-- <div *ngIf="doc" class=" mat-card-image" [style.background-image]="makeTrustedImage(images[i].file)"></div> -->

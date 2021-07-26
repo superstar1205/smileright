@@ -1,0 +1,21 @@
+<div class="confirmation-dialog-card-header text-center">
+  <h2 mat-dialog-title>{{title}}</h2>
+
+</div>
+<mat-dialog-content class="text-center">
+
+  <p class="row clearfix " [innerHTML]="message | safeHtml"></p>
+
+  <hr>
+
+  <div class="row buttonrow flex">
+  <button mat-raised-button class="full-width" color="primary" (click)="onNo()">
+    <span>{{noLabel}}</span>
+  </button>
+
+  <button mat-raised-button class="full-width" color="accent" (click)="onYes()">
+    <mat-icon>{{icon}}</mat-icon>
+    <span>{{yesLabel}}</span>
+  </button>
+</div>
+</mat-dialog-content>

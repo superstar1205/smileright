@@ -1,0 +1,188 @@
+::ng-deep app-lanap-protocol {
+  display: block;
+  overflow: hidden;
+   background: #fafafa;
+}
+.container.main {
+ position: relative;
+ z-index: 2;
+}
+section.introduction {
+  padding: 80px 0 180px;
+  position: relative;
+}
+img.hero {
+  width: 900px;
+  margin-top: -100px;
+  position: absolute;
+  right: -200px;
+}
+h1.white-header {
+  font-size: 4.2rem;
+  line-height: 4.5rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+h1 .smallIntro {
+  display: block;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+p.white {
+  font-size: 1.5rem;
+  line-height: 2.20rem;
+}
+.extra-margin {
+  margin: 5rem auto;
+}
+.background span.grey-bg {
+  background: #fafafa;
+}
+.features h3.background {
+  position: relative;
+  z-index: 1;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+.features mat-card {
+  padding: 24px 40px;
+}
+.half-width.text-center.padded {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.half-width.text-center.padded .rel {
+  display: block;
+  width: 6rem;
+  margin: 0 auto 20px;
+}
+mat-icon.icon {
+  font-size: 5rem;
+  width: auto;
+  height: auto;
+}
+mat-icon.icon.small {
+  font-size: 3rem;
+  width: auto;
+  height: auto;
+}
+mat-icon.icon.heart {
+  color: #b30000;
+}
+mat-icon.icon.brain {
+  color: #f99faf;
+}
+mat-icon.exclaim {
+  position: absolute;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #525252;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
+}
+.qtr-width.padded {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+section.grey {
+  background: #efefef;
+  padding: 2rem 0;
+}
+h1.offerValue {
+  font-size: 5rem;
+  line-height: 4rem;
+}
+.dealArea {
+  margin: 20px -16px -24px;
+  border-radius: 0 0 4px 4px;
+  padding: 24px;
+  background: #1b8bdd;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #182848, #1b8bdd);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #182848, #1b8bdd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.dealArea h1.offerValue {
+  font-size: 5rem;
+  line-height: 4rem;
+  color: #fff;
+  margin-top: 1rem;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.3), 0 1px 5px rgba(0,0,0,0.05);
+}
+.promoPos {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 300px;
+}
+::ng-deep app-lanap-protocol #blueBg {
+  top: -250px !important;
+  background: url('/assets/img/laser-background.jpg') no-repeat !important;
+  background-size: cover !important;
+  z-index: 1;
+}
+::ng-deep app-lanap-protocol figure.mat-figure {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 1024px) {
+  h1.white-header {
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+  }
+  section.introduction {
+    padding: 20px 0 30px;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  section.grey .rm-bp.mat-card {
+    margin-bottom: 10px;
+  }
+  h1.white-header {
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+  }
+  section.introduction {
+    padding: 20px 0 300px;
+    position: relative;
+  }
+  img.hero {
+    width: 700px;
+    margin-top: -50px;
+    position: absolute;
+    right: -200px;
+  }
+}
+@media (max-width: 599px) {
+  .dealArea {
+    margin: 20px -16px -16px;
+    padding: 16px;
+  }
+}
+@media (max-width: 380px) {
+  h1.white-header {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+  p.white {
+    font-size: 1.2rem;
+    line-height: 2.00rem;
+}
+  img.hero {
+    width: 700px;
+    margin-top: -50px;
+    position: absolute;
+    right: -200px;
+  }
+  .promoPos {
+    max-width: 240px;
+  }
+}

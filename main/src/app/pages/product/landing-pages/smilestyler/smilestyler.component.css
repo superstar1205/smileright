@@ -1,0 +1,341 @@
+/* heading */
+.heading-banner {
+  background: #757F9A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.heading-banner .container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+h1.white-header {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 3px 12px rgba(0, 0, 0, 0.3);
+  font-size: 4.0rem;
+  line-height: 5.2rem;
+}
+
+img.hero {
+  max-height: 800px;
+  margin: -100px 0;
+}
+
+img.brand-logo {
+  filter: brightness(0) invert(1);
+}
+
+/*  top cta  */
+section.top-cta {
+  background: #33353d;
+  padding: 40px 0;
+}
+
+section.top-cta .row.flex {
+  align-items: center;
+}
+
+h2.cta {
+  margin-right: 40px;
+}
+
+h2.cta {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  align-items: center;
+  display: flex;
+}
+
+span.cta-value {
+  font-size: 3rem;
+  margin: 0 10px;
+}
+
+button.btn-outline.btn-white.btn-large {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* introduction text */
+section.introduction {
+  padding: 80px 0;
+}
+
+.introduction p.lead.add-mt {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin: 0;
+}
+
+/* product info */
+section.product-info.flex {
+  background: #f7f7f7;
+}
+
+.product-info .half-width.background-image {
+  background: url('/assets/img/third-party/smilestyler-girl-1.jpg');
+  background-position: top right;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.product-info .half-width.flex {
+  padding: 60px 80px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.product-info .half-width.flex .text {
+  max-width: 520px;
+  text-align: left;
+}
+
+.product-info .half-width.flex h3.sm-h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #525252;
+}
+
+.product-info .half-width.flex p.lead {
+  line-height: 2.15rem;
+}
+
+button.btn-outline.btn-dark.btn-large {
+  border: 2px solid #d28655;
+  border-radius: 8px;
+  color: #d28655;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+  margin: 40px auto 0;
+}
+
+/* product description */
+.bronze {
+  color: #e79e6d;
+}
+
+.product-info-description .half-width.text {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+img.product-image {
+  max-width: 140%;
+  margin: 100px 0 0;
+}
+
+/*  lower info bar */
+.info-bar {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
+
+.info-bar p.lead {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin: 0;
+}
+
+/*  deal area */
+section.lower-cta {
+  padding: 80px 0;
+  background: #757F9A;
+  background: -webkit-linear-gradient(linear, left bottom, left top, from(#D7DDE8), to(#757F9A));
+  background: linear-gradient(to bottom, #D7DDE8, #757F9A);
+}
+
+.half-width.centered,
+.two-thrd-width.centered {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dealArea {
+  margin: 20px -16px -24px;
+  border-radius: 0 0 4px 4px;
+  padding: 24px;
+  background: #757F9A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #D7DDE8, #757F9A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dealArea h1.offerValue {
+  font-size: 4.8rem;
+  line-height: 3.8rem;
+  color: #fff;
+  margin-top: 1rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.lower-cta mat-card p.lead {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.15rem;
+}
+
+.lower-cta h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #525252;
+}
+
+.dealArea h3.white {
+  margin: 10px 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.promoPos {
+  position: absolute;
+  left: 30px;
+  bottom: -24px;
+  max-width: 320px;
+}
+
+/*  overflow  */
+
+::ng-deep .body-container.body-is-mobile {
+  overflow-x: hidden;
+}
+
+::ng-deep .body-container.body-is-mobile .promoPos {
+  position: relative;
+  left: 0;
+  bottom: -28px;
+  max-width: 320px;
+}
+
+/*  booking call to action */
+
+.booking-cta {
+  background: #33353d;
+  padding: 40px 0;
+}
+
+.booking-cta button {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+
+  img.hero {
+    max-width: 100%;
+    margin: 0 0 -40px;
+  }
+
+  img.brand-logo {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .product-info .half-width.flex h3.sm-h3 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  img.product-image {
+    max-width: 100% !important;
+    margin: 0px 0 20px !important;
+  }
+
+  .promoPos {
+    position: relative;
+    left: 0;
+    bottom: -28px;
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+  h1.white-header {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+
+
+  h2.cta {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto !important;
+  }
+
+  button.btn-outline.btn-white.btn-large {
+    margin: 0 auto;
+    display: block;
+  }
+
+  section.product-info.flex {
+    display: block;
+  }
+
+  section.product-info .half-width.flex {
+    padding: 40px 20px !important;
+  }
+
+  .product-info-description .half-width.text {
+    padding: 40px 0;
+  }
+
+
+  .promoPos {
+    display: none;
+  }
+
+  section.lower-cta,
+  section.info-bar,
+  section.introduction {
+    padding: 40px 0;
+  }
+
+  .row.clearfix.dealArea.rel.flex {
+    text-align: center;
+  }
+
+  .dealArea .col-right {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .heading-banner .container {
+    display: block;
+  }
+}
+
+@media (max-width: 599px) {
+  .row.clearfix.dealArea.rel.flex {
+    margin: 20px -16px;
+  }
+}
+
+@media (max-width: 380px) {}

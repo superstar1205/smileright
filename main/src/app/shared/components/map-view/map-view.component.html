@@ -1,0 +1,73 @@
+<div class="row clearfix rel" *ngIf="positions.length>0 && loading==false">
+  <div class="pull-right closeModal">
+    <!-- Modal dismiss button -->
+    <button class="btn-close btn-clear mat-button" *ngIf="canClose==true" (click)="closeEvent()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  <agm-map class="mapDisplay" [latitude]="toNumber(positions[0].Latitude)" [longitude]="toNumber(positions[0].Longitude)" [zoom]="zoom">
+
+    <div *ngIf="canClick==true">
+      <agm-marker *ngFor="let position of positions" [latitude]="toNumber(position.Latitude)" [longitude]="toNumber(position.Longitude)"
+        [markerDraggable]="true" (markerClick)="displayAddress(position)">
+        <agm-snazzy-info-window [isOpen]="true" [maxWidth]="200" [maxHeight]="500" [closeWhenOthersOpen]="false">
+          <ng-template>
+            <strong *ngIf="util.timeAgo( position.time) &&  position.time"> {{util.timeAgo( position.time)}} ago </strong>
+            <p> {{ position?.time | customDateTime }}</p>
+            <p> {{ addressLine?.AddressLine }}</p>
+          </ng-template>
+        </agm-snazzy-info-window>
+      </agm-marker>
+    </div>
+
+
+    <div *ngIf="canClick==false">
+        <agm-marker *ngFor="let position of positions" [latitude]="toNumber(position.Latitude)" [longitude]="toNumber(position.Longitude)"
+          [markerDraggable]="true">
+  
+          <agm-snazzy-info-window [isOpen]="true" [maxWidth]="300" [maxHeight]="500" [closeWhenOthersOpen]="false">
+            <ng-template>
+              <p> {{ addressLineFull }}</p>
+            </ng-template>
+          </agm-snazzy-info-window>
+  
+        </agm-marker>
+      </div>
+  </agm-map>
+  <div *ngIf="showDetails==true && (address || moreInfo || positionTime)" class="row clearfix informationPane">
+    <div class="column">
+      <h2 class="sr-title sm-h2 rm-mb"> Details </h2>
+      <hr>
+      <p class="rm-mt" *ngIf="positionTime">
+        <strong>Time :</strong> {{ positionTime | customDateTime }} ({{util.timeAgo( positionTime)}} ago)</p>
+      <p class="rm-mt" *ngIf="address">
+        <strong>Address : </strong> {{address}}</p>
+      <div *ngIf="moreInfo" [innerHtml]="moreInfo | safeHtml"></div>
+    </div>
+  </div>
+</div>
+
+<div  *ngIf="loading==true" class="full-width clearfix row text-center rel">
+    <p>{{"PlsWaitLoading"}}</p>
+    <div class="loadingMap">
+    <img src="/assets/images/map_loader.gif" class="" />
+    
+    </div>
+</div>
+
+
+<div *ngIf="notFound==true && loading==false" class="container clearfix">
+    <div class="pull-right closeModal" *ngIf="canClose==true">
+      <!-- Modal dismiss button -->
+      <button class="btn-close btn-clear mat-button" (click)="closeEvent()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  
+    <app-simple404 [imageSource]="'/assets/images/broken_map.png'" [errorTitle]="'Location not found'" [errorContent]="'There might be a problem with the address you are looking for.'"
+      [displayContact]="false">
+  
+    </app-simple404>
+  
+  
+  </div>

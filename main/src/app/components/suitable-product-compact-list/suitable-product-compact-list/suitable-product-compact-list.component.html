@@ -1,0 +1,59 @@
+<div #nav class="prod-container flex" myMatchHeight="matchHeight">
+
+  <div class="noOptions" @options *ngIf="options.length == 0">
+    <p>There are no products that match your criteria.</p>
+    <p>Please select a different amount with the slider above.</p>
+  </div>
+
+  <div class="cardContain prodItem mt" *ngFor="let option of options; let i = index" @options>
+
+
+    <mat-card class="prodCard rel mat-elevation-z7" [ngClass]="option['SubType']">
+      <div class="ribbon">
+        <span>{{ option['Label.Web']}}</span>
+      </div>
+      <h2 class="lending-prod-compact-h2">{{ option['Label.Marketing']}}</h2>
+      <div class="value text-center">
+        <h3 class="white small from"> From</h3>
+        <p class="mainValue green-text rm-m">{{ option['BasedOnMaxDuration.Repayments.Weekly']/7 | customCurrency}}</p>
+        <h3 class="white small per-day">Per day</h3>
+      </div>
+      <div class="product-description matchHeight"
+        [innerHtml]="utils.formatTermsAndConditions(option['Description']) | safeHtml"></div>
+      <div class="deepBg"></div>
+      <div *ngIf="canSelect!=true" class="buttons-content">
+        <button mat-raised-button (click)="openProductDialog(option)" class="btn-outline full-width">
+          <span class="mobile-view">
+            Product Details
+            <mat-icon>search</mat-icon>
+          </span>
+        </button>
+        <button mat-raised-button (click)="simulateProduct(option)" class="btn-outline full-width">
+          <span class="mobile-view">
+            Payment Calculator
+            <mat-icon>search</mat-icon>
+          </span>
+        </button>
+        <button mat-raised-button class="btn-outline-accent mat-accent full-width"
+          [routerLink]="['/consumer/', {outlets: {'page': ['how-to-apply']}}]" title="How to apply">How to
+          <span class="mobile-view">
+            Apply
+            <mat-icon>edit</mat-icon>
+          </span>
+        </button>
+      </div>
+
+      <div *ngIf="canSelect==true" class="buttons-content">
+
+        <button mat-raised-button (click)="selectProduct(option)" color="accent" class="btn-outline full-width">
+          Select
+          <mat-icon>check</mat-icon>
+        </button>
+
+      </div>
+
+    </mat-card>
+
+
+  </div>
+</div>

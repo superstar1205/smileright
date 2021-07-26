@@ -1,0 +1,943 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+
+@import url("https://fonts.googleapis.com/css?family=Nunito|Open+Sans");
+@import "variables";
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+@import "~ngx-toastr/toastr.css";
+
+// Smileright Blue
+$md-smilerightblue: (
+  50: #e4f1fb,
+  100: #bbdcf5,
+  200: #8dc5ee,
+  300: #5faee7,
+  400: #3d9ce2,
+  500: #1b8bdd,
+  600: #1883d9,
+  700: #1478d4,
+  800: #106ecf,
+  900: #085bc7,
+  A100: #f1f6ff,
+  A200: #bed7ff,
+  A400: #8bb8ff,
+  A700: #71a8ff,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #000000,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+// Smileright Red
+$md-smilerightred: (
+  50: #fee5e7,
+  100: #fcbfc3,
+  200: #fa949c,
+  300: #f76974,
+  400: #f64956,
+  500: #f42938,
+  600: #f32432,
+  700: #f11f2b,
+  800: #ef1924,
+  900: #ec0f17,
+  A100: #ffffff,
+  A200: #ffe5e5,
+  A400: #ffb2b4,
+  A700: #ff989b,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #ffffff,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+// Smileright Magenta
+$md-smilerightmagenta: (
+  50: #fce4ec,
+  100: #f8bcd0,
+  200: #f48fb1,
+  300: #f06292,
+  400: #ec407a,
+  500: #e91e63,
+  600: #e61a5b,
+  700: #e31651,
+  800: #df1247,
+  900: #d90a35,
+  A100: #ffffff,
+  A200: #ffd0d8,
+  A400: #ff9dae,
+  A700: #ff8498,
+  contrast:
+    (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #ffffff,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000
+    )
+);
+
+$smileright-primary: mat-palette($md-smilerightblue, 500, 800);
+$smileright-accent: mat-palette($md-smilerightred, 500, 900, A100);
+$smileright-warn: mat-palette($md-smilerightmagenta);
+
+$smileright-theme: mat-light-theme(
+  $smileright-primary,
+  $smileright-accent,
+  $smileright-warn
+);
+
+@include angular-material-theme($smileright-theme);
+
+.primary-light-bg {
+  background-color: mat-color($smileright-primary, lighter);
+}
+
+.primary-bg,
+.inlined-label,
+nav.breadcrumb a {
+  background-color: mat-color($smileright-primary);
+}
+
+.primary,
+th strong,
+mat-panel-title {
+  color: mat-color($smileright-primary) !important;
+}
+.accent {
+  color: mat-color($smileright-accent) !important;
+}
+.warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+
+.calcContainer .well {
+  border: 2px solid $smileright_blue;
+}
+.calcContainer .well .mat-select-placeholder, .calcContainer .well .mat-select-arrow {
+  color: $smileright_blue;
+}
+
+//  Flex Layout
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body,
+app {
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
+}
+
+// main {
+//   display: flex;
+//   flex: 1 1 auto;
+//   overflow-y: scroll;
+// }
+
+// main .ng-star-inserted {
+//   width: 100%;
+// }
+
+nav {
+  margin-top: 16px;
+}
+
+nav a {
+  background-color: $nav-button-color;
+  color: white;
+  padding: 8px 16px;
+  margin: 8px;
+  vertical-align: middle;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+nav.advanced a {
+  background-color: transparent;
+  padding: 8px 16px;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+button.nav-trigger {
+  color: #626466;
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: none !important;
+  position: relative;
+  left: -5px;
+  padding: 0;
+}
+button.nav-trigger:hover {
+  color: #4d4f50;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.1), 0 1px 8px 0 rgba(0,0,0,0.08) !important;
+}
+button.nav-trigger mat-icon.mat-icon.material-icons {
+  position: relative;
+  top: -4px;
+  margin-right: 5px;
+  font-size: 1.8rem;
+  color: #979797;
+}
+//  footer
+
+footer {
+  background: $smileright_blue;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 15px;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+button * {
+  font-family: "Nunito", sans-serif;
+}
+h1 {
+  color: $smileright_blue;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.body-is-mobile .body-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.body-app-name {
+  margin-left: 8px;
+}
+
+.body-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.body-is-mobile .body-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.body-is-mobile .mat-toolbar a.nav-link {
+  display: none;
+}
+
+.body-is-mobile .mobHide {
+  display: none;
+}
+
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.mb {
+  margin-bottom: 40px !important;
+}
+
+.mt {
+  margin-top: 40px !important;
+}
+
+.add-mt {
+  margin-top: 3.5rem !important;
+}
+.add-mb {
+  margin-bottom: 3.5rem !important;
+}
+hr {
+  border: none;
+  height: 1px;
+  background: #f2f2f2;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+section.topIntro {
+  padding: 0;
+    position: relative;
+    display: block;
+    z-index: 1;
+    background: #fafafa;
+    border-radius: 3px;
+}
+section.topIntro span.contentArea {
+  position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #fafafa;
+    height: 100%;
+    width: auto;
+    padding: 60px 40px;
+    display: block;
+    border-radius: 3px;
+}
+section.topIntro:after {
+  display: block;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: #fafafa;
+    z-index: -1;
+    border-radius: 3px;
+    box-shadow: 0 -10px 50px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.1);
+}
+
+
+//  Links
+
+a.nav-link,
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:visited {
+  color: $smileright_blue;
+}
+
+
+
+//  Colours
+
+.primary {
+  color: $smileright_blue;
+}
+.accent {
+  color: $smileright_red;
+}
+
+// Icons
+
+.mat-icon.fas.fa-angle-right {
+  vertical-align: baseline !important;
+}
+
+// Merchant Colours
+
+.body-is-merchant a.nav-link,
+.body-is-merchant a.nav-link:hover,
+.body-is-merchant a.nav-link:active,
+.body-is-merchant a.nav-link:visited {
+  color: #2ca3a2;
+}
+
+.body-is-merchant .primary-light-bg {
+  background-color:#2ca3a2;
+}
+
+.body-is-merchant .primary-bg,
+.body-is-merchant .inlined-label,
+.body-is-merchant nav.breadcrumb a {
+  background-color:#2ca3a2;
+}
+
+.body-is-merchant .primary,
+.body-is-merchant th strong,
+.body-is-merchant mat-panel-title {
+  color: #2ca3a2 !important;
+}
+.body-is-merchant .accent {
+  color: #059dbf !important;
+}
+.body-is-merchant .warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+.body-is-merchant .primary, .merchCard .primary, .noCardMerch .primary {
+  color: #2ca3a2 !important;
+}
+.body-is-merchant .prodCard-header h2 {
+  background: rgba(44, 163, 162, 0.78) !important;
+} 
+.body-is-merchant .accent {
+  color: #059dbf;
+}
+
+.body-is-merchant footer {
+  background: #2ca3a2;
+}
+
+.body-is-merchant a.nav-link.active {
+    border-bottom: 5px solid #2ca3a2 !important;
+}
+
+.body-is-merchant .mat-button.mat-primary, .body-is-merchant .mat-icon-button.mat-primary, .body-is-merchant .mat-stroked-button.mat-primary {
+  color: #2ca3a2;
+}
+
+.body-is-merchant .mat-raised-button.mat-primary, .body-is-merchant .mat-fab.mat-primary, .body-is-merchant .mat-mini-fab.mat-primary, .merchCard button.mat-primary, .noCardMerch button.mat-primary {
+    background-color: #2ca3a2;
+}
+
+.merchCard h2.mat-dialog-title {
+  background: #2ca3a2 !important;
+}
+
+
+// Invest Colours
+
+.body-is-invest a.nav-link,
+.body-is-invest a.nav-link:hover,
+.body-is-invest a.nav-link:active,
+.body-is-invest a.nav-link:visited {
+  color: #4641ca;
+}
+
+.body-is-invest .primary-light-bg {
+  background-color:#4641ca;
+}
+
+.body-is-invest .primary-bg,
+.body-is-invest .inlined-label,
+.body-is-invest nav.breadcrumb a {
+  background-color:#4641ca;
+}
+
+.body-is-invest .primary,
+.body-is-invest th strong,
+.body-is-invest mat-panel-title {
+  color: #4641ca !important;
+}
+.body-is-invest .accent {
+  color: #059dbf !important;
+}
+.body-is-invest .warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+.body-is-invest .primary {
+  color: #4641ca;
+}
+
+.body-is-invest .accent {
+  color: #059dbf;
+}
+
+.body-is-invest footer {
+  background: #4641ca;
+}
+
+.body-is-invest a.nav-link.active {
+    border-bottom: 5px solid #4641ca !important;
+}
+
+.body-is-invest .mat-button.mat-primary, .body-is-invest .mat-icon-button.mat-primary, .body-is-invest .mat-stroked-button.mat-primary {
+  color: #4641ca;
+}
+
+.body-is-invest .mat-raised-button.mat-primary, .body-is-invest .mat-fab.mat-primary, .body-is-invest .mat-mini-fab.mat-primary {
+    background-color: #4641ca;
+}
+
+
+.body-is-merchant app-invest-modal .prodCard-header h2,
+.body-is-merchant app-invest-modal-dif .prodCard-header h2  {
+  background: none !important;
+}
+
+
+
+//  mobile responsive
+
+// .nav-trigger {
+//   display: none !important;
+// }
+
+.body-is-mobile .nav-trigger {
+  display: block !important;
+  margin-top: 20px;
+  color: #5f5f5f;
+}
+.body-is-mobile .logoSet {
+  display: none;
+}
+.body-is-mobile .mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  // height: calc(100vh - 72px) !important;
+  height: 100% !important;
+  overflow: auto;
+}
+.body-is-mobile mat-card.productCard.mat-card {
+  margin: 0 5px 20px !important;
+}
+
+.body-is-mobile main {
+  display: block;
+}
+
+.body-is-mobile a:focus {
+    outline: none;
+}
+
+// Specialists Colours
+
+.body-is-specialists a.nav-link,
+.body-is-specialists a.nav-link:hover,
+.body-is-specialists a.nav-link:active,
+.body-is-specialists a.nav-link:visited {
+  color: #91558e ;
+}
+
+.body-is-specialists .primary-light-bg {
+  background-color:#7b607a;
+}
+
+.body-is-specialists .primary-bg,
+.body-is-specialists .inlined-label,
+.body-is-specialists nav.breadcrumb a {
+  background-color:#7b607a;
+}
+
+.body-is-specialists .primary,
+.body-is-specialists th strong,
+.body-is-specialists mat-panel-title {
+  color: #91558e  !important;
+}
+.body-is-specialists .accent {
+  color: mat-color($smileright-accent) !important;
+}
+.body-is-specialists .warn {
+  color: mat-color($smileright-warn) !important;
+}
+
+.body-is-specialists .primary, .noCardSpec .primary, .cardSpec .primary {
+  color: #91558e  !important;
+}
+
+.body-is-specialists .accent {
+  color: #605164 !important;
+}
+
+.body-is-specialists footer {
+  background: #7b607a;
+}
+.body-is-specialists footer .disclaimer {
+  color: #e3bfde;
+}
+
+.body-is-specialists section.contact {
+    background-color: #584565 !important;
+}
+
+.body-is-specialists a.nav-link.active {
+    border-bottom: 5px solid #91558e  !important;
+}
+
+.body-is-specialists .mat-button.mat-primary, .body-is-specialists .mat-icon-button.mat-primary, .body-is-specialists .mat-stroked-button.mat-primary {
+  color: #91558e ;
+}
+
+.body-is-specialists .mat-raised-button.mat-primary, .body-is-specialists .mat-fab.mat-primary, .body-is-specialists .mat-mini-fab.mat-primary, .noCardSpec .mat-raised-button.mat-primary, .cardSpec .mat-raised-button.mat-primary, .specCard .mat-raised-button.mat-primary {
+    background-color: #91558e ;
+}
+
+.body-is-specialists .whiteBg {
+  background-color: #e6e1ea !important;
+}
+span.white-bg {
+  background-color: #fff !important;
+}
+span.faf-bg {
+  background: #fafafa !important;
+}
+.body-is-specialists .prodCard-header h2 {
+  background: rgba(145, 85, 142, 0.75) !important;
+}
+.body-is-specialists .img-overlay {
+  background: rgb(70, 55, 76) !important;
+}
+.body-is-specialists ul.check li:before {
+  color: #9641b1 !important;
+}
+
+.body-is-specialists section.greenBg {
+  background-color: #6f566f !important;
+  background-image: linear-gradient(315deg, #a07c9a 0%, #6f566f 74%) !important;
+}
+.body-is-specialists p.topCta {
+  border-bottom: 1px solid #e5c9ec !important;
+}
+
+.specCard h2.mat-dialog-title, .cardSpec .prodCard-header h2 {
+  background: #91558e !important;
+}
+
+
+
+// Blue Bg
+#blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  z-index: -1;
+  top: -350px;
+}
+
+#blueBg,
+#blueBg span {
+  position: absolute;
+}
+#blueBg :nth-child(2) {
+  width: 14%;
+  right: 0;
+  bottom: 40px;
+  background: #3094e2;
+}
+#blueBg :nth-child(3) {
+  width: 25%;
+  bottom: 0;
+  right: 0;
+  background: #a1ffc8;
+}
+
+.body-is-merchant #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #2ca3a2;
+  background-image: linear-gradient(315deg, #2ca3a2 0%, #059dbf 74%);
+  z-index: -1;
+  top: -240px;
+}
+
+.body-is-merchant #blueBg :nth-child(2) {
+  background: #2ca3a2;
+}
+.body-is-merchant #blueBg :nth-child(3) {
+  background: #2ca3a2;
+}
+
+.body-is-invest #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #4640ca;
+  background-image: linear-gradient(315deg, #4640ca 0%, #0a9ed6 74%);
+  z-index: -1;
+  top: -240px;
+}
+
+.body-is-invest #blueBg :nth-child(2) {
+  background: #4640ca;
+}
+.body-is-invest #blueBg :nth-child(3) {
+  background: #4640ca;
+}
+
+
+.body-is-specialists #blueBg {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  transform: skewY(-6deg);
+  transform-origin: 0;
+  background-color: #a07c9a  ;
+  background-image: linear-gradient(315deg, #362b3e 0%, #a07c9a   74%);
+  z-index: -1;
+  top: -240px;
+}
+
+.body-is-specialists #blueBg :nth-child(2) {
+  background: #a07c9a ;
+}
+.body-is-specialists #blueBg :nth-child(3) {
+  background: #a07c9a ;
+}
+
+// Forms
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+// Snack bar
+
+.mat-snack-bar-container {
+  background: #f1f1f1 !important;
+  color: #565656 !important;
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.04), 0px 3px 14px 2px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.04), 0px 3px 14px 2px rgba(0, 0, 0, 0.02);
+}
+
+.card-type {
+    display: inline-block;
+    text-align: left;
+    width: 40px;
+    height: 30px;
+    background-color: #c8c8c8;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.04), 0px 3px 14px 2px rgba(0, 0, 0, 0.02);
+}
+
+.card-type::before, .card-type::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+}
+
+
+
+.card-type.visa {
+    background-color: #fff;
+    border-top: solid #1E3F8E 8px;
+}
+
+.card-type.visa::before {
+    background-color: #1E3F8E;
+    border: solid #fff 4px;
+    border-width: 5px 10px;
+    width: 40px;
+    height: 13px;
+    top: 0;
+}
+
+.card-type.visa::after {
+    width: 100%;
+    height: 8px;
+    background-color: #DF9600;
+    bottom: 0;
+}
+
+.card-type.mastercard {
+    background-color: #1D468F;
+}
+
+.card-type.mastercard::before, .card-type.mastercard::after {
+    width: 18px;
+    height: 18px;
+    border-radius: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.card-type.mastercard::before {
+    background-color: #DB2142;
+    left: 16px;
+}
+
+.card-type.mastercard::after {
+    background-color: #FEC627;
+    right: 16px;
+}
+
+.card-type.amex {
+    background-color: #CAE2C3;
+    border: solid 3px #6F8668;
+    border-bottom: none;
+}
+
+.card-type.amex::before {
+    width: 16px;
+    height: 24px;
+    border-radius: 8px/12px;
+    background-color: #6F8668;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-type.discover {
+    background-color: #FF8A00;
+}
+
+.card-type.discover::before {
+    width: 100px;
+    height: 90px;
+    border-radius: 50px/40px;
+    background-color: #fff;
+    top: -49px;
+    left: -34px;
+}
+
+.card-type.discover::after {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #c8c8c8;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.card-type {
+  margin-right: 4px;
+}
+
+//  wizard
+
+aw-wizard-navigation-bar.horizontal.large-filled-symbols ul.steps-indicator li .step-indicator {
+  top: -40px;
+  left: calc(50% - 15px);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  transition: 0.25s;
+  border-radius: 100%;
+  background-color: #E6E6E6;
+  color: rgb(61, 61, 61);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+aw-wizard-navigation-bar ul.steps-indicator li .step-indicator {
+  font-weight: bold;
+  color: #5b5b5b;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+aw-wizard-navigation-bar.horizontal.large-filled-symbols ul.steps-indicator li.current .step-indicator {
+  background-color: #2ca3a2!important;
+  color: white !important;
+}
+
+aw-wizard-navigation-bar ul.steps-indicator li.editing .step-indicator {
+  color: white;
+}
+
+aw-wizard-navigation-bar ul.steps-indicator li.done .step-indicator,
+aw-wizard-navigation-bar ul.steps-indicator li.navigable.done a:hover .step-indicator {
+  background-color: #02c5d3 !important;
+  color: white !important;
+  font-size: 0;
+}
+
+
+aw-wizard-navigation-bar ul.steps-indicator li.done .step-indicator:after {
+  display: block;
+  content: "\f00c";
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+aw-wizard-navigation-bar ul.steps-indicator li.done.editing .step-indicator {
+  background-color: #FF0000 !important;
+  color: white !important;
+  font-size: 0;
+}
+
+aw-wizard-navigation-bar ul.steps-indicator li.done.editing .step-indicator:after {
+  display: block;
+  content: "\f303";
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+aw-wizard-navigation-bar {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 0.5rem;
+}
+
+//  outlined form fields
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.7em 0;
+  top: -0.25rem;
+}
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+  transform: translateY(0) !important;
+}

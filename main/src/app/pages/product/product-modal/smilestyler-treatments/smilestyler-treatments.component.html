@@ -1,0 +1,94 @@
+<div class="card-header smilestyler-gradient clearfix inModal">
+  <div class="row clearfix">
+    <button class="btn-close btn-clear mat-button white" mat-dialog-close>
+      <mat-icon>clear</mat-icon>
+    </button>
+    <div class="row titleArea clearfix full-width">
+      <h2 class="summary-header rm-m white">
+        What we treat
+        <span class="subLabel">Get a smile that's designed to shine</span>
+      </h2>
+    </div>
+  </div>
+</div>
+<mat-dialog-content>
+
+  <p class="lead rm-mt text-center">SmileStyler<sup>&reg;</sup> has been designed to not just straighten your teeth,
+    but also to
+    positively affect the aesthetic features of your face.</p>
+
+  <div class="row clearfix rel">
+    <mat-tab-group class="treatment-tabs" dynamicHeight="true" [(selectedIndex)]="selectedTab">
+      <mat-tab label="Tab 1">
+        <img src="/assets/img/third-party/ss-teeth/overbite-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">OVERBITE</p>
+        <p class="rm-mb">Upper teeth protrude over the lower teeth by a proportion of between 30-50%.</p>
+      </mat-tab>
+      <mat-tab label="Tab 2">
+        <img src="/assets/img/third-party/ss-teeth/crowded-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">CROWDING</p>
+        <p class="rm-mb">The lack of space for all the teeth to fit normally within the jaws. The teeth may be twisted or displaced.</p>
+      </mat-tab>
+      <mat-tab label="Tab 3">
+        <img src="/assets/img/third-party/ss-teeth/spacing-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">SPACING/DIASTEMA</p>
+        <p class="rm-mb">A dental anomaly characterised by interdental spaces and lack of contact points between teeth.</p>
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        <img src="/assets/img/third-party/ss-teeth/rotations-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">ROTATIONS</p>
+        <p class="rm-mb">A condition where one or more teeth are not aligned properly in relation to the adjacent and opposing teeth.</p>
+      </mat-tab>
+      <mat-tab label="Tab 5">
+        <img src="/assets/img/third-party/ss-teeth/crossbite-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">CROSSBITE</p>
+        <p class="rm-mb">A malocclusion where a tooth (or teeth) are inset behind the inside of a corresponding tooth.</p>
+      </mat-tab>
+      <mat-tab label="Tab 6">
+        <img src="/assets/img/third-party/ss-teeth/openbite-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">OPENBITE</p>
+        <p class="rm-mb">Occurs when the front teeth fail to touch and there is no overlap between upper and lower incisors.</p>
+      </mat-tab>
+      <mat-tab label="Tab 7">
+        <img src="/assets/img/third-party/ss-teeth/underbite-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">UNDERBITE</p>
+        <p class="rm-mb">A condition in which the lower teeth and jaw protrude in front of the upper
+          teeth.</p>
+      </mat-tab>
+      <mat-tab label="Tab 8">
+        <img src="/assets/img/third-party/ss-teeth/dental-midlines-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">DENTAL MIDLINES</p>
+        <p class="rm-mb">This type of problem is caused when the bite does not fit and match appropriately.</p>
+      </mat-tab>
+      <mat-tab label="Tab 9">
+        <img src="/assets/img/third-party/ss-teeth/narrow-smile-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">BUCCAL CORRIDORS</p>
+        <p class="rm-mb">Negative space present between the lateral aspects of the back teeth and the corner of the mouth during
+          smile which appears as a dark space.</p>
+      </mat-tab>
+      <mat-tab label="Tab 10">
+        <img src="/assets/img/third-party/ss-teeth/gummy-smile-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">GUMMY SMILE</p>
+        <p class="rm-mb">A ‘gummy smile’ is one where the gums show when you are smiling.</p>
+      </mat-tab>
+      <mat-tab label="Tab 11">
+        <img src="/assets/img/third-party/ss-teeth/overjet-01.svg" class="tab-icon" />
+        <p class="larger bronze rm-mb">OVERJET</p>
+        <p class="rm-mb">Refers to the horizontal distance between the upper front teeth and lower front teeth.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="row clearfix buttons">
+      <button mat-mini-fab class="pull-left" (click)="changeBackTab()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-mini-fab class="pull-right" (click)="changeTab()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+  <p class="small text-center rm-mt">Results do vary between individual cases and ideal aligner cases are those that require
+    moderate alignment or
+    rotation. Talk to your dentist or orthodontist about whether SmileStyler is the right solution for your dental
+    issues.</p>
+</mat-dialog-content>

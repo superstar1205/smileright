@@ -1,0 +1,866 @@
+.logo-small{
+  margin: 40px auto;
+  display: block;
+  max-width: 200px;
+}
+
+.bg-dark {
+  background: rgb(89 166 127);
+}
+
+.bg-light {
+  background: rgb(221 226 225);
+}
+
+.text-white,
+.text-white a {
+  color: white;
+}
+.text-white a{
+  text-decoration: none;
+}
+.text-gray {
+  color: rgb(80 80 80);
+}
+
+.text-align-left {
+  text-align: left;
+}
+.text-align-justify {
+  text-align: justify;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+/* intro */
+.intro-container {
+  max-width: 400px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+h2.intro {
+  font-size: 2rem;
+}
+
+/* gofamily img */
+img.gofamily {
+  max-width: 100%;
+  height: auto;
+  margin-top: -70px;
+}
+
+/* contact practice */
+.contact-practice-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   align-content: center;
+   padding: 0;
+}
+
+.contact-practice-left {
+  flex: 50%;
+  background: url('/assets/img/ultradent/teeth.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 355px;
+}
+
+.contact-practice-right {
+  flex: 50%;
+  padding: 20px;
+}
+
+/* brand name */
+.brand {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+h2.brand-name,
+h1.brand-name {
+  margin-top: 0;
+}
+
+/* brand image */
+.brand-image-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.brand-image-left {
+  flex: 50%;
+  background: url('/assets/img/ultradent/takehomekit0.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 355px;
+  width: 100%;
+  height: 100%;
+}
+.brand-image-right {
+  flex: 50%;
+  background: url('/assets/img/ultradent/takehomekit1.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 355px;
+  width: 100%;
+  height: 100%;
+}
+
+/* brand texts */
+.brand-texts {
+  padding: 0 0 48px 0;
+}
+.brand-texts-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand-texts-item {
+  margin: 20px;
+  padding: 20px;
+  flex: 1;
+  background-color: white;
+}
+
+/* in-office */
+.in-office-container {
+  display: flex;
+  flex-direction: row;
+}
+.in-office-item-img {
+  flex: 50%;
+  background: url('/assets/img/ultradent/boostgreenbg.png') no-repeat;
+  background-position: center top;
+  background-size: contain;
+  min-height: 355px;
+  margin-top: -48px;
+}
+.in-office-item-texts {
+  flex: 50%;
+  padding: 20px;
+}
+
+/* From invisalign */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heading-banner {
+  background: url('/assets/img/ultradent/header-image.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 700px;
+  padding-top: 600px;
+  box-sizing: border-box;
+}
+
+.heading-banner h1.white.rm-m {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+img.invis-logo {
+  width: 400px;
+  margin: 0 auto 30px;
+  display: block;
+}
+
+.blue {
+  color: rgb(0 154 206);
+}
+
+
+.logo-img {
+  width: 200px;
+  height: 70px;
+  background: url('/assets/img/campaign/dentsply-logo.png') no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+}
+
+.logo-img.mobShow {
+  width: 100px;
+  height: 50px;
+  background: url('/assets/img/campaign/dentsply-logo.png') no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+section.top-cta {
+  padding: 80px 0;
+}
+
+section.top-cta .side-img {
+  background: url('/assets/img/campaign/invisalign/aligner_tray.png') no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.two-thrd-width.ml {
+  padding-left: 30px;
+}
+
+.heading-banner .cta {
+  /* background: rgb(0 154 206); */
+  padding: 20px 0;
+}
+
+.product-info {
+  /* background: rgb(0 154 206); */
+  display: block;
+  min-height: 450px;
+}
+
+.mid-cta {
+  /* background: rgb(0 154 206); */
+  padding: 20px 0;
+}
+
+.mid-cta h2.white {
+  font-size: 2rem;
+  line-height: 3rem;
+
+}
+
+
+img.anim-icon {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+section.introduction {
+  padding: 60px 0;
+}
+
+.introduction .full-width {
+  background: #000;
+  box-sizing: border-box;
+  margin: 10px;
+  background-position: center center !important;
+  background-size: 110% !important;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.introduction .full-width:hover {
+  background-size: 115% !important;
+}
+
+.introduction .title {
+  width: 100%;
+  margin-top: 150px;
+  /* background: rgb(0 154 206 / 0.3); */
+}
+
+.introduction .title p {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.introduction .full-width.overbite {
+  background: url('/assets/img/campaign/invisalign/Overbite.png') no-repeat;
+}
+
+.introduction .full-width.crossbite {
+  background: url('/assets/img/campaign/invisalign/Crossbite.png') no-repeat;
+}
+
+.introduction .full-width.openbite {
+  background: url('/assets/img/campaign/invisalign/Openbite.png') no-repeat;
+}
+
+.introduction .full-width.underbite {
+  background: url('/assets/img/campaign/invisalign/Underbite.png') no-repeat;
+}
+
+.introduction .full-width.gapteeth {
+  background: url('/assets/img/campaign/invisalign/GapTeeth.png') no-repeat;
+}
+
+.introduction .full-width.crowding {
+  background: url('/assets/img/campaign/invisalign/Crowding.png') no-repeat;
+}
+
+.introduction .full-width.straight {
+  background: url('/assets/img/campaign/invisalign/StraighterTeeth.png') no-repeat;
+}
+
+.full-width.straight {
+  max-width: calc(33% - 10px);
+}
+
+.introduction .full-width p.info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  /* background: rgb(0 154 206 / 0.8); */
+  padding: 6px 10px;
+  text-align: center;
+  transition: all 0.1s;
+}
+
+.introduction .full-width:hover p.info {
+  opacity: 1;
+}
+
+.introduction .full-width:first-child {
+  margin-left: 0 !important;
+}
+
+.introduction .full-width:last-child {
+  margin-right: 0 !important;
+}
+
+.full-width.blue {
+  max-width: 66% !important;
+  background: #009ace !important;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.full-width.blue p {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+section.product-testimonial {
+  padding: 0 0 60px;
+}
+
+.product-testimonial .half-width.flex {
+  align-items: center;
+}
+
+.product-testimonial h3.primary {
+  font-size: 2rem;
+
+}
+
+.video-placeholder {
+  cursor: pointer;
+}
+
+section.lower-img {
+  min-height: 600px;
+  background: url('/assets/img/campaign/invisalign/group-201.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+section.bottom-img {
+  min-height: 600px;
+  background: url('/assets/img/campaign/invisalign/ANZ_wearing_aligner.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+section.video {
+  text-align: center;
+  padding: 60px 0;
+}
+
+section.video .video-frame {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+section.lower-info {
+  padding: 60px 0;
+}
+
+section.lower-info button {
+  width: 100%;
+  max-width: 400px;
+  border-width: 2px;
+  border-color: #1b8bdd;
+}
+
+section.product-steps {
+  padding: 100px 0;
+}
+
+img.side-img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.product-steps .two-thrd-width {
+  align-items: center;
+}
+
+.product-steps .two-thrd-width.mr {
+  padding-right: 20px;
+}
+
+.product-steps .two-thrd-width.ml {
+  padding-left: 20px;
+}
+
+.product-steps h2 {
+  font-size: 2rem;
+
+}
+
+.product-testimonial ul {
+  list-style: none;
+}
+
+.product-testimonial li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: orange;
+}
+
+.product-testimonial li {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.95rem;
+  font-weight: 300;
+  margin-bottom: 0.8rem;
+}
+
+
+.thrd-width.round-img img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-height: 700px;
+  max-width: 700px;
+  margin-left: 50px;
+}
+
+
+/*  deal area */
+
+
+
+section.lower-cta {
+  padding: 80px 0;
+  background: #e4e7ef;
+  background: -webkit-linear-gradient(linear, left bottom, left top, from(#D7DDE8), to(#e4e7ef));
+  background: linear-gradient(to bottom, #D7DDE8, #e4e7ef);
+}
+
+section.lower-info mat-card {
+  padding-top: 0;
+  margin-top: 80px;
+}
+
+.half-width.centered,
+.two-thrd-width.centered {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dealArea {
+  margin: 0 -16px -24px;
+  border-radius: 0 0 4px 4px;
+  padding: 24px;
+  background: #558c9e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #d0e4f9, #558c9e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #d0e4f9, #558c9e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dealArea h1.offerValue {
+  font-size: 4.8rem;
+  line-height: 3.8rem;
+  color: #fff;
+  margin-top: 1rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.lower-info mat-card p.lead {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.15rem;
+}
+
+.lower-info h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #525252;
+}
+
+.dealArea h3.white {
+  margin: 10px 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.promoPos {
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+  max-width: 320px;
+}
+
+
+.lower-cta ul {
+  list-style: none;
+}
+
+/* prod info image */
+
+.product-info .background-image {
+  position: relative;
+}
+
+.product-info img {
+  position: absolute;
+  max-height: 600px;
+  width: auto;
+  max-width: unset;
+
+}
+
+.product-info {
+  overflow: hidden;
+}
+
+.product-info .container {
+  display: flex;
+  min-height: 450px;
+}
+
+.product-info .container .half-width.flex {
+  align-items: center;
+}
+
+/*  booking call to action */
+
+.booking-cta {
+  background: #33353d;
+  padding: 40px 0;
+}
+
+.booking-cta button {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: transparent;
+}
+
+/*  grow on hover */
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.text.ml {
+  padding-left: 20px;
+}
+
+
+.upper-cta {
+  position: absolute;
+  top: -160px;
+
+}
+
+.upper-cta button {
+  background: orange;
+}
+
+span.perDay {
+  font-size: 70%;
+  margin-left: 4px;
+}
+
+.upper-cta strong {
+  margin-left: 6px;
+}
+
+::ng-deep .upper-cta span.mat-button-wrapper {
+  display: flex;
+  align-items: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .product-info img {
+    max-height: 450px;
+  }
+
+  .product-info {
+    min-height: 400px;
+  }
+
+  .product-info .container {
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .upper-cta span.mat-button-wrapper {
+    font-size: 150%;
+    padding: 10px;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .promoPos {
+    position: absolute;
+    right: -95%;
+    left: unset;
+    bottom: -270px;
+    max-width: 240px;
+  }
+
+  .introduction .full-width {
+    display: flex;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 5px 0;
+  }
+
+  img.main-img {
+    max-width: 80%;
+  }
+
+  img.invis-logo {
+    max-width: 80%;
+  }
+
+  .thrd-width.side-img {
+    display: none;
+  }
+
+  .two-thrd-width.ml {
+    padding-left: 0;
+    text-align: center;
+    width: 100% !important;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .product-testimonial ul {
+    padding-left: 0;
+  }
+
+  .product-testimonial li:before {
+    display: none;
+  }
+
+  .product-testimonial li {
+    font-size: 1.00rem;
+    line-height: 1.6rem;
+  }
+
+  .mid-cta h2.white {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+  }
+
+  .text.ml {
+    padding-left: 0;
+  }
+
+  .heading-banner {
+    background: url('/assets/img/ultradent/header-image.png') no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 350px;
+    padding-top: 350px;
+  }
+
+  .introduction .full-width {
+    display: flex;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  section.product-steps {
+    text-align: center;
+  }
+
+  .two-thrd-width.ml {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  img.main-img {
+    max-width: 80%;
+  }
+
+  img.anim-icon {
+    max-width: 160px;
+    max-height: 160px;
+    margin: 0 auto;
+  }
+
+  img.invis-logo {
+    max-width: 80%;
+  }
+
+  .thrd-width.side-img {
+    display: none;
+  }
+
+  img.side-img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .product-info img {
+    max-height: 450px;
+    left: -50%;
+    opacity: 0.4;
+  }
+
+  .thrd-width.round-img {
+    display: none;
+  }
+
+  .video-placeholder img {
+    width: 100%;
+  }
+
+  .full-width.blue {
+    max-width: 100% !important;
+  }
+
+  .promoPos {
+    position: absolute;
+    right: -40px;
+    left: unset;
+    bottom: -270px;
+    max-width: 240px;
+  }
+
+  .lower-cta ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  section.lower-img {
+    min-height: 400px;
+  }
+
+  section.bottom-img {
+    min-height: 350px;
+  }
+
+  .heading-banner h1.white.rm-m {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  section.lower-info button {
+    max-width: 90%;
+  }
+
+  .upper-cta {
+    top: -90px;
+  }
+
+  .upper-cta button {
+    font-size: 100%;
+    padding: 5px 20px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {}
+
+@media (max-width: 599px) {
+
+  .promoPos {
+    display: none;
+  }
+
+  .lower-info .half-width.text-left.rel {
+    text-align: center;
+  }
+
+  section.lower-info mat-card {
+    margin-top: 40px;
+  }
+  .contact-practice-container {
+    flex-direction: column;
+  }
+
+  .contact-practice-left {
+    background: url('/assets/img/ultradent/teeth.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand-image-container,
+  .brand-texts-container,
+  .in-office-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .heading-banner {
+    background: url('/assets/img/ultradent/header-image.png') no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 350px;
+    padding-top: 300px;
+  }
+
+}

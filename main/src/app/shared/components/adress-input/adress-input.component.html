@@ -1,0 +1,85 @@
+<div class="clearfix full-width row">
+  <form #formadresss1="ngForm">
+    <div class="row clearfix flex full-width">
+      <mat-icon class="inline">location_on</mat-icon>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Unit Number</mat-label>
+        <input matInput type="number" placeholder="Unit Number" name="unitNumber" (change)="changeUnitNumber($event.currentTarget.value)"
+          [(ngModel)]="unitNumber">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Street Number</mat-label>
+        <input matInput type="number" placeholder="Street Number" name="streetNumber" (change)="changeStreetNumber($event.currentTarget.value)"
+          [(ngModel)]="streetNumber" [required]="requiredLabel">
+
+        <mat-error *ngIf="!streetNumber">Street number is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Street Name</mat-label>
+        <input matInput type="text" placeholder="Street Name " name="streetName" (change)="changeStreetName($event.currentTarget.value)"
+          [(ngModel)]="streetName" [required]="requiredLabel">
+
+        <mat-error *ngIf="!streetName">Street name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="titleField" appearance="outline" [ngClass]="{'mat-form-field-invalid ng-invalid mat-error' : invalidStreetType==true}">
+        <mat-label>Street Type</mat-label>
+        
+        <!-- <mat-select matInput placeholder="Street Type" (selectionChange)="changeStreetType($event.value)" [(ngModel)]="streetTypeObject" class="full-width"
+          name="streetTypeObject">
+          <mat-option *ngFor="let p of streeTypes  | orderBy : ['Label'] " [value]="p">
+            {{ p.Label }}
+          </mat-option>
+        </mat-select> -->
+
+
+
+        <input matIput name="streetType" type="text" [(ngModel)]="streetTypeObjectLabel"
+          (ngModelChange)="filterStreetType($event)" placeholder="Street Type" matInput [matAutocomplete]="auto" [required]="requiredLabel" >
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getSelectedStreetType($event.option.value)'>
+          <mat-option *ngFor="let streetType of filteredStreetTypes" [value]="streetType"
+            [hidden]="hideStreetTypeOption==true">
+            {{streetType}}
+          </mat-option>
+        </mat-autocomplete>
+
+        <mat-hint *ngIf="invalidStreetType==true && streetTypeObjectLabel" [style.color]="'#f44336'">Invalid street type</mat-hint>
+
+        <mat-error *ngIf="!streetTypeObjectLabel">Street type is required</mat-error>
+        
+      </mat-form-field>
+
+    </div>
+
+    <div class="row clearfix flex full-width">
+      <mat-icon class="inline">public</mat-icon>
+
+      <mat-form-field class="full-width">
+        <input name="suburb" type="text" [(ngModel)]="suburb" (ngModelChange)="suburbChange($event)" placeholder="City/Suburb" aria-label="State"
+          matInput [matAutocomplete]="autoSuburb" class="full-width" [required]="requiredLabel" (blur)="runCheck()">
+        <mat-autocomplete (optionSelected)='chooseSuburb($event.option.value)' #autoSuburb="matAutocomplete" [displayWith]="displaySuburbFn">
+          <mat-option *ngFor="let s of suburbs  | orderBy: ['Locality','State','PostCode'] " [value]="s">
+            {{ s.Locality }}, {{ s.State }}, {{ s.Postcode }}
+          </mat-option>
+        </mat-autocomplete>
+
+        <mat-error *ngIf="!suburb">Suburb is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width " [ngClass]="{'mat-form-field-invalid': suburb!=null && isSelectedSuburb==true}">
+        <input matInput type="text" placeholder="State" name="State" [disabled]="true" [(ngModel)]="state" [required]="requiredLabel">
+      </mat-form-field>
+      <mat-form-field class="titleField" [class.mat-form-field-invalid]="suburb!=null && isSelectedSuburb==true">
+        <input matInput type="number" placeholder="Postcode" name="Postcode" [disabled]="true" [(ngModel)]="postCode" [required]="requiredLabel">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+<!-- <div class="row clearfix full-width" [hidden]="!postCode ||  !state || displayMap!=true ">
+  <app-map-view [canClose]="canClose" [unitNumber]="unitNumber" [canClick]="false" [streetType]="streetType" [streetName]="streetName"
+    [streetNumber]="streetNumber" (notFoundEvent)="notFoundEvent($event)" [zoom]="17" [postCode]="postCode" [state]="state"
+    [suburb]="suburb" [moreInfo]=""></app-map-view>
+</div> -->

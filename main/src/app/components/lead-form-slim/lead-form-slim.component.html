@@ -1,0 +1,74 @@
+<div class="row clearfix">
+  <div class="column text-center">
+    <form class="form-container" novalidate>
+      <div *ngIf="isCreated==false">
+        <div class="row clearfix flex">
+          <mat-form-field class="full-width title-field" appearance="outline">
+            <input name="title" type="text" placeholder="Title" aria-label="Title" matInput [matAutocomplete]="autoTitle"
+               class="full-width">
+            <mat-autocomplete #autoTitle="matAutocomplete">
+              <mat-option *ngFor="let t of titles  " [value]="t.Label">
+                {{ t.Label }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <input matInput placeholder="Your first name" required>
+            <!-- <mat-error *ngIf="firstName.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <input matInput placeholder="Your last name" required>
+            <!-- <mat-error *ngIf="lastName.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+        </div>
+        <div class="row clearfix">
+          <mat-form-field class="full-width" appearance="outline">
+            <input matInput placeholder="Enter your email" required>
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <input matInput placeholder="Enter your mobile number" required>
+            <!-- <mat-error *ngIf="mobile.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+        </div>
+        <div class="row clearfix flex full-width">
+          <mat-form-field class="full-width" appearance="outline">
+            <input name="suburb" type="text" [(ngModel)]="suburb" (ngModelChange)="suburbChange($event)" placeholder="City/Suburb"
+              aria-label="State" matInput [matAutocomplete]="autoSuburb" class="full-width" [required]="requiredLabel">
+            <mat-autocomplete (optionSelected)='chooseSuburb($event.option.value)' #autoSuburb="matAutocomplete">
+              <mat-option *ngFor="let s of suburbs  | orderBy: ['Locality','State','PostCode'] " [value]="s">
+                {{ s.Locality }}, {{ s.State }}, {{ s.Postcode }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field class="full-width " appearance="outline">
+            <input matInput type="text" placeholder="State" name="State" [disabled]="true" [(ngModel)]="state"
+              [required]="requiredLabel">
+          </mat-form-field>
+          <mat-form-field class="titleField full-width" appearance="outline">
+            <input matInput type="number" placeholder="Postcode" name="Postcode" [disabled]="true" [(ngModel)]="postCode"
+              [required]="requiredLabel">
+          </mat-form-field>
+        </div>
+        <div class="row clearfix text-right">
+          <button mat-raised-button color="accent" class="sm-mt" (click)="SubmitProspect()" [disabled]="leadGenForm.invalid">Submit appointment request
+            <mat-icon fontSet="fas" fontIcon="fa-angle-right"></mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="animated fadeInDown" *ngIf="isCreated==true">
+        <span>
+          <h2>Thank you!</h2>
+          <p>One of our friendly staff will be in touch with you soon to help arrange a time for your appointment.</p>
+          <pre>{{ res | json }}</pre>
+          <hr>
+          <p class="lead">Need something to read while you wait?</p>
+          <p>Download a copy of the popular e-book written by one of Australia's leading dentists, "Getting Your Smile
+            Right". </p>
+          <button mat-raised-button color="primary" (click)="downloadEbook()">Download now!</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>

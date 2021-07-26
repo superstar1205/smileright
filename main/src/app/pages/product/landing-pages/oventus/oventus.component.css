@@ -1,0 +1,386 @@
+::ng-deep app-oventus {
+  display: block;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+img.tooth-icon {
+  width: 100%;
+  max-width: 45px;
+}
+
+img.ips-logo {
+  max-width: 500px;
+  width: 100%;
+}
+
+.container.main {
+  position: relative;
+  z-index: 2;
+}
+
+section.introduction {
+  padding: 80px 0 180px;
+  position: relative;
+}
+
+img.hero {
+  width: 100%;
+  margin-bottom: -350px;
+  position: relative;
+  right: 0;
+}
+
+h1.white-header {
+  font-size: 4.2rem;
+  line-height: 4.5rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+h1 .smallIntro {
+  display: block;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+p.white {
+  font-size: 1.5rem;
+  line-height: 2.20rem;
+}
+
+.extra-margin {
+  margin: 5rem auto;
+}
+
+.background span.grey-bg {
+  background: #fafafa;
+}
+
+.features h3.background {
+  position: relative;
+  z-index: 1;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+
+.features mat-card {
+  padding: 24px 40px;
+}
+
+.half-width.centered,
+.two-thrd-width.centered {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.half-width.text-center.padded .rel {
+  display: block;
+  width: 6rem;
+  margin: 0 auto 20px;
+}
+
+mat-icon.icon {
+  font-size: 5rem;
+  width: auto;
+  height: auto;
+}
+
+mat-icon.icon.small {
+  font-size: 3rem;
+  width: auto;
+  height: auto;
+}
+
+mat-icon.icon.heart {
+  color: #b30000;
+}
+
+mat-icon.icon.brain {
+  color: #f99faf;
+}
+
+mat-icon.exclaim {
+  position: absolute;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #525252;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.qtr-width.padded {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+section.grey {
+  background: #efefef;
+  padding: 2rem 0;
+}
+
+.dealArea {
+  margin: 20px -16px -24px;
+  border-radius: 0 0 4px 4px;
+  padding: 24px;
+  background: #044a6c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #044a6c, #089ac6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #044a6c, #089ac6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dealArea h1.offerValue {
+  font-size: 4.8rem;
+  line-height: 3.8rem;
+  color: #fff;
+  margin-top: 1rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.promoPos {
+  position: absolute;
+  left: 10px;
+  bottom: -24px;
+  max-width: 100%;
+}
+
+::ng-deep app-oventus #blueBg {
+  top: -250px !important;
+  background: #044a6c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #044a6c, #089ac6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #044a6c, #089ac6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 1;
+}
+
+::ng-deep app-oventus figure.mat-figure {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row.clearfix.dealArea.rel.flex {
+  display: flex;
+}
+
+/*  */
+.featurettes mat-icon {
+  color: #454545;
+  position: relative;
+  top: 5px;
+}
+
+section.productShowcase {
+  background: #fff;
+  padding: 40px 0;
+}
+
+section.primary-bg {
+  padding: 40px 0;
+}
+
+section.primary-bg h2,
+section.productShowcase h2 {
+  font-size: 2.2rem;
+}
+
+section.primary-bg * {
+  color: #fff;
+}
+
+::ng-deep app-oventus ul.question li:before {
+
+  color: #ff4a57;
+}
+
+.brand-logo {
+  width: auto;
+  max-height: 150px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.questionBg {
+  position: relative;
+  overflow: hidden;
+}
+
+.questionBg h3,
+.questionBg p {
+  position: relative;
+  z-index: 2;
+}
+
+.questionBg mat-icon {
+  position: absolute;
+  font-size: 10rem;
+  color: #f5f5f5;
+  top: -20px;
+  left: -40px;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg)
+}
+
+.arrow_box {
+  position: relative;
+  background: #ff4a57;
+  border: 2px solid #ffafaf;
+  padding: 10px 16px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.arrow_box p {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.arrow_box:after,
+.arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #ff4a57;
+  border-width: 20px;
+  margin-left: -20px;
+}
+
+.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: #ffafaf;
+  border-width: 23px;
+  margin-left: -23px;
+}
+
+.dealArea .col-right {
+  padding-left: 30px;
+}
+
+/*  */
+@media (max-width: 1024px) {
+  h1.white-header {
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 30px;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .dealArea .col-right {
+    padding-left: 0;
+  }
+
+  .row.clearfix.dealArea.rel.flex {
+    display: block;
+  }
+
+  .dealArea .text-left {
+    text-align: center;
+  }
+
+  .promoPos {
+    position: relative;
+    left: auto;
+    bottom: 0;
+    margin: -30px 0 -4px;
+    max-width: 100%;
+  }
+
+  .dealArea .half-width.img {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  section.grey .rm-bp.mat-card {
+    margin-bottom: 10px;
+  }
+
+  h1.white-header {
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 300px;
+    position: relative;
+  }
+
+  img.hero {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: -400px;
+    position: relative;
+    right: 0;
+  }
+  .features mat-card {
+    padding: 24px 16px;
+}
+}
+
+@media (max-width: 599px) {
+  .dealArea {
+    margin: 20px -16px -16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1.white-header {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+
+  p.white {
+    font-size: 1.2rem;
+    line-height: 2.00rem;
+  }
+
+  section.introduction {
+    padding: 20px 0 250px;
+    position: relative;
+  }
+
+  img.hero {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: -260px;
+    position: relative;
+    right: 0;
+  }
+
+  .promoPos {
+    max-width: 240px;
+  }
+}
