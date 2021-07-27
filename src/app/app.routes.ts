@@ -18,12 +18,13 @@ import { HygienePeriodontistComponent } from './pages/product/landing-pages/hygi
 import { HygieneRecal1Component } from './pages/product/landing-pages/hygiene-recal1/hygiene-recal1.component';
 import { HygieneRecal2Component } from './pages/product/landing-pages/hygiene-recal2/hygiene-recal2.component';
 import { DentistGeneralInfoComponent } from './pages/product/landing-pages/dentist-general-info/dentist-general-info.component';
-
+import { IntropageComponentComponent } from './pages/product/landing-pages/intropage-component/intropage-component.component';
 
 
 // Consumer routes
 
 export const ROUTES: Routes = [
+    {path: '', component: IntropageComponentComponent},
     {path: 'angel', component: AngelAlignerComponent},
     {path: 'boutique', component: BoutiqueComponent},
     {path: 'Ccorrect', component: ClearCorrectComponent},
