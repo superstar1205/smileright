@@ -80,13 +80,13 @@ import { ConfirmDialogOptionsComponent } from './components/confirm-dialog-optio
 import { DocumentUrlViewComponent } from './components/document-url-view/document-url-view.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { OrderArrayObject } from './pipes/order-array-object.pipe';
-import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyAgtwhf3asTnIJ93KpsuOmfrL76wAruYxs",
-      libraries: ["places"]
+      apiKey: 'AIzaSyAgtwhf3asTnIJ93KpsuOmfrL76wAruYxs',
+      libraries: ['places']
     }),
     DeviceDetectorModule.forRoot(),
     AgmSnazzyInfoWindowModule,
@@ -167,8 +167,6 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
     ConfirmDialogMultipleComponent,
     ConfirmDialogOptionsComponent,
     DocumentUrlViewComponent,
- 
-
   ],
   providers: [
 

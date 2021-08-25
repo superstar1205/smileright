@@ -43,12 +43,12 @@ export class PartnerPricingFreeComponent implements OnInit {
 
   standAlone = true;
 
-  // add these 
-  price=22
-  practiceName="Smile Right "
-  practiceAddress="practice@smileright.com.au"
-  practiceNumber="1300 793 983"
- 
+  // add these
+  price = 22
+  practiceName = 'Smile Right '
+  practiceAddress = 'practice@smileright.com.au'
+  practiceNumber = '1300 793 983'
+
   constructor(
     public dialog: MatDialog,
     private titleService: Title,
@@ -63,7 +63,7 @@ export class PartnerPricingFreeComponent implements OnInit {
     this.metaTagService.updateTag(
       { name: 'description', content: 'Advanced blue LED light-accelerated whitening delivers dramatic results in minimal time.' }
     );
-    
+
     AOS.init();
 
   }
@@ -80,7 +80,7 @@ export class PartnerPricingFreeComponent implements OnInit {
   // show calculator, then booking
   launchApplyModal() {
     if (this.merchant && this.userData['Amount'] && this.campaign && this.campaign['ID']) {
-      let dialogRef = this.dialog.open(applyFormComponent, {
+      const dialogRef = this.dialog.open(applyFormComponent, {
         data: {
           patient: this.patient,
           showConcern: true,
@@ -110,7 +110,7 @@ export class PartnerPricingFreeComponent implements OnInit {
 
   // show booking modal and then proceed to finance
   launchBookingModal() {
-    let dialogRef = this.dialog.open(bookingModalComponent, {
+    const dialogRef = this.dialog.open(bookingModalComponent, {
       data: {
         campaignID: this.campaign['ID'],
         patient: this.patient,

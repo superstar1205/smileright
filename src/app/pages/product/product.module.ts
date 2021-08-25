@@ -107,7 +107,6 @@ import { HygieneDentalTipsComponent } from './landing-pages/hygiene-dental-tips/
 import { HygienePeriodontistComponent } from './landing-pages/hygiene-periodontist/hygiene-periodontist.component';
 import { HygieneBadBreathComponent } from './landing-pages/hygiene-bad-breath/hygiene-bad-breath.component';
 import { DentistGeneralInfoComponent } from './landing-pages/dentist-general-info/dentist-general-info.component';
-import { IntropageComponentComponent } from './landing-pages/intropage-component/intropage-component.component';
 @NgModule({
   imports: [
     CreditCardDirectivesModule,
@@ -221,8 +220,7 @@ import { IntropageComponentComponent } from './landing-pages/intropage-component
     HygieneDentalTipsComponent,
     HygienePeriodontistComponent,
     HygieneBadBreathComponent,
-    DentistGeneralInfoComponent,
-    IntropageComponentComponent
+    DentistGeneralInfoComponent
   ],
   entryComponents: [
     PreModalComponent,
