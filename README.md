@@ -1,5 +1,6 @@
 # how to run the app 
 
+<<<<<<< HEAD
 - first u need to install nodejs v12 , download it from the [link](https://nodejs.org/dist/latest-v12.x/). 
 - install git from the [link](https://git-scm.com/downloads).
 - clone the project ` git clone https://github.com/smileright/public.git`
