@@ -1,5 +1,5 @@
 # SmileLight
-I worked for smilelight company and it's dentis website and build by angular and Node.
+I worked with Mr. Steven who funderand director of smilelight company and it's dentis website and build by angular and Node.
 
 # how to run the app 
 - first u need to install nodejs v12 , download it from the [link](https://nodejs.org/dist/latest-v12.x/). 
