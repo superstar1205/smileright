@@ -23,3 +23,9 @@ ng table and read more and less...
 
 ng-modal
 ![Frame 5](https://user-images.githubusercontent.com/86986628/130814145-2e83d80a-a899-4224-8535-0d9456c340ae.png)
+
+## Contact Link
+
+[telegram] (https://t.me/ProDev1205)
+
+[Skype] (https://join.skype.com/invite/xAHPnMKaZkkk)
